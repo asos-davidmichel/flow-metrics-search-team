@@ -1,0 +1,186 @@
+{
+  "org": "asos",
+  "project": "Search",
+  "team": "Search Team",
+  "board_url": "https://dev.azure.com/asos/Search/_boards/board/t/Search%20Team/Backlog%20Items",
+  "board": {
+    "id": "6e910de8-5b36-4629-bdbe-85a77f883164",
+    "name": "Backlog Items",
+    "url": "https://dev.azure.com/asos/caad47e8-d526-4004-a9dd-d8fcda8869c4/e26668ab-5448-4823-9dc7-621f557b14eb/_apis/work/boards/6e910de8-5b36-4629-bdbe-85a77f883164"
+  },
+  "columns": [
+    {
+      "id": "e6854dde-ba61-4a6d-99f7-628e9ffee267",
+      "name": "Backlog",
+      "column_type": "incoming",
+      "wip_limit": 0,
+      "is_split": false
+    },
+    {
+      "id": "7deeb765-8834-4bd7-8d4b-6ea8ba23268a",
+      "name": "Refinement",
+      "column_type": "inProgress",
+      "wip_limit": 0,
+      "is_split": false
+    },
+    {
+      "id": "6f20bf43-efff-4739-b5be-3f2a844c7d06",
+      "name": "Ready",
+      "column_type": "inProgress",
+      "wip_limit": 5,
+      "is_split": false
+    },
+    {
+      "id": "b57cdc06-f434-4336-91bf-9c71667812a0",
+      "name": "In Progress",
+      "column_type": "inProgress",
+      "wip_limit": 10,
+      "is_split": false
+    },
+    {
+      "id": "d3a57eae-43db-497f-9924-d49dbb007f6d",
+      "name": "Ready For Test",
+      "column_type": "inProgress",
+      "wip_limit": 5,
+      "is_split": false
+    },
+    {
+      "id": "f9b2af62-8a05-4c60-bd9a-0f1d909832f2",
+      "name": "In Test",
+      "column_type": "inProgress",
+      "wip_limit": 5,
+      "is_split": false
+    },
+    {
+      "id": "8b326bab-956d-4b1e-9d8f-1b0683c7851c",
+      "name": "Ready for Release",
+      "column_type": "inProgress",
+      "wip_limit": 5,
+      "is_split": false
+    },
+    {
+      "id": "2aff17de-e3e3-4561-945e-24776775754f",
+      "name": "Production",
+      "column_type": "outgoing",
+      "wip_limit": 0,
+      "is_split": false
+    }
+  ],
+  "work_item_types": [
+    "Bug",
+    "Product Backlog Item",
+    "User Story"
+  ],
+  "work_item_type_styles": {
+    "Bug": {
+      "color": "#CC293D",
+      "icon_id": "icon_insect",
+      "icon_url": "https://tfsprodweu3.visualstudio.com/_apis/wit/workItemIcons/icon_insect?color=CC293D&v=2"
+    },
+    "Product Backlog Item": {
+      "color": "#009CCC",
+      "icon_id": "icon_clipboard",
+      "icon_url": "https://tfsprodweu3.visualstudio.com/_apis/wit/workItemIcons/icon_clipboard?color=009CCC&v=2"
+    },
+    "User Story": {
+      "color": "#0098C7",
+      "icon_id": "icon_book",
+      "icon_url": "https://tfsprodweu3.visualstudio.com/_apis/wit/workItemIcons/icon_book?color=0098C7&v=2"
+    }
+  },
+  "state_mappings": {
+    "Bug": {
+      "Backlog": "New",
+      "Refinement": "Approved",
+      "Ready": "Committed",
+      "In Progress": "Active",
+      "Ready For Test": "Active",
+      "In Test": "Active",
+      "Ready for Release": "Active",
+      "Production": "Done"
+    },
+    "Product Backlog Item": {
+      "Backlog": "New",
+      "Refinement": "Approved",
+      "Ready": "Committed",
+      "In Progress": "Active",
+      "Ready For Test": "Active",
+      "In Test": "Active",
+      "Ready for Release": "Active",
+      "Production": "Done"
+    },
+    "User Story": {
+      "Backlog": "New",
+      "Refinement": "New",
+      "Ready": "New",
+      "In Progress": "Active",
+      "Ready For Test": "Active",
+      "In Test": "Active",
+      "Ready for Release": "Active",
+      "Production": "Closed"
+    }
+  },
+  "swimlanes": [
+    {
+      "id": "00000000-0000-0000-0000-000000000000",
+      "name": "Expedited & Fixed Date",
+      "color": null
+    },
+    {
+      "id": "48546498-117a-48f1-a511-5ddea6865038",
+      "name": "Mixpanel",
+      "color": "#DB552C"
+    },
+    {
+      "id": "8806b9d9-08d9-4e14-8e8f-b0bb4f5b069e",
+      "name": "Fredhopper Migration",
+      "color": "#FBBC3D"
+    },
+    {
+      "id": "34478f3a-39aa-4b79-a9f2-c8f004326f93",
+      "name": "BAU",
+      "color": "#339947"
+    },
+    {
+      "id": "f50e12a1-9f27-47b6-894f-99e7a63d266b",
+      "name": "InnerSource",
+      "color": "#009CCC"
+    }
+  ],
+  "default_swimlane": "Expedited & Fixed Date",
+  "area_paths": [
+    {
+      "value": "Search",
+      "includeChildren": false
+    },
+    {
+      "value": "Search\\Search Team",
+      "includeChildren": false
+    }
+  ],
+  "card_rules": {
+    "fill": [
+      {
+        "name": "Blocked",
+        "filter": "[System.Tags] contains 'Blocked'",
+        "background_color": "#7F1725"
+      },
+      {
+        "name": "RIA_Green",
+        "filter": "[System.Tags] contains 'RIA_Green'",
+        "background_color": "#D7E587"
+      },
+      {
+        "name": "RIA_Amber",
+        "filter": "[System.Tags] contains 'RIA_Amber'",
+        "background_color": "#FCFEA8"
+      },
+      {
+        "name": "RIA_Red",
+        "filter": "[System.Tags] contains 'RIA_Red'",
+        "background_color": "#F599A2"
+      }
+    ],
+    "swimlane_rules": []
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "lead_time": {
+    "clock_start": {
+      "type": "column",
+      "value": "Backlog"
+    },
+    "clock_end": {
+      "type": "column",
+      "value": "Production"
+    }
+  },
+  "cycle_time": {
+    "clock_start": {
+      "type": "column",
+      "value": "In Progress"
+    },
+    "clock_end": {
+      "type": "column",
+      "value": "Production"
+    }
+  },
+  "historical_column_mapping": {
+    "3 Amigos": "Refinement",
+    "Approved": "Refinement",
+    "Code Review": "In Progress",
+    "Committed": "Ready",
+    "Deployed": "Production",
+    "Development": "In Progress",
+    "Done": "Production",
+    "In Dev": "In Progress",
+    "In Production": "Production",
+    "In Review": "In Progress",
+    "In Testing": "In Test",
+    "New": "Backlog",
+    "PT02": "In Test",
+    "Product Backlog": "Backlog",
+    "Ready For Dev": "Ready",
+    "Ready For Release": "Ready for Release",
+    "Ready For Testing": "Ready For Test",
+    "Ready for Testing": "Ready For Test",
+    "Released": "Production",
+    "Test": "In Test",
+    "Testing": "In Test",
+    "pre-production": "Ready for Release"
+  },
+  "flow_efficiency": {
+    "active_columns": [
+      "Refinement",
+      "In Progress",
+      "In Test"
+    ],
+    "waiting_columns": [
+      "Backlog",
+      "Ready",
+      "Ready For Test",
+      "Ready for Release"
+    ]
+  },
+  "blocked_time": {
+    "signals": [
+      {
+        "mechanism": "tag",
+        "tags": [
+          "Blocked"
+        ],
+        "label": "Blocked",
+        "color": "#7F1725"
+      },
+      {
+        "mechanism": "tag",
+        "tags": [
+          "Waiting for Mircosoft"
+        ],
+        "label": "Waiting on Microsoft",
+        "color": null
+      }
+    ]
+  },
+  "swimlane_mapping": {
+    "Guided Search": null
+  }
+}

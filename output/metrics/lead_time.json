@@ -1,0 +1,3529 @@
+{
+  "metric": "lead_time",
+  "calculated_at": "2026-08-09T20:04:08.238200+00:00",
+  "window": {
+    "parameter": "6m",
+    "start": "2026-02-10T20:04:08.238200+00:00",
+    "end": "2026-08-09T20:04:08.238200+00:00"
+  },
+  "config_used": {
+    "clock_start": {
+      "type": "column",
+      "value": "Backlog"
+    },
+    "clock_end": {
+      "type": "column",
+      "value": "Production"
+    },
+    "historical_column_mapping": {
+      "3 Amigos": "Refinement",
+      "Approved": "Refinement",
+      "Code Review": "In Progress",
+      "Committed": "Ready",
+      "Deployed": "Production",
+      "Development": "In Progress",
+      "Done": "Production",
+      "In Dev": "In Progress",
+      "In Production": "Production",
+      "In Review": "In Progress",
+      "In Testing": "In Test",
+      "New": "Backlog",
+      "PT02": "In Test",
+      "Product Backlog": "Backlog",
+      "Ready For Dev": "Ready",
+      "Ready For Release": "Ready for Release",
+      "Ready For Testing": "Ready For Test",
+      "Ready for Testing": "Ready For Test",
+      "Released": "Production",
+      "Test": "In Test",
+      "Testing": "In Test",
+      "pre-production": "Ready for Release"
+    }
+  },
+  "ado_url_base": "https://dev.azure.com/asos/Search/_workitems/edit",
+  "work_item_type_styles": {
+    "Bug": {
+      "color": "#CC293D",
+      "icon_id": "icon_insect",
+      "icon_url": "https://tfsprodweu3.visualstudio.com/_apis/wit/workItemIcons/icon_insect?color=CC293D&v=2"
+    },
+    "Product Backlog Item": {
+      "color": "#009CCC",
+      "icon_id": "icon_clipboard",
+      "icon_url": "https://tfsprodweu3.visualstudio.com/_apis/wit/workItemIcons/icon_clipboard?color=009CCC&v=2"
+    },
+    "User Story": {
+      "color": "#0098C7",
+      "icon_id": "icon_book",
+      "icon_url": "https://tfsprodweu3.visualstudio.com/_apis/wit/workItemIcons/icon_book?color=0098C7&v=2"
+    }
+  },
+  "excluded_item_ids": [
+    1192916,
+    1207177,
+    1207266,
+    1213036,
+    1213038,
+    1213045,
+    1213046,
+    1214245,
+    1214920,
+    1214923,
+    1215727,
+    1215729,
+    1216887,
+    1218234,
+    1223312,
+    1223522,
+    1227012,
+    1229484,
+    1230625,
+    1230767,
+    1231227,
+    1231414,
+    1232947,
+    1235084,
+    1235095,
+    1235101,
+    1235112,
+    1235124
+  ],
+  "item_count": 413,
+  "warnings": [],
+  "overall": {
+    "n": 413,
+    "mean_days": 201.7,
+    "median_days": 175.1,
+    "p85_days": 421.9,
+    "min_days": 0.1,
+    "max_days": 628.4
+  },
+  "weekly_stats": [
+    {
+      "week_start": "2026-02-16",
+      "n": 1,
+      "mean_days": 17.8,
+      "median_days": 17.8
+    },
+    {
+      "week_start": "2026-03-02",
+      "n": 14,
+      "mean_days": 71.2,
+      "median_days": 66.4
+    },
+    {
+      "week_start": "2026-03-09",
+      "n": 2,
+      "mean_days": 24.3,
+      "median_days": 24.3
+    },
+    {
+      "week_start": "2026-03-16",
+      "n": 6,
+      "mean_days": 51.4,
+      "median_days": 37.2
+    },
+    {
+      "week_start": "2026-04-13",
+      "n": 255,
+      "mean_days": 300.9,
+      "median_days": 316.2
+    },
+    {
+      "week_start": "2026-04-20",
+      "n": 10,
+      "mean_days": 24.1,
+      "median_days": 11.5
+    },
+    {
+      "week_start": "2026-04-27",
+      "n": 12,
+      "mean_days": 14.6,
+      "median_days": 9.3
+    },
+    {
+      "week_start": "2026-05-04",
+      "n": 8,
+      "mean_days": 117.4,
+      "median_days": 80.6
+    },
+    {
+      "week_start": "2026-05-11",
+      "n": 12,
+      "mean_days": 13.4,
+      "median_days": 15.6
+    },
+    {
+      "week_start": "2026-05-18",
+      "n": 11,
+      "mean_days": 29.9,
+      "median_days": 14.3
+    },
+    {
+      "week_start": "2026-05-25",
+      "n": 5,
+      "mean_days": 18.7,
+      "median_days": 9.8
+    },
+    {
+      "week_start": "2026-06-08",
+      "n": 8,
+      "mean_days": 13.4,
+      "median_days": 8.1
+    },
+    {
+      "week_start": "2026-06-15",
+      "n": 6,
+      "mean_days": 7.9,
+      "median_days": 8.7
+    },
+    {
+      "week_start": "2026-06-22",
+      "n": 4,
+      "mean_days": 26.8,
+      "median_days": 31.0
+    },
+    {
+      "week_start": "2026-06-29",
+      "n": 7,
+      "mean_days": 18.4,
+      "median_days": 11.2
+    },
+    {
+      "week_start": "2026-07-06",
+      "n": 7,
+      "mean_days": 102.4,
+      "median_days": 27.9
+    },
+    {
+      "week_start": "2026-07-13",
+      "n": 10,
+      "mean_days": 109.6,
+      "median_days": 14.4
+    },
+    {
+      "week_start": "2026-07-20",
+      "n": 10,
+      "mean_days": 17.7,
+      "median_days": 7.8
+    },
+    {
+      "week_start": "2026-07-27",
+      "n": 11,
+      "mean_days": 12.0,
+      "median_days": 10.1
+    },
+    {
+      "week_start": "2026-08-03",
+      "n": 14,
+      "mean_days": 52.7,
+      "median_days": 12.7
+    }
+  ],
+  "items": [
+    {
+      "id": 960117,
+      "title": "[Algolia] ProductPrice is used instead of current price on variant",
+      "type": "Bug",
+      "lead_time_days": 628.35,
+      "started_at": "2024-07-30T08:19:06.557000+00:00",
+      "completed_at": "2026-04-19T16:38:20.470000+00:00"
+    },
+    {
+      "id": 971834,
+      "title": "[Algolia] DE store support: Error in AttributeMappingService",
+      "type": "Bug",
+      "lead_time_days": 597.29,
+      "started_at": "2024-08-30T09:43:23.003000+00:00",
+      "completed_at": "2026-04-19T16:38:20.470000+00:00"
+    },
+    {
+      "id": 977058,
+      "title": "[Algolia] Query Engine: Unknown attribute_ refinement causes InternalServerError",
+      "type": "Bug",
+      "lead_time_days": 584.31,
+      "started_at": "2024-09-12T09:14:51.710000+00:00",
+      "completed_at": "2026-04-19T16:38:20.470000+00:00"
+    },
+    {
+      "id": 979264,
+      "title": "[Algolia] Variant Mapping Service not uploading mappings for DE",
+      "type": "Bug",
+      "lead_time_days": 579.06,
+      "started_at": "2024-09-17T15:10:21.433000+00:00",
+      "completed_at": "2026-04-19T16:38:20.470000+00:00"
+    },
+    {
+      "id": 979386,
+      "title": "[Algolia] Query Engine: FxClient dependency injection exception",
+      "type": "Bug",
+      "lead_time_days": 578.36,
+      "started_at": "2024-09-18T07:59:20.640000+00:00",
+      "completed_at": "2026-04-19T16:38:20.470000+00:00"
+    },
+    {
+      "id": 979412,
+      "title": "[Search API] Investigate searches in non store currency with DTC products - seems to be an issue when logged in",
+      "type": "Bug",
+      "lead_time_days": 578.33,
+      "started_at": "2024-09-18T08:37:05.520000+00:00",
+      "completed_at": "2026-04-19T16:38:10.380000+00:00"
+    },
+    {
+      "id": 979421,
+      "title": "[SEO] Bulk update - Returning 404",
+      "type": "Bug",
+      "lead_time_days": 578.32,
+      "started_at": "2024-09-18T08:50:33.353000+00:00",
+      "completed_at": "2026-04-19T16:38:10.380000+00:00"
+    },
+    {
+      "id": 988633,
+      "title": "[Algolia] Error 422 on Purchase Event Value ",
+      "type": "Bug",
+      "lead_time_days": 524.19,
+      "started_at": "2024-11-11T11:58:33.373000+00:00",
+      "completed_at": "2026-04-19T16:38:20.470000+00:00"
+    },
+    {
+      "id": 988642,
+      "title": "[Algolia] Purchase Event Error 422 on Value",
+      "type": "Bug",
+      "lead_time_days": 556.24,
+      "started_at": "2024-10-10T10:54:10.377000+00:00",
+      "completed_at": "2026-04-19T16:38:20.470000+00:00"
+    },
+    {
+      "id": 992775,
+      "title": "[SearchAPI] Investigate Resiliency Test Failures (from 10/10/24)",
+      "type": "Bug",
+      "lead_time_days": 544.01,
+      "started_at": "2024-10-22T16:30:45.977000+00:00",
+      "completed_at": "2026-04-19T16:38:10.380000+00:00"
+    },
+    {
+      "id": 993599,
+      "title": "Fundamentals - Migrate Recs ETL to service template",
+      "type": "Product Backlog Item",
+      "lead_time_days": 624.91,
+      "started_at": "2024-10-28T10:12:14.657000+00:00",
+      "completed_at": "2026-07-15T08:04:19.483000+00:00"
+    },
+    {
+      "id": 994656,
+      "title": "[Algolia] additionalImageUrls causing crash on iOS",
+      "type": "Bug",
+      "lead_time_days": 537.31,
+      "started_at": "2024-10-29T09:16:44.740000+00:00",
+      "completed_at": "2026-04-19T16:38:20.470000+00:00"
+    },
+    {
+      "id": 994668,
+      "title": "[Visual Search API] Null Reference Exception if the SearchByIds call does not succeed",
+      "type": "Bug",
+      "lead_time_days": 537.29,
+      "started_at": "2024-10-29T09:38:57.253000+00:00",
+      "completed_at": "2026-04-19T16:37:59.367000+00:00"
+    },
+    {
+      "id": 995714,
+      "title": "[PLPM] Customer Segmentation not being ingested in PLPM",
+      "type": "Bug",
+      "lead_time_days": 534.3,
+      "started_at": "2024-11-01T09:20:23.240000+00:00",
+      "completed_at": "2026-04-19T16:38:10.380000+00:00"
+    },
+    {
+      "id": 999638,
+      "title": "[Algolia] QueryEngine API - Deserialization error thrown for field (lowestprice for 30 days)",
+      "type": "Bug",
+      "lead_time_days": 523.09,
+      "started_at": "2024-11-12T14:34:44.040000+00:00",
+      "completed_at": "2026-04-19T16:38:20.470000+00:00"
+    },
+    {
+      "id": 1000903,
+      "title": "[Recs ETL] Folders within the \"exports\" file mount are not auto-deleted",
+      "type": "Bug",
+      "lead_time_days": 520.22,
+      "started_at": "2024-11-15T11:26:33.210000+00:00",
+      "completed_at": "2026-04-19T16:38:10.380000+00:00"
+    },
+    {
+      "id": 1003859,
+      "title": "[Algolia] Query Engine - refinement values that start with <refinementID>_ not supported",
+      "type": "Bug",
+      "lead_time_days": 509.12,
+      "started_at": "2024-11-26T13:48:31.140000+00:00",
+      "completed_at": "2026-04-19T16:38:20.470000+00:00"
+    },
+    {
+      "id": 1004953,
+      "title": "[Indexer] : Algolia is giving incorrect prices for DTC Products on all stores",
+      "type": "Bug",
+      "lead_time_days": 506.12,
+      "started_at": "2024-11-29T13:47:26.703000+00:00",
+      "completed_at": "2026-04-19T16:38:20.470000+00:00"
+    },
+    {
+      "id": 1005595,
+      "title": "[WEB] - Remove Redial Library",
+      "type": "Product Backlog Item",
+      "lead_time_days": 577.64,
+      "started_at": "2024-12-08T20:40:51.483000+00:00",
+      "completed_at": "2026-07-09T12:04:21.390000+00:00"
+    },
+    {
+      "id": 1005655,
+      "title": "[Indexer] : Algolia out of stock variants effecting facets and filters",
+      "type": "Bug",
+      "lead_time_days": 502.29,
+      "started_at": "2024-12-03T09:38:27.583000+00:00",
+      "completed_at": "2026-04-19T16:38:20.470000+00:00"
+    },
+    {
+      "id": 1005934,
+      "title": "[SearchAPI] Rollback deploy pipeline change",
+      "type": "Bug",
+      "lead_time_days": 501.99,
+      "started_at": "2024-12-03T16:56:30.853000+00:00",
+      "completed_at": "2026-04-19T16:38:10.380000+00:00"
+    },
+    {
+      "id": 1007039,
+      "title": "[PLP Playwright] - Breadcrumbs  - Migrate tests",
+      "type": "Product Backlog Item",
+      "lead_time_days": 494.79,
+      "started_at": "2024-12-08T20:40:51.483000+00:00",
+      "completed_at": "2026-04-17T15:32:13.670000+00:00"
+    },
+    {
+      "id": 1007927,
+      "title": "[PLP Playwright] - Brands - Migrate load category test",
+      "type": "Product Backlog Item",
+      "lead_time_days": 493.05,
+      "started_at": "2024-12-10T14:25:45.190000+00:00",
+      "completed_at": "2026-04-17T15:32:13.670000+00:00"
+    },
+    {
+      "id": 1008020,
+      "title": "[Sitecore] Creating Brand causing Category full tree to break",
+      "type": "Bug",
+      "lead_time_days": 495.0,
+      "started_at": "2024-12-10T16:43:47.270000+00:00",
+      "completed_at": "2026-04-19T16:37:59.367000+00:00"
+    },
+    {
+      "id": 1008144,
+      "title": "[RecsEtl] Investigate New In Personalisation Error Alerts",
+      "type": "Bug",
+      "lead_time_days": 494.27,
+      "started_at": "2024-12-11T10:08:18.583000+00:00",
+      "completed_at": "2026-04-19T16:38:10.380000+00:00"
+    },
+    {
+      "id": 1008318,
+      "title": "[Search Feeds] is_new_to_sale not set to correct value",
+      "type": "Bug",
+      "lead_time_days": 494.04,
+      "started_at": "2024-12-11T15:42:23.607000+00:00",
+      "completed_at": "2026-04-19T16:38:10.380000+00:00"
+    },
+    {
+      "id": 1008801,
+      "title": "[PLP Playwright] - Refactor validateScreenshot",
+      "type": "Product Backlog Item",
+      "lead_time_days": 490.19,
+      "started_at": "2024-12-13T10:53:43.980000+00:00",
+      "completed_at": "2026-04-17T15:32:13.670000+00:00"
+    },
+    {
+      "id": 1008950,
+      "title": "Curated Categories Not Rendering Correctly",
+      "type": "Bug",
+      "lead_time_days": 492.04,
+      "started_at": "2024-12-13T15:45:33.887000+00:00",
+      "completed_at": "2026-04-19T16:37:59.367000+00:00"
+    },
+    {
+      "id": 1008969,
+      "title": "[PLP Playwright] - SEO Redirects - Migrate search and redirects tests",
+      "type": "Product Backlog Item",
+      "lead_time_days": 489.93,
+      "started_at": "2024-12-13T17:15:30.480000+00:00",
+      "completed_at": "2026-04-17T15:32:13.670000+00:00"
+    },
+    {
+      "id": 1009437,
+      "title": "[Recs ETL] Expired files in the 'working' directory are not completely deleted",
+      "type": "Bug",
+      "lead_time_days": 488.29,
+      "started_at": "2024-12-17T09:40:23.980000+00:00",
+      "completed_at": "2026-04-19T16:38:10.380000+00:00"
+    },
+    {
+      "id": 1009756,
+      "title": "[PLP Playwright] - Upsell carousel - Migrate request failure test",
+      "type": "Product Backlog Item",
+      "lead_time_days": 485.98,
+      "started_at": "2024-12-17T15:59:08.610000+00:00",
+      "completed_at": "2026-04-17T15:32:13.670000+00:00"
+    },
+    {
+      "id": 1009806,
+      "title": "[PLP Playwright] - Upsell carousel - Migrate request timeout test",
+      "type": "Product Backlog Item",
+      "lead_time_days": 485.93,
+      "started_at": "2024-12-17T17:10:18.993000+00:00",
+      "completed_at": "2026-04-17T15:32:13.670000+00:00"
+    },
+    {
+      "id": 1009808,
+      "title": "[PLP Playwright] - Upsell carousel - Migrate carousel test",
+      "type": "Product Backlog Item",
+      "lead_time_days": 485.93,
+      "started_at": "2024-12-17T17:13:17.040000+00:00",
+      "completed_at": "2026-04-17T15:32:13.670000+00:00"
+    },
+    {
+      "id": 1010818,
+      "title": "[a11y] - P1 - Hover content needs to be visible to screen readers",
+      "type": "Product Backlog Item",
+      "lead_time_days": 482.95,
+      "started_at": "2024-12-20T16:44:54.120000+00:00",
+      "completed_at": "2026-04-17T15:32:51.720000+00:00"
+    },
+    {
+      "id": 1010840,
+      "title": "[a11y] - P2 - Add role and aria labels to product tiles",
+      "type": "Product Backlog Item",
+      "lead_time_days": 472.04,
+      "started_at": "2024-12-31T14:38:58.773000+00:00",
+      "completed_at": "2026-04-17T15:32:51.720000+00:00"
+    },
+    {
+      "id": 1013896,
+      "title": "[User Activity] M&A for User Activity and Variant Mapping services",
+      "type": "Bug",
+      "lead_time_days": 465.24,
+      "started_at": "2025-01-09T10:54:54.117000+00:00",
+      "completed_at": "2026-04-19T16:37:59.367000+00:00"
+    },
+    {
+      "id": 1015969,
+      "title": "[E2E]: Search feeds clear down runs before cluster shutdown",
+      "type": "Bug",
+      "lead_time_days": 459.3,
+      "started_at": "2025-01-15T09:30:23.250000+00:00",
+      "completed_at": "2026-04-19T16:38:20.470000+00:00"
+    },
+    {
+      "id": 1017091,
+      "title": "[PLP Playwright] - SEO PillLinks - Migrate test",
+      "type": "Product Backlog Item",
+      "lead_time_days": 454.96,
+      "started_at": "2025-01-17T16:34:22.507000+00:00",
+      "completed_at": "2026-04-17T15:32:51.720000+00:00"
+    },
+    {
+      "id": 1017546,
+      "title": "[a11y] - P2 - Improve custom radio buttons or checkboxes",
+      "type": "Product Backlog Item",
+      "lead_time_days": 451.86,
+      "started_at": "2025-01-20T18:50:21.863000+00:00",
+      "completed_at": "2026-04-17T15:32:51.720000+00:00"
+    },
+    {
+      "id": 1018702,
+      "title": "Playwright tests - Use forbidOnly in CI",
+      "type": "Product Backlog Item",
+      "lead_time_days": 450.22,
+      "started_at": "2025-01-22T10:14:22.213000+00:00",
+      "completed_at": "2026-04-17T15:32:51.720000+00:00"
+    },
+    {
+      "id": 1018955,
+      "title": "[SEO] - SPIKE - Sitecore Options to Define Connected Categories",
+      "type": "Product Backlog Item",
+      "lead_time_days": 450.05,
+      "started_at": "2025-01-22T14:24:07.437000+00:00",
+      "completed_at": "2026-04-17T15:32:51.720000+00:00"
+    },
+    {
+      "id": 1019800,
+      "title": "[PLP Playwright] - Shorten snapshot filenames and use kebab case for test names",
+      "type": "Product Backlog Item",
+      "lead_time_days": 448.18,
+      "started_at": "2025-01-24T11:18:08.410000+00:00",
+      "completed_at": "2026-04-17T15:32:51.720000+00:00"
+    },
+    {
+      "id": 1019930,
+      "title": "[ALGOLIA] - SPIKE - Investigate iOS search area",
+      "type": "Product Backlog Item",
+      "lead_time_days": 448.06,
+      "started_at": "2025-01-24T14:06:07.073000+00:00",
+      "completed_at": "2026-04-17T15:32:51.720000+00:00"
+    },
+    {
+      "id": 1020532,
+      "title": "[PLP Playwright] - Migrate functional SEO pagination hydrated page test",
+      "type": "Product Backlog Item",
+      "lead_time_days": 444.98,
+      "started_at": "2025-01-27T16:06:39.970000+00:00",
+      "completed_at": "2026-04-17T15:32:51.720000+00:00"
+    },
+    {
+      "id": 1020616,
+      "title": "[WEB] - Update PR template",
+      "type": "Product Backlog Item",
+      "lead_time_days": 444.72,
+      "started_at": "2025-01-27T22:13:17.913000+00:00",
+      "completed_at": "2026-04-17T15:32:51.720000+00:00"
+    },
+    {
+      "id": 1020934,
+      "title": "[Facet API] Error Creating Change Request ",
+      "type": "Bug",
+      "lead_time_days": 446.13,
+      "started_at": "2025-01-28T13:33:16.313000+00:00",
+      "completed_at": "2026-04-19T16:38:20.470000+00:00"
+    },
+    {
+      "id": 1022158,
+      "title": "[RETRO] Jackie to add confluence teams channel",
+      "type": "Product Backlog Item",
+      "lead_time_days": 441.13,
+      "started_at": "2025-01-31T12:32:25.423000+00:00",
+      "completed_at": "2026-04-17T15:32:51.720000+00:00"
+    },
+    {
+      "id": 1022163,
+      "title": "[RETRO] Verify if file exipry can be removed",
+      "type": "Product Backlog Item",
+      "lead_time_days": 441.12,
+      "started_at": "2025-01-31T12:38:17.297000+00:00",
+      "completed_at": "2026-04-17T15:32:51.720000+00:00"
+    },
+    {
+      "id": 1023251,
+      "title": "(IntegrationTest) Sitecore Category API changes for connected categories ",
+      "type": "Product Backlog Item",
+      "lead_time_days": 437.9,
+      "started_at": "2025-02-03T17:59:12.497000+00:00",
+      "completed_at": "2026-04-17T15:32:51.720000+00:00"
+    },
+    {
+      "id": 1023252,
+      "title": "(ManualTest)Sitecore Category API changes for connected categories (ManualValidation)",
+      "type": "Product Backlog Item",
+      "lead_time_days": 437.89,
+      "started_at": "2025-02-03T18:04:20.953000+00:00",
+      "completed_at": "2026-04-17T15:32:51.720000+00:00"
+    },
+    {
+      "id": 1023342,
+      "title": "[Recs ETL] Increase ROW Memory",
+      "type": "Bug",
+      "lead_time_days": 439.28,
+      "started_at": "2025-02-04T09:53:27.353000+00:00",
+      "completed_at": "2026-04-19T16:38:10.380000+00:00"
+    },
+    {
+      "id": 1024100,
+      "title": "[a11y] - P2 -Filter dropdowns a11y improvements",
+      "type": "Product Backlog Item",
+      "lead_time_days": 436.24,
+      "started_at": "2025-02-05T09:42:47.873000+00:00",
+      "completed_at": "2026-04-17T15:32:51.720000+00:00"
+    },
+    {
+      "id": 1024352,
+      "title": "[iOS] Create a iOS UI Test for PLP Sticky filters",
+      "type": "Product Backlog Item",
+      "lead_time_days": 436.06,
+      "started_at": "2025-02-05T14:11:51.747000+00:00",
+      "completed_at": "2026-04-17T15:32:51.720000+00:00"
+    },
+    {
+      "id": 1025385,
+      "title": "[SITECHROME] - Keep search terms in searchbar after submitting",
+      "type": "Product Backlog Item",
+      "lead_time_days": 435.65,
+      "started_at": "2025-02-06T00:00:32.233000+00:00",
+      "completed_at": "2026-04-17T15:32:51.720000+00:00"
+    },
+    {
+      "id": 1026403,
+      "title": "[ALGOLIA] Further Investigate Algolia Implementation on iOS",
+      "type": "Product Backlog Item",
+      "lead_time_days": 435.16,
+      "started_at": "2025-02-06T11:47:21.290000+00:00",
+      "completed_at": "2026-04-17T15:32:51.720000+00:00"
+    },
+    {
+      "id": 1026675,
+      "title": "[PLP Playwright] - Refactor describe and test blocks to align with GIVEN, WHEN, THEN structure (Part 1)",
+      "type": "Product Backlog Item",
+      "lead_time_days": 434.99,
+      "started_at": "2025-02-06T15:41:04.227000+00:00",
+      "completed_at": "2026-04-17T15:32:51.720000+00:00"
+    },
+    {
+      "id": 1027092,
+      "title": "[PLAYWRIGHT] - Refactor selectors files",
+      "type": "Product Backlog Item",
+      "lead_time_days": 434.92,
+      "started_at": "2025-02-06T17:32:35.967000+00:00",
+      "completed_at": "2026-04-17T15:32:51.720000+00:00"
+    },
+    {
+      "id": 1027107,
+      "title": "[PLP Playwright] - Update Playwright folder structure to follow standards",
+      "type": "Product Backlog Item",
+      "lead_time_days": 434.92,
+      "started_at": "2025-02-06T17:33:01.767000+00:00",
+      "completed_at": "2026-04-17T15:32:51.720000+00:00"
+    },
+    {
+      "id": 1027474,
+      "title": "[PLP Playwright] - Remove unnecessary locale snapshots",
+      "type": "Product Backlog Item",
+      "lead_time_days": 434.89,
+      "started_at": "2025-02-06T18:17:16.967000+00:00",
+      "completed_at": "2026-04-17T15:32:51.720000+00:00"
+    },
+    {
+      "id": 1030886,
+      "title": "[SEO] Cache Manager component changes (Manual/Automation)",
+      "type": "Product Backlog Item",
+      "lead_time_days": 424.01,
+      "started_at": "2025-02-17T15:11:43.787000+00:00",
+      "completed_at": "2026-04-17T15:32:51.720000+00:00"
+    },
+    {
+      "id": 1032366,
+      "title": "[WEB] - Make anchor bar sticky (Desktop and mobile)",
+      "type": "Product Backlog Item",
+      "lead_time_days": 421.96,
+      "started_at": "2025-02-19T16:27:29.350000+00:00",
+      "completed_at": "2026-04-17T15:32:51.720000+00:00"
+    },
+    {
+      "id": 1032386,
+      "title": "[iOS Algolia POC] Update searching page",
+      "type": "Product Backlog Item",
+      "lead_time_days": 421.95,
+      "started_at": "2025-02-19T16:43:27.430000+00:00",
+      "completed_at": "2026-04-17T15:32:51.720000+00:00"
+    },
+    {
+      "id": 1033639,
+      "title": "Related Categories - The ability to override related categories per language",
+      "type": "Product Backlog Item",
+      "lead_time_days": 420.01,
+      "started_at": "2025-02-21T15:23:59.693000+00:00",
+      "completed_at": "2026-04-17T15:32:51.720000+00:00"
+    },
+    {
+      "id": 1033640,
+      "title": "Category Details - Performance tests Current and New",
+      "type": "Product Backlog Item",
+      "lead_time_days": 420.01,
+      "started_at": "2025-02-21T15:24:23.847000+00:00",
+      "completed_at": "2026-04-17T15:32:51.720000+00:00"
+    },
+    {
+      "id": 1033859,
+      "title": "[Future Search] App Insights Provisioning",
+      "type": "Bug",
+      "lead_time_days": 419.26,
+      "started_at": "2025-02-24T10:26:35.663000+00:00",
+      "completed_at": "2026-04-19T16:38:20.470000+00:00"
+    },
+    {
+      "id": 1034445,
+      "title": "Related Categories - External Category API Changes",
+      "type": "Product Backlog Item",
+      "lead_time_days": 416.17,
+      "started_at": "2025-02-25T11:32:15.107000+00:00",
+      "completed_at": "2026-04-17T15:32:51.720000+00:00"
+    },
+    {
+      "id": 1035069,
+      "title": "[a11y] - Remove filter heading and inessential icon",
+      "type": "Product Backlog Item",
+      "lead_time_days": 415.14,
+      "started_at": "2025-02-26T12:14:59.140000+00:00",
+      "completed_at": "2026-04-17T15:32:51.720000+00:00"
+    },
+    {
+      "id": 1035084,
+      "title": "[a11y] - Update the product tiles section to be a list",
+      "type": "Product Backlog Item",
+      "lead_time_days": 415.13,
+      "started_at": "2025-02-26T12:32:44.967000+00:00",
+      "completed_at": "2026-04-17T15:32:51.720000+00:00"
+    },
+    {
+      "id": 1035104,
+      "title": "[Search Feeds] Shipping Restrictions not working in IE",
+      "type": "Bug",
+      "lead_time_days": 417.13,
+      "started_at": "2025-02-26T13:31:17.627000+00:00",
+      "completed_at": "2026-04-19T16:38:10.380000+00:00"
+    },
+    {
+      "id": 1035325,
+      "title": "[PLAYWRIGHT] - Filters - Migrate color filters test",
+      "type": "Product Backlog Item",
+      "lead_time_days": 414.23,
+      "started_at": "2025-02-27T09:57:36.007000+00:00",
+      "completed_at": "2026-04-17T15:32:51.720000+00:00"
+    },
+    {
+      "id": 1035326,
+      "title": "[PLAYWRIGHT] - Filters - Migrate price range filter test",
+      "type": "Product Backlog Item",
+      "lead_time_days": 414.23,
+      "started_at": "2025-02-27T09:59:50.890000+00:00",
+      "completed_at": "2026-04-17T15:32:51.720000+00:00"
+    },
+    {
+      "id": 1036363,
+      "title": "[Search] 'Support Level' Facet disappears when used for filtering",
+      "type": "Bug",
+      "lead_time_days": 412.23,
+      "started_at": "2025-03-03T11:05:26.350000+00:00",
+      "completed_at": "2026-04-19T16:38:10.380000+00:00"
+    },
+    {
+      "id": 1037258,
+      "title": "[PLAYWRIGHT] - Filters - Migrate sort test",
+      "type": "Product Backlog Item",
+      "lead_time_days": 408.65,
+      "started_at": "2025-03-04T23:52:12.400000+00:00",
+      "completed_at": "2026-04-17T15:32:51.720000+00:00"
+    },
+    {
+      "id": 1037535,
+      "title": "[Search API] - Currency Changes AC tests",
+      "type": "Bug",
+      "lead_time_days": 410.12,
+      "started_at": "2025-03-05T13:48:14.410000+00:00",
+      "completed_at": "2026-04-19T16:38:10.380000+00:00"
+    },
+    {
+      "id": 1038124,
+      "title": "[PLAYWRIGHT] - Category - Migrate Google Ads test",
+      "type": "Product Backlog Item",
+      "lead_time_days": 406.21,
+      "started_at": "2025-03-07T10:30:07.750000+00:00",
+      "completed_at": "2026-04-17T15:32:51.720000+00:00"
+    },
+    {
+      "id": 1038126,
+      "title": "[PLAYWRIGHT] - Category Pills - Migrate request delay, failure and timeout tests",
+      "type": "Product Backlog Item",
+      "lead_time_days": 406.21,
+      "started_at": "2025-03-07T10:30:17.807000+00:00",
+      "completed_at": "2026-04-17T15:32:51.720000+00:00"
+    },
+    {
+      "id": 1038127,
+      "title": "[PLAYWRIGHT] - Category - Migrate load category page from pill test",
+      "type": "Product Backlog Item",
+      "lead_time_days": 406.21,
+      "started_at": "2025-03-07T10:30:23.540000+00:00",
+      "completed_at": "2026-04-17T15:32:51.720000+00:00"
+    },
+    {
+      "id": 1038129,
+      "title": "[PLAYWRIGHT] - Search - Migrate search for edge case terms test",
+      "type": "Product Backlog Item",
+      "lead_time_days": 406.6,
+      "started_at": "2025-03-07T01:07:46.500000+00:00",
+      "completed_at": "2026-04-17T15:32:51.720000+00:00"
+    },
+    {
+      "id": 1039502,
+      "title": "Split out playwright tests on webmain to speed up tests",
+      "type": "Product Backlog Item",
+      "lead_time_days": 402.0,
+      "started_at": "2025-03-11T15:38:03.670000+00:00",
+      "completed_at": "2026-04-17T15:32:51.720000+00:00"
+    },
+    {
+      "id": 1039585,
+      "title": "[iOS] Suggested searches ticker | Update config for structure changes",
+      "type": "Product Backlog Item",
+      "lead_time_days": 394.99,
+      "started_at": "2025-03-18T15:47:40.630000+00:00",
+      "completed_at": "2026-04-17T15:32:51.720000+00:00"
+    },
+    {
+      "id": 1039986,
+      "title": "Metrics - Orchestrator: Too many blob changes detected",
+      "type": "Bug",
+      "lead_time_days": 403.01,
+      "started_at": "2025-03-12T16:26:33.787000+00:00",
+      "completed_at": "2026-04-19T16:37:59.367000+00:00"
+    },
+    {
+      "id": 1040146,
+      "title": "[iOS] Suggested searches ticker | Integrate optimizely experimentation logic",
+      "type": "Product Backlog Item",
+      "lead_time_days": 394.06,
+      "started_at": "2025-03-19T14:12:19.193000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1041285,
+      "title": "PLP Changing Search Provider on Page Refresh",
+      "type": "Bug",
+      "lead_time_days": 398.31,
+      "started_at": "2025-03-17T09:13:22.930000+00:00",
+      "completed_at": "2026-04-19T16:37:59.367000+00:00"
+    },
+    {
+      "id": 1041452,
+      "title": "[SITECHROME] - Clear term outside of search pages and fire event350",
+      "type": "Product Backlog Item",
+      "lead_time_days": 396.2,
+      "started_at": "2025-03-17T10:41:33.530000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1041790,
+      "title": "Drop in Sponsored Ads on COM and DE since March 3rd",
+      "type": "Bug",
+      "lead_time_days": 397.96,
+      "started_at": "2025-03-17T17:34:27.983000+00:00",
+      "completed_at": "2026-04-19T16:37:59.367000+00:00"
+    },
+    {
+      "id": 1041936,
+      "title": "[iOS Algolia POC] Trending section UI/UX",
+      "type": "Product Backlog Item",
+      "lead_time_days": 395.21,
+      "started_at": "2025-03-18T10:25:38.400000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1041940,
+      "title": "[iOS Algolia POC] suggested searches box UI/UX",
+      "type": "Product Backlog Item",
+      "lead_time_days": 395.21,
+      "started_at": "2025-03-18T10:27:52.990000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1041945,
+      "title": "[iOS Algolia POC] Recent reaches section",
+      "type": "Product Backlog Item",
+      "lead_time_days": 395.21,
+      "started_at": "2025-03-18T10:31:26.040000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1041948,
+      "title": "[iOS Algolia POC] Popular edits section UI/UX",
+      "type": "Product Backlog Item",
+      "lead_time_days": 395.21,
+      "started_at": "2025-03-18T10:32:26.260000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1044263,
+      "title": "[Provisioning] User Activity Service - Provision Secrets to KeyVault",
+      "type": "Bug",
+      "lead_time_days": 394.3,
+      "started_at": "2025-03-21T09:19:03.853000+00:00",
+      "completed_at": "2026-04-19T16:38:10.380000+00:00"
+    },
+    {
+      "id": 1045338,
+      "title": "[a11y] - P2 - Announce filter radio button selected state",
+      "type": "Product Backlog Item",
+      "lead_time_days": 388.71,
+      "started_at": "2025-03-24T22:28:52.440000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1045384,
+      "title": "Devops Build Agents",
+      "type": "Bug",
+      "lead_time_days": 390.31,
+      "started_at": "2025-03-25T09:08:23.953000+00:00",
+      "completed_at": "2026-04-19T16:37:59.367000+00:00"
+    },
+    {
+      "id": 1045532,
+      "title": "[PLAYWRIGHT] - Update playwright docker image",
+      "type": "Product Backlog Item",
+      "lead_time_days": 332.91,
+      "started_at": "2025-05-19T17:49:50.017000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1047801,
+      "title": "[iOS] Turn sticky filters experiment on for production",
+      "type": "Product Backlog Item",
+      "lead_time_days": 381.28,
+      "started_at": "2025-04-01T08:49:25.543000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1049446,
+      "title": "[PLAYWRIGHT] - Search - Add test coverage for persisting search terms on search page",
+      "type": "Product Backlog Item",
+      "lead_time_days": 379.31,
+      "started_at": "2025-04-03T08:08:49.363000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1049570,
+      "title": "Exclude categories marked as \"SEO No Index\" from Related Categories",
+      "type": "Product Backlog Item",
+      "lead_time_days": 379.28,
+      "started_at": "2025-04-03T08:44:26.690000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1051157,
+      "title": "[iOS] Algolia Search P1 - Implement Popular Searches UI",
+      "type": "Product Backlog Item",
+      "lead_time_days": 374.25,
+      "started_at": "2025-04-08T09:35:01.813000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1051300,
+      "title": "[iOS] Suggested searches ticker | a11y disable feature for reduce motion",
+      "type": "Product Backlog Item",
+      "lead_time_days": 374.12,
+      "started_at": "2025-04-08T12:41:58.413000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1051453,
+      "title": "[iOS] - Open search bar after double-tapping icon",
+      "type": "Product Backlog Item",
+      "lead_time_days": 373.89,
+      "started_at": "2025-04-08T18:08:23.660000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1051694,
+      "title": "[PLP Playwright]  Refactor describe and test blocks to Given When Then (Part 2)",
+      "type": "Product Backlog Item",
+      "lead_time_days": 367.06,
+      "started_at": "2025-04-15T14:03:30.610000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1051696,
+      "title": "[PLP Playwright]  Refactor describe and test blocks to Given When Then (Part 3)",
+      "type": "Product Backlog Item",
+      "lead_time_days": 373.2,
+      "started_at": "2025-04-09T10:40:27.900000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1053491,
+      "title": "Extend Sitecore endpoint to update related categories for a category by language/store",
+      "type": "Product Backlog Item",
+      "lead_time_days": 367.27,
+      "started_at": "2025-04-15T08:58:17.587000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1054555,
+      "title": "Product Images not displaying in Algolia",
+      "type": "Bug",
+      "lead_time_days": 368.35,
+      "started_at": "2025-04-16T08:19:46.857000+00:00",
+      "completed_at": "2026-04-19T16:37:59.367000+00:00"
+    },
+    {
+      "id": 1056410,
+      "title": "[WEB] - Add Wiz container scanning to PLP repository",
+      "type": "Product Backlog Item",
+      "lead_time_days": 360.11,
+      "started_at": "2025-04-22T12:51:36.200000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1056647,
+      "title": "INC0324101 - PLP API 404s",
+      "type": "Bug",
+      "lead_time_days": 362.01,
+      "started_at": "2025-04-22T16:28:56.447000+00:00",
+      "completed_at": "2026-04-19T16:37:59.367000+00:00"
+    },
+    {
+      "id": 1059517,
+      "title": "[PLAYWRIGHT] Dockerise snapshot workflow",
+      "type": "Product Backlog Item",
+      "lead_time_days": 351.31,
+      "started_at": "2025-05-01T08:09:33.317000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1059625,
+      "title": "[iOS] Integrate Recent Searches UI",
+      "type": "Product Backlog Item",
+      "lead_time_days": 351.2,
+      "started_at": "2025-05-01T10:48:20.267000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1060423,
+      "title": "[Algolia] channel mobile-app returns web URL when no results",
+      "type": "Bug",
+      "lead_time_days": 352.18,
+      "started_at": "2025-05-02T12:15:25.290000+00:00",
+      "completed_at": "2026-04-19T16:38:20.470000+00:00"
+    },
+    {
+      "id": 1061759,
+      "title": "[iOS] Algolia Search Experience - Add feature switch",
+      "type": "Product Backlog Item",
+      "lead_time_days": 345.0,
+      "started_at": "2025-05-07T15:28:58.360000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1061761,
+      "title": "[iOS] Algolia Search P1 - Integrate Optimizely experiment",
+      "type": "Product Backlog Item",
+      "lead_time_days": 345.21,
+      "started_at": "2025-05-07T10:34:02.863000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1061956,
+      "title": "[iOS] Algolia Search P1 - Implement Algolia API Wrapper",
+      "type": "Product Backlog Item",
+      "lead_time_days": 344.86,
+      "started_at": "2025-05-07T18:59:27.580000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1063367,
+      "title": "[Playwright] Stabilise lighthouse tests in CI",
+      "type": "Product Backlog Item",
+      "lead_time_days": 340.27,
+      "started_at": "2025-05-12T09:06:17.117000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1063845,
+      "title": "[Algolia] searchClient.SearchAsync not being awaited",
+      "type": "Bug",
+      "lead_time_days": 341.36,
+      "started_at": "2025-05-13T07:56:43.880000+00:00",
+      "completed_at": "2026-04-19T16:38:20.470000+00:00"
+    },
+    {
+      "id": 1064586,
+      "title": "Related Categories - Updates on related categories are not reflected on the parent category",
+      "type": "Product Backlog Item",
+      "lead_time_days": 338.28,
+      "started_at": "2025-05-14T08:50:49.330000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1064721,
+      "title": "[iOS] - Update code owners file",
+      "type": "Product Backlog Item",
+      "lead_time_days": 338.18,
+      "started_at": "2025-05-14T11:10:19.997000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1064739,
+      "title": "[Algolia] No results url is asos.com in Test Environments",
+      "type": "Bug",
+      "lead_time_days": 340.19,
+      "started_at": "2025-05-14T12:11:55.700000+00:00",
+      "completed_at": "2026-04-19T16:38:20.470000+00:00"
+    },
+    {
+      "id": 1065535,
+      "title": "[WEB] - Remove Snyk from PLP",
+      "type": "Product Backlog Item",
+      "lead_time_days": 337.0,
+      "started_at": "2025-05-15T15:37:38.810000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1065590,
+      "title": "[WEB] - Veracode vulnerabilities - URL redirection to untrusted site",
+      "type": "Product Backlog Item",
+      "lead_time_days": 336.86,
+      "started_at": "2025-05-15T18:50:29.843000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1067002,
+      "title": "[iOS] Taller Search Bar | Create configuration provider",
+      "type": "Product Backlog Item",
+      "lead_time_days": 332.91,
+      "started_at": "2025-05-19T17:49:50.017000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1067472,
+      "title": "[iOS] Taller Search Bar | Integrate Optimizely experiment",
+      "type": "Product Backlog Item",
+      "lead_time_days": 332.24,
+      "started_at": "2025-05-20T09:47:03.860000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1069205,
+      "title": "[WEB] - Adjust products results to a range",
+      "type": "Product Backlog Item",
+      "lead_time_days": 330.07,
+      "started_at": "2025-05-22T13:49:03.050000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1069463,
+      "title": "[iOS] Revert \"Introduce flat-style SearchTextField\"",
+      "type": "Product Backlog Item",
+      "lead_time_days": 329.3,
+      "started_at": "2025-05-23T08:20:54.357000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1069647,
+      "title": "[iOS] Algolia Search Experience - Create Feature Provider",
+      "type": "Product Backlog Item",
+      "lead_time_days": 329.15,
+      "started_at": "2025-05-23T11:53:45.490000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1069650,
+      "title": "[iOS] Create New Visual Search UI",
+      "type": "Product Backlog Item",
+      "lead_time_days": 329.06,
+      "started_at": "2025-05-23T14:07:26.460000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1070630,
+      "title": "PL Translations not rendering correctly",
+      "type": "Bug",
+      "lead_time_days": 327.0,
+      "started_at": "2025-05-27T16:43:06.653000+00:00",
+      "completed_at": "2026-04-19T16:37:59.367000+00:00"
+    },
+    {
+      "id": 1071771,
+      "title": "[Topshop][Sitemaps]: Categories under Topshop are being exposed in the ASOS sitemaps",
+      "type": "Bug",
+      "lead_time_days": 324.36,
+      "started_at": "2025-05-30T08:03:50.653000+00:00",
+      "completed_at": "2026-04-19T16:37:59.367000+00:00"
+    },
+    {
+      "id": 1072760,
+      "title": "[Web] Filtering & Sorting Refresh - Drawer Menu Clear All, Close, View Item Buttons.",
+      "type": "Product Backlog Item",
+      "lead_time_days": 319.04,
+      "started_at": "2025-06-02T14:37:48.820000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1073655,
+      "title": "[Web] Filtering & Sorting Refresh - Update applied filters buttons",
+      "type": "Product Backlog Item",
+      "lead_time_days": 317.09,
+      "started_at": "2025-06-04T13:25:48.403000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1073710,
+      "title": "[Web] Filtering & Sorting Refresh - SEO Sub Category Pills, Description & H1",
+      "type": "Product Backlog Item",
+      "lead_time_days": 317.07,
+      "started_at": "2025-06-04T13:53:30.967000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1073898,
+      "title": "[Web] Filtering & Sorting Refresh - Setup optimizely variants folder",
+      "type": "Product Backlog Item",
+      "lead_time_days": 316.25,
+      "started_at": "2025-06-05T09:38:19.667000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1074424,
+      "title": "[iOS] Algolia Search Experience - Create initial feature composition",
+      "type": "Product Backlog Item",
+      "lead_time_days": 315.97,
+      "started_at": "2025-06-05T16:19:18.847000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1074428,
+      "title": "[iOS] Algolia Search Experience - Integrate Visual Search",
+      "type": "Product Backlog Item",
+      "lead_time_days": 315.97,
+      "started_at": "2025-06-05T16:20:56.943000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1075544,
+      "title": "[PLP] Pop pages logic automation under CTA & A to Z brands Face&Body",
+      "type": "Product Backlog Item",
+      "lead_time_days": 311.12,
+      "started_at": "2025-06-10T12:37:24.750000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1075685,
+      "title": "[iOS] PLP Cloudinary/Akamai Test reduced range of image sizes",
+      "type": "Product Backlog Item",
+      "lead_time_days": 311.01,
+      "started_at": "2025-06-10T15:20:58.123000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1075973,
+      "title": "[iOS] Investigate StyleMatchTests.testStyleMatchEmptyMessageIsDisplayed UI Test failures",
+      "type": "Product Backlog Item",
+      "lead_time_days": 310.3,
+      "started_at": "2025-06-11T08:15:13.510000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1076746,
+      "title": "[Web] Filtering & Sorting Refresh - Revert back the Sort and Filter buttons for mobile view",
+      "type": "Product Backlog Item",
+      "lead_time_days": 309.19,
+      "started_at": "2025-06-12T10:56:18.200000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1078419,
+      "title": "[iOS] Algolia Search P1 - Separate Terms by Dominant Gender Floor",
+      "type": "Product Backlog Item",
+      "lead_time_days": 304.15,
+      "started_at": "2025-06-17T11:52:52.670000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1078892,
+      "title": "[PLAYWRIGHT] Update Playwright version",
+      "type": "Product Backlog Item",
+      "lead_time_days": 303.29,
+      "started_at": "2025-06-18T08:32:16.497000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1080036,
+      "title": "[WEB] - Veracode vulnerabilities - Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+      "type": "Product Backlog Item",
+      "lead_time_days": 302.96,
+      "started_at": "2025-06-18T16:35:05.467000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1080079,
+      "title": "[TopShop][SearchAPI]: Search for bangles from search API for store=ts-gb",
+      "type": "Bug",
+      "lead_time_days": 304.35,
+      "started_at": "2025-06-19T08:10:52.290000+00:00",
+      "completed_at": "2026-04-19T16:37:59.367000+00:00"
+    },
+    {
+      "id": 1080396,
+      "title": "[iOS] Update how to test pages for new search",
+      "type": "Product Backlog Item",
+      "lead_time_days": 302.09,
+      "started_at": "2025-06-19T13:23:17.370000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1080478,
+      "title": "[iOS] Taller Search Bar | Update remote config file turning feature switch ON",
+      "type": "Product Backlog Item",
+      "lead_time_days": 301.97,
+      "started_at": "2025-06-19T16:19:12.090000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1081341,
+      "title": "[Algolia] Redirect URL being returned on empty category search responses",
+      "type": "Bug",
+      "lead_time_days": 300.12,
+      "started_at": "2025-06-23T13:52:15.313000+00:00",
+      "completed_at": "2026-04-19T16:38:20.470000+00:00"
+    },
+    {
+      "id": 1082060,
+      "title": "[WEB] - a11y - Live filter input activity should be announced to screen readers",
+      "type": "Product Backlog Item",
+      "lead_time_days": 296.96,
+      "started_at": "2025-06-24T16:36:12.570000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1082063,
+      "title": "[WEB] - a11y - Category Pills should hide non-visible elements from screen readers",
+      "type": "Product Backlog Item",
+      "lead_time_days": 296.94,
+      "started_at": "2025-06-24T16:56:51.090000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1082415,
+      "title": "[TOPSHOP][Mix&Match]: Products from M&M should have Product link when shop=topshop",
+      "type": "Bug",
+      "lead_time_days": 298.28,
+      "started_at": "2025-06-25T09:48:38.940000+00:00",
+      "completed_at": "2026-04-19T16:37:59.367000+00:00"
+    },
+    {
+      "id": 1082416,
+      "title": "[PLAYWRIGHT] Skip flaky safari tests",
+      "type": "Product Backlog Item",
+      "lead_time_days": 295.98,
+      "started_at": "2025-06-25T16:03:30.443000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1082658,
+      "title": "[iOS] Algolia Search P1 - Implement Popular Searches Terms Data Source",
+      "type": "Product Backlog Item",
+      "lead_time_days": 296.01,
+      "started_at": "2025-06-25T15:18:02.563000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1082669,
+      "title": "[iOS] Algolia Search P1 - Fetch Popular Searches on app launch",
+      "type": "Product Backlog Item",
+      "lead_time_days": 295.99,
+      "started_at": "2025-06-25T15:42:43.207000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1082678,
+      "title": "[iOS] Algolia Search P1 - Implement Algolia related config file parsing",
+      "type": "Product Backlog Item",
+      "lead_time_days": 295.99,
+      "started_at": "2025-06-25T15:45:34.980000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1083435,
+      "title": "[WEB] - Brands page Accessibility issue",
+      "type": "Bug",
+      "lead_time_days": 313.23,
+      "started_at": "2025-06-27T08:28:15.347000+00:00",
+      "completed_at": "2026-05-06T14:02:02.830000+00:00"
+    },
+    {
+      "id": 1084715,
+      "title": "[iOS] Add missing save feature tests to XCUITest framework",
+      "type": "Product Backlog Item",
+      "lead_time_days": 290.95,
+      "started_at": "2025-06-30T16:43:31.293000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1085455,
+      "title": "[iOS] Move search related config properties into new structure.",
+      "type": "Product Backlog Item",
+      "lead_time_days": 376.79,
+      "started_at": "2025-07-03T13:04:41.340000+00:00",
+      "completed_at": "2026-07-15T07:58:42.883000+00:00"
+    },
+    {
+      "id": 1086883,
+      "title": "[Sitecore] Territories Template",
+      "type": "Bug",
+      "lead_time_days": 289.33,
+      "started_at": "2025-07-04T08:44:57.037000+00:00",
+      "completed_at": "2026-04-19T16:37:59.367000+00:00"
+    },
+    {
+      "id": 1087617,
+      "title": "[WEB] - DR Rehearsal for PLP",
+      "type": "Product Backlog Item",
+      "lead_time_days": 283.28,
+      "started_at": "2025-07-08T08:44:56.943000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1087846,
+      "title": "[Web] Filtering & Sorting Refresh - Price Range applied filter",
+      "type": "Product Backlog Item",
+      "lead_time_days": 283.14,
+      "started_at": "2025-07-08T12:12:04.540000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1088818,
+      "title": "[Web] Filtering & Sorting Refresh - Fix all CSS Lint errors",
+      "type": "Product Backlog Item",
+      "lead_time_days": 281.14,
+      "started_at": "2025-07-10T12:11:37.907000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1090855,
+      "title": "[iOS] Condensed Navigation | Add feature switch",
+      "type": "Product Backlog Item",
+      "lead_time_days": 252.86,
+      "started_at": "2025-08-07T18:52:17.987000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1090991,
+      "title": "[iOS] Algolia Search P1 - Convert local feature switch into remote",
+      "type": "Product Backlog Item",
+      "lead_time_days": 269.14,
+      "started_at": "2025-07-22T12:11:24.990000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1093111,
+      "title": "[PLAYWRIGHT] Add visual test coverage for curated categories",
+      "type": "Product Backlog Item",
+      "lead_time_days": 268.19,
+      "started_at": "2025-07-23T11:05:20.310000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1095363,
+      "title": "[iOS] Algolia Search P1 - Update remote config file turning feature switch ON",
+      "type": "Product Backlog Item",
+      "lead_time_days": 261.18,
+      "started_at": "2025-07-30T11:08:20.143000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1098428,
+      "title": "[iOS] Add XCUITest for popular search terms (new search experience)",
+      "type": "Product Backlog Item",
+      "lead_time_days": 253.12,
+      "started_at": "2025-08-07T12:34:23.777000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1098615,
+      "title": "[WEB] - HIGH - Update axios to 1.8.2",
+      "type": "Product Backlog Item",
+      "lead_time_days": 252.86,
+      "started_at": "2025-08-07T18:48:57.097000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1098617,
+      "title": "[WEB] - HIGH - Update cookie to 0.7.0",
+      "type": "Product Backlog Item",
+      "lead_time_days": 252.86,
+      "started_at": "2025-08-07T18:52:17.987000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1098618,
+      "title": "[WEB] - HIGH - Update braces to 3.0.3",
+      "type": "Product Backlog Item",
+      "lead_time_days": 252.86,
+      "started_at": "2025-08-07T18:52:17.987000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1098619,
+      "title": "[WEB] - HIGH - Update form-data to 4.0.4",
+      "type": "Product Backlog Item",
+      "lead_time_days": 252.86,
+      "started_at": "2025-08-07T18:52:17.987000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1098620,
+      "title": "[WEB] - HIGH - Update unset-value to 2.0.1",
+      "type": "Product Backlog Item",
+      "lead_time_days": 252.86,
+      "started_at": "2025-08-07T18:53:36.630000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1099585,
+      "title": "[iOS] Condensed Navigation | Create configuration provider",
+      "type": "Product Backlog Item",
+      "lead_time_days": 248.09,
+      "started_at": "2025-08-12T13:17:12.323000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1099822,
+      "title": "[iOS] Taller Search Bar | Update search bar height",
+      "type": "Product Backlog Item",
+      "lead_time_days": 227.26,
+      "started_at": "2025-09-02T09:16:12.860000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1100019,
+      "title": "[iOS] Condensed Navigation | Integrate Optimizely experiment",
+      "type": "Product Backlog Item",
+      "lead_time_days": 248.09,
+      "started_at": "2025-08-12T13:17:08.123000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1100046,
+      "title": "[Web] Filtering & Sorting Refresh - UI updates",
+      "type": "Product Backlog Item",
+      "lead_time_days": 248.22,
+      "started_at": "2025-08-12T10:22:46.880000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1100344,
+      "title": "[Topshop] Shop By Product included in url",
+      "type": "Bug",
+      "lead_time_days": 250.12,
+      "started_at": "2025-08-12T13:42:21.690000+00:00",
+      "completed_at": "2026-04-19T16:37:59.367000+00:00"
+    },
+    {
+      "id": 1101729,
+      "title": "[iOS] LoyaltyNavigationTests UI test failed",
+      "type": "Product Backlog Item",
+      "lead_time_days": 245.1,
+      "started_at": "2025-08-15T13:09:38.630000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1101767,
+      "title": "[WEB] - Revert product tile a11y change",
+      "type": "Product Backlog Item",
+      "lead_time_days": 245.06,
+      "started_at": "2025-08-15T14:12:46.923000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1101997,
+      "title": "[iOS] Add popular search stub",
+      "type": "Product Backlog Item",
+      "lead_time_days": 242.23,
+      "started_at": "2025-08-18T10:06:44.380000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1102535,
+      "title": "[iOS] Add popular search accessibility identifier",
+      "type": "Product Backlog Item",
+      "lead_time_days": 241.19,
+      "started_at": "2025-08-19T10:54:23.547000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1103540,
+      "title": "[iOS] SearchTextFieldTests Unit test failed",
+      "type": "Product Backlog Item",
+      "lead_time_days": 239.03,
+      "started_at": "2025-08-21T14:47:52.013000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1104373,
+      "title": "[iOS] Condensed Navigation | Create NavigationTreeTemplateLayoutProvider",
+      "type": "Product Backlog Item",
+      "lead_time_days": 232.14,
+      "started_at": "2025-08-28T12:16:37.020000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1104630,
+      "title": "[iOS] Condensed Navigation | Integrate NavigationTreeTemplateLayoutProvider",
+      "type": "Product Backlog Item",
+      "lead_time_days": 232.27,
+      "started_at": "2025-08-28T08:59:13.583000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1106037,
+      "title": "[WEB]  Peak Prep - Update operational levers document",
+      "type": "Product Backlog Item",
+      "lead_time_days": 227.28,
+      "started_at": "2025-09-02T08:48:11.333000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1106049,
+      "title": "[WEB] Peak Prep - Create 2025 peak tracker in Confluence",
+      "type": "Product Backlog Item",
+      "lead_time_days": 227.27,
+      "started_at": "2025-09-02T09:10:31.620000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1106054,
+      "title": "[WEB] Peak Prep - Update health checks document",
+      "type": "Product Backlog Item",
+      "lead_time_days": 227.27,
+      "started_at": "2025-09-02T09:11:52.553000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1106391,
+      "title": "[WEB] Gender Floor - Create new Optimizely flag",
+      "type": "Product Backlog Item",
+      "lead_time_days": 227.09,
+      "started_at": "2025-09-02T13:18:02.103000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1111404,
+      "title": "[iOS] Visual Categories - Implement a Visual Categories carousel view",
+      "type": "Product Backlog Item",
+      "lead_time_days": 211.99,
+      "started_at": "2025-09-17T15:49:42.750000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1111591,
+      "title": "[iOS] Condensed Navigation | Update remote config file turning feature switch ON",
+      "type": "Product Backlog Item",
+      "lead_time_days": 196.28,
+      "started_at": "2025-10-03T08:56:50.567000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1111593,
+      "title": "[iOS] Condensed Navigation | Convert local feature switch into remote",
+      "type": "Product Backlog Item",
+      "lead_time_days": 206.21,
+      "started_at": "2025-09-23T10:27:27.277000+00:00",
+      "completed_at": "2026-04-17T15:33:41.740000+00:00"
+    },
+    {
+      "id": 1112294,
+      "title": "[WEB] - Product card tabbing improvement",
+      "type": "Bug",
+      "lead_time_days": 317.91,
+      "started_at": "2025-09-19T14:36:29.723000+00:00",
+      "completed_at": "2026-08-03T12:33:03.220000+00:00"
+    },
+    {
+      "id": 1113106,
+      "title": "[iOS] Test Promotion Asset (Carousel)",
+      "type": "Product Backlog Item",
+      "lead_time_days": 206.13,
+      "started_at": "2025-09-23T12:26:33.360000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1113203,
+      "title": "[Algolia] No product/brand descriptions for IE",
+      "type": "Bug",
+      "lead_time_days": 208.04,
+      "started_at": "2025-09-23T15:33:56.240000+00:00",
+      "completed_at": "2026-04-19T16:38:20.470000+00:00"
+    },
+    {
+      "id": 1115234,
+      "title": "[WEB] - Upgrade elsint to 9.36.0",
+      "type": "Product Backlog Item",
+      "lead_time_days": 219.87,
+      "started_at": "2025-09-29T12:58:54.953000+00:00",
+      "completed_at": "2026-05-07T09:58:52.823000+00:00"
+    },
+    {
+      "id": 1115384,
+      "title": "[WEB] - Delete old branchs on our repo",
+      "type": "Product Backlog Item",
+      "lead_time_days": 199.99,
+      "started_at": "2025-09-29T15:44:21.717000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1116056,
+      "title": "[WEB] Peak Prep - EUN, EUW & USNC Error getCuratedCategoryTreatments failed",
+      "type": "Product Backlog Item",
+      "lead_time_days": 197.19,
+      "started_at": "2025-10-02T11:07:23.100000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1116063,
+      "title": "[WEB] Peak Prep - EUW, USNC & EUN Error: canonicalUrls was not of expected type for cid",
+      "type": "Product Backlog Item",
+      "lead_time_days": 197.19,
+      "started_at": "2025-10-02T11:07:32.880000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1117223,
+      "title": "Redis Errors Detected in Fredhopper Peak Volume Testing in PT02 (Resiliency Test Bug)",
+      "type": "Bug",
+      "lead_time_days": 198.16,
+      "started_at": "2025-10-03T12:53:02.303000+00:00",
+      "completed_at": "2026-04-19T16:37:59.367000+00:00"
+    },
+    {
+      "id": 1117224,
+      "title": "Topshop Category Details requests failing in PT02 (Resiliency Test Bug)",
+      "type": "Bug",
+      "lead_time_days": 198.16,
+      "started_at": "2025-10-03T12:53:20.197000+00:00",
+      "completed_at": "2026-04-19T16:37:59.367000+00:00"
+    },
+    {
+      "id": 1118849,
+      "title": "[iOS] Visual Categories - Update remote config file turning feature switch ON",
+      "type": "Product Backlog Item",
+      "lead_time_days": 190.27,
+      "started_at": "2025-10-09T08:58:30.863000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1118852,
+      "title": "[iOS] Final check for condensed nav",
+      "type": "Product Backlog Item",
+      "lead_time_days": 190.27,
+      "started_at": "2025-10-09T09:05:51.067000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1120096,
+      "title": "Indexer OOM exceptions",
+      "type": "Bug",
+      "lead_time_days": 188.09,
+      "started_at": "2025-10-13T14:32:43.097000+00:00",
+      "completed_at": "2026-04-19T16:37:59.367000+00:00"
+    },
+    {
+      "id": 1122084,
+      "title": "[WEB] Filtering & Sorting Refresh - Increase the speed of the filter menu animation",
+      "type": "Product Backlog Item",
+      "lead_time_days": 182.17,
+      "started_at": "2025-10-17T11:24:09.383000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1122092,
+      "title": "[iOS] Sort & Filter button missing animation when scrolling",
+      "type": "Product Backlog Item",
+      "lead_time_days": 182.2,
+      "started_at": "2025-10-17T10:39:31.747000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1123677,
+      "title": "[iOS] Visual Categories - Convert local feature switch into remote",
+      "type": "Product Backlog Item",
+      "lead_time_days": 176.97,
+      "started_at": "2025-10-22T16:23:30.927000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1124262,
+      "title": "[iOS]  Visual categories accessibility testing",
+      "type": "Product Backlog Item",
+      "lead_time_days": 175.17,
+      "started_at": "2025-10-24T11:28:14.597000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1124263,
+      "title": "[iOS] Visual Categories: PLP regression test",
+      "type": "Product Backlog Item",
+      "lead_time_days": 175.17,
+      "started_at": "2025-10-24T11:28:31.647000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1124264,
+      "title": "[iOS] Visual categories: Network testing",
+      "type": "Product Backlog Item",
+      "lead_time_days": 175.17,
+      "started_at": "2025-10-24T11:28:49.013000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1124296,
+      "title": "[WEB] - Oct 2025 Vulnerabilities - MED/LOW",
+      "type": "Product Backlog Item",
+      "lead_time_days": 175.09,
+      "started_at": "2025-10-24T13:19:46.690000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1125051,
+      "title": "[WEB] - Address terminal errors",
+      "type": "Product Backlog Item",
+      "lead_time_days": 204.09,
+      "started_at": "2025-10-28T11:23:10.493000+00:00",
+      "completed_at": "2026-05-20T13:32:17.747000+00:00"
+    },
+    {
+      "id": 1127040,
+      "title": "[iOS] Update visual categories to have placeholder colour while images haven't loaded",
+      "type": "Product Backlog Item",
+      "lead_time_days": 165.21,
+      "started_at": "2025-11-03T10:27:01.257000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1127883,
+      "title": "[WEB] Redux Migration - Setup Redux Toolkit Infrastructure",
+      "type": "Product Backlog Item",
+      "lead_time_days": 163.95,
+      "started_at": "2025-11-04T16:47:39.333000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1127884,
+      "title": "[WEB] Redux Migration - Migrate withTextFilter Container to Hooks",
+      "type": "Product Backlog Item",
+      "lead_time_days": 147.96,
+      "started_at": "2025-11-20T16:38:59.937000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1127886,
+      "title": "[WEB] Redux Migration - Migrate Pagination Container to Hooks",
+      "type": "Product Backlog Item",
+      "lead_time_days": 103.98,
+      "started_at": "2025-11-20T12:52:08.793000+00:00",
+      "completed_at": "2026-03-04T12:29:43.390000+00:00"
+    },
+    {
+      "id": 1132862,
+      "title": "[WEB] - Test rollback action",
+      "type": "Product Backlog Item",
+      "lead_time_days": 151.1,
+      "started_at": "2025-11-17T13:03:46.580000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1134230,
+      "title": "[WEB] Redux Migration - Container - SelectedFacets",
+      "type": "Product Backlog Item",
+      "lead_time_days": 103.85,
+      "started_at": "2025-11-20T15:59:15.780000+00:00",
+      "completed_at": "2026-03-04T12:29:43.390000+00:00"
+    },
+    {
+      "id": 1134234,
+      "title": "[WEB] Redux Migration - Migrate ProductListingPage & LoadMoreButton Containers",
+      "type": "Product Backlog Item",
+      "lead_time_days": 103.85,
+      "started_at": "2025-11-20T16:00:54.450000+00:00",
+      "completed_at": "2026-03-04T12:29:43.390000+00:00"
+    },
+    {
+      "id": 1134241,
+      "title": "[WEB] Redux Migration - Container - CategoryOutOfStock",
+      "type": "Product Backlog Item",
+      "lead_time_days": 147.95,
+      "started_at": "2025-11-20T16:47:11.943000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1134245,
+      "title": "[WEB] Redux Migration - Modules - Config",
+      "type": "Product Backlog Item",
+      "lead_time_days": 117.95,
+      "started_at": "2025-11-20T16:47:33.363000+00:00",
+      "completed_at": "2026-03-18T15:29:09.127000+00:00"
+    },
+    {
+      "id": 1134750,
+      "title": "[Algolia] Search broken in Tonga (INC0495131)",
+      "type": "Bug",
+      "lead_time_days": 146.21,
+      "started_at": "2025-11-24T11:39:34.950000+00:00",
+      "completed_at": "2026-04-19T16:38:20.470000+00:00"
+    },
+    {
+      "id": 1134867,
+      "title": "Fix Vicar web deployment",
+      "type": "Bug",
+      "lead_time_days": 146.01,
+      "started_at": "2025-11-24T16:16:47.750000+00:00",
+      "completed_at": "2026-04-19T16:37:59.367000+00:00"
+    },
+    {
+      "id": 1136101,
+      "title": "[WEB] - Lock down Lint version in package.json",
+      "type": "Product Backlog Item",
+      "lead_time_days": 150.03,
+      "started_at": "2025-12-08T09:27:33.453000+00:00",
+      "completed_at": "2026-05-07T10:11:03.410000+00:00"
+    },
+    {
+      "id": 1138059,
+      "title": "Add visual test coverage for pagination on listing page",
+      "type": "Product Backlog Item",
+      "lead_time_days": 134.93,
+      "started_at": "2025-12-03T17:20:43.350000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1138900,
+      "title": "[WEB] Redux Migration - Container - SortLayout",
+      "type": "Product Backlog Item",
+      "lead_time_days": 86.1,
+      "started_at": "2025-12-08T10:00:44.557000+00:00",
+      "completed_at": "2026-03-04T12:29:43.390000+00:00"
+    },
+    {
+      "id": 1138909,
+      "title": "[WEB] - Redux Migration - Migrate the SmallScreenHeader container",
+      "type": "Product Backlog Item",
+      "lead_time_days": 86.1,
+      "started_at": "2025-12-08T10:08:54.527000+00:00",
+      "completed_at": "2026-03-04T12:29:43.390000+00:00"
+    },
+    {
+      "id": 1138922,
+      "title": "[WEB] Redux Migration - Migrate the NewPill container",
+      "type": "Product Backlog Item",
+      "lead_time_days": 130.22,
+      "started_at": "2025-12-08T10:20:32.807000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1138928,
+      "title": "[WEB] Redux Migration - Migrate MembersDay container",
+      "type": "Product Backlog Item",
+      "lead_time_days": 86.08,
+      "started_at": "2025-12-08T10:28:41.680000+00:00",
+      "completed_at": "2026-03-04T12:29:43.390000+00:00"
+    },
+    {
+      "id": 1139526,
+      "title": "[iOS] Search suggestion A/B Test",
+      "type": "Product Backlog Item",
+      "lead_time_days": 129.14,
+      "started_at": "2025-12-09T12:07:45.040000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1141144,
+      "title": "[Search Feeds] Database - Error SqlException (Login Failed for User)",
+      "type": "Bug",
+      "lead_time_days": 128.3,
+      "started_at": "2025-12-12T09:28:03.333000+00:00",
+      "completed_at": "2026-04-19T16:38:10.380000+00:00"
+    },
+    {
+      "id": 1142074,
+      "title": "[Faceted Nav] Data Insert does not fail when CSV fails validation",
+      "type": "Bug",
+      "lead_time_days": 124.98,
+      "started_at": "2025-12-15T17:00:08.580000+00:00",
+      "completed_at": "2026-04-19T16:38:20.470000+00:00"
+    },
+    {
+      "id": 1143588,
+      "title": "[WEB] - Redux Migration - Migrate the ErrorAlert container",
+      "type": "Product Backlog Item",
+      "lead_time_days": 76.86,
+      "started_at": "2025-12-17T15:55:48.617000+00:00",
+      "completed_at": "2026-03-04T12:29:43.390000+00:00"
+    },
+    {
+      "id": 1145706,
+      "title": "Incorrect Facet Results for incorrectly formatted search query \"teddyfell%2520teamgeist\"",
+      "type": "Bug",
+      "lead_time_days": 112.05,
+      "started_at": "2025-12-28T15:22:56.410000+00:00",
+      "completed_at": "2026-04-19T16:37:59.367000+00:00"
+    },
+    {
+      "id": 1146144,
+      "title": "Remove PLP Filtering Experience A/B Test",
+      "type": "Product Backlog Item",
+      "lead_time_days": 107.23,
+      "started_at": "2025-12-31T10:07:06.813000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1147402,
+      "title": "[WEB] Redux Migration - Container - ListingPage, MediumLargeScreenHeader, LayoutManager, ProductListingPage",
+      "type": "Product Backlog Item",
+      "lead_time_days": 100.97,
+      "started_at": "2026-01-06T16:20:32.467000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1147414,
+      "title": "[WEB] Redux Migration - Routes - CategoryPageRoute, BrandsPageRoute, NoBrandPageRoute, NotFoundErrorPageRoute, SearchPageRoute",
+      "type": "Product Backlog Item",
+      "lead_time_days": 100.96,
+      "started_at": "2026-01-06T16:38:50.097000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1147459,
+      "title": "[Search API] Partner Fulfilled products blocked from Search",
+      "type": "Bug",
+      "lead_time_days": 102.95,
+      "started_at": "2026-01-06T17:53:31.633000+00:00",
+      "completed_at": "2026-04-19T16:38:10.380000+00:00"
+    },
+    {
+      "id": 1147461,
+      "title": "[search API] Search Redirects redirect url incorrctly (ROE/ROW)",
+      "type": "Bug",
+      "lead_time_days": 102.94,
+      "started_at": "2026-01-06T18:00:24.233000+00:00",
+      "completed_at": "2026-04-19T16:38:10.380000+00:00"
+    },
+    {
+      "id": 1147626,
+      "title": "[iOS] Gender Search - Update remote config file turning feature switch ON",
+      "type": "Product Backlog Item",
+      "lead_time_days": 100.17,
+      "started_at": "2026-01-07T11:35:16.883000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1147641,
+      "title": "[iOS] Gender Search - Convert local feature switch into remote",
+      "type": "Product Backlog Item",
+      "lead_time_days": 100.16,
+      "started_at": "2026-01-07T11:37:57.467000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1147643,
+      "title": "[iOS] Gender Search - Add feature switch",
+      "type": "Product Backlog Item",
+      "lead_time_days": 100.16,
+      "started_at": "2026-01-07T11:38:27.270000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1147757,
+      "title": "[WEB] Redux Migration - Container - ErrorBoundary",
+      "type": "Product Backlog Item",
+      "lead_time_days": 55.81,
+      "started_at": "2026-01-07T17:03:09.153000+00:00",
+      "completed_at": "2026-03-04T12:29:43.390000+00:00"
+    },
+    {
+      "id": 1147790,
+      "title": "[WEB] Redux Migration - Container - FilterLayout",
+      "type": "Product Backlog Item",
+      "lead_time_days": 99.99,
+      "started_at": "2026-01-07T15:54:08.590000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1147792,
+      "title": "[WEB] Redux Migration - Container - HorizontalRefinements",
+      "type": "Product Backlog Item",
+      "lead_time_days": 55.86,
+      "started_at": "2026-01-07T15:56:22.700000+00:00",
+      "completed_at": "2026-03-04T12:29:43.390000+00:00"
+    },
+    {
+      "id": 1147794,
+      "title": "[WEB] Redux Migration - Container - withToggledHook, withTogglePoint, useUpdateRefineParameters move",
+      "type": "Product Backlog Item",
+      "lead_time_days": 99.98,
+      "started_at": "2026-01-07T15:59:35.250000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1147798,
+      "title": "[WEB] Redux Migration - Container - SearchPage",
+      "type": "Product Backlog Item",
+      "lead_time_days": 55.85,
+      "started_at": "2026-01-07T16:03:11.110000+00:00",
+      "completed_at": "2026-03-04T12:29:43.390000+00:00"
+    },
+    {
+      "id": 1147821,
+      "title": "[WEB] Redux Migration - Container - NoBrandPage, BrandsPage, NotFoundErrorPage",
+      "type": "Product Backlog Item",
+      "lead_time_days": 55.85,
+      "started_at": "2026-01-07T16:10:34.137000+00:00",
+      "completed_at": "2026-03-04T12:29:43.390000+00:00"
+    },
+    {
+      "id": 1147827,
+      "title": "[WEB] Redux Migration - Container - LoyaltyOptInModal",
+      "type": "Product Backlog Item",
+      "lead_time_days": 55.84,
+      "started_at": "2026-01-07T16:16:00.720000+00:00",
+      "completed_at": "2026-03-04T12:29:43.390000+00:00"
+    },
+    {
+      "id": 1148977,
+      "title": "[iOS] Gender Search - Implement Gender Filtering Feature",
+      "type": "Product Backlog Item",
+      "lead_time_days": 95.68,
+      "started_at": "2026-01-11T23:17:05.450000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1149194,
+      "title": "[iOS] Review and fix UI Test failures on the CI",
+      "type": "Product Backlog Item",
+      "lead_time_days": 95.22,
+      "started_at": "2026-01-12T10:22:14.673000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1153578,
+      "title": "[Plp Manager Editing API] Blob Access",
+      "type": "Product Backlog Item",
+      "lead_time_days": 199.85,
+      "started_at": "2026-01-19T12:21:02.100000+00:00",
+      "completed_at": "2026-08-07T08:42:59.943000+00:00"
+    },
+    {
+      "id": 1153609,
+      "title": "Plp Manager Rules Engine: Blob Usage",
+      "type": "Product Backlog Item",
+      "lead_time_days": 90.97,
+      "started_at": "2026-01-19T13:23:23.620000+00:00",
+      "completed_at": "2026-04-20T12:43:13.253000+00:00"
+    },
+    {
+      "id": 1154322,
+      "title": "[Query Engine] Search return no results when Price Slider is used",
+      "type": "Bug",
+      "lead_time_days": 89.0,
+      "started_at": "2026-01-20T16:43:01.970000+00:00",
+      "completed_at": "2026-04-19T16:38:10.380000+00:00"
+    },
+    {
+      "id": 1155198,
+      "title": "[StoreSwitch] Store Switch IE from ROW to ROE (6th May)",
+      "type": "Product Backlog Item",
+      "lead_time_days": 104.0,
+      "started_at": "2026-01-22T13:44:26.710000+00:00",
+      "completed_at": "2026-05-06T13:40:48.227000+00:00"
+    },
+    {
+      "id": 1155199,
+      "title": "Search Suggestions Not Uploading",
+      "type": "Bug",
+      "lead_time_days": 87.12,
+      "started_at": "2026-01-22T13:44:42.813000+00:00",
+      "completed_at": "2026-04-19T16:37:59.367000+00:00"
+    },
+    {
+      "id": 1157075,
+      "title": "[Web] - Add playwright test for search with filters",
+      "type": "Product Backlog Item",
+      "lead_time_days": 36.26,
+      "started_at": "2026-01-28T09:28:41.060000+00:00",
+      "completed_at": "2026-03-05T15:44:19.160000+00:00"
+    },
+    {
+      "id": 1157312,
+      "title": "[WEB] Redux Migration - replace references to mapStateToProps and mapDispatchToProps",
+      "type": "Product Backlog Item",
+      "lead_time_days": 34.93,
+      "started_at": "2026-01-28T14:15:09.770000+00:00",
+      "completed_at": "2026-03-04T12:29:43.390000+00:00"
+    },
+    {
+      "id": 1162372,
+      "title": "[iOS] Visual Categories - Responsive images",
+      "type": "Product Backlog Item",
+      "lead_time_days": 17.79,
+      "started_at": "2026-01-29T14:34:21.277000+00:00",
+      "completed_at": "2026-02-16T09:28:33.200000+00:00"
+    },
+    {
+      "id": 1164025,
+      "title": "[iOS] Gender Search - localized string",
+      "type": "Product Backlog Item",
+      "lead_time_days": 73.91,
+      "started_at": "2026-02-02T17:44:09.370000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1164297,
+      "title": "Move product-listing-pages repo to GitHub (30th April)",
+      "type": "Product Backlog Item",
+      "lead_time_days": 77.98,
+      "started_at": "2026-02-03T09:05:05.780000+00:00",
+      "completed_at": "2026-04-22T08:38:48.990000+00:00"
+    },
+    {
+      "id": 1164655,
+      "title": "[Web] - Add core attributes to PLP Edgeworker",
+      "type": "Product Backlog Item",
+      "lead_time_days": 73.08,
+      "started_at": "2026-02-03T13:38:52.083000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1165527,
+      "title": "[WEB] Redux Migration - Modules - Error",
+      "type": "Product Backlog Item",
+      "lead_time_days": 42.03,
+      "started_at": "2026-02-04T14:41:18.343000+00:00",
+      "completed_at": "2026-03-18T15:29:09.127000+00:00"
+    },
+    {
+      "id": 1165778,
+      "title": "remove old experiement flags",
+      "type": "Product Backlog Item",
+      "lead_time_days": 34.6,
+      "started_at": "2026-02-04T18:27:13.290000+00:00",
+      "completed_at": "2026-03-11T08:48:14.330000+00:00"
+    },
+    {
+      "id": 1166038,
+      "title": "[WEB] Redux Migration - Containers testing and release",
+      "type": "Product Backlog Item",
+      "lead_time_days": 71.17,
+      "started_at": "2026-02-05T11:35:47.083000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1166082,
+      "title": "[iOS] Gender Search - Improve immediacy of autosuggest & gender floor tabs on typing",
+      "type": "Product Backlog Item",
+      "lead_time_days": 71.12,
+      "started_at": "2026-02-05T12:43:50.400000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1166215,
+      "title": "[iOS] Gender Floor UITests",
+      "type": "Product Backlog Item",
+      "lead_time_days": 71.04,
+      "started_at": "2026-02-05T14:33:49.213000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1166655,
+      "title": "[iOS] Gender Search - Update remote config file turning feature switch ON",
+      "type": "Product Backlog Item",
+      "lead_time_days": 70.16,
+      "started_at": "2026-02-06T11:43:57.057000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1167009,
+      "title": "[WEB] Redux Migration - Modules - Layout",
+      "type": "Product Backlog Item",
+      "lead_time_days": 37.16,
+      "started_at": "2026-02-09T11:35:07.460000+00:00",
+      "completed_at": "2026-03-18T15:29:09.127000+00:00"
+    },
+    {
+      "id": 1167014,
+      "title": "[WEB] Redux Migration - Modules - Page",
+      "type": "Product Backlog Item",
+      "lead_time_days": 37.16,
+      "started_at": "2026-02-09T11:38:10.767000+00:00",
+      "completed_at": "2026-03-18T15:29:09.127000+00:00"
+    },
+    {
+      "id": 1167015,
+      "title": "[WEB] Redux Migration - Modules - Brands",
+      "type": "Product Backlog Item",
+      "lead_time_days": 37.16,
+      "started_at": "2026-02-09T11:38:05.290000+00:00",
+      "completed_at": "2026-03-18T15:29:09.127000+00:00"
+    },
+    {
+      "id": 1167106,
+      "title": "[WEB] Redux Migration - Modules - savedItems",
+      "type": "Product Backlog Item",
+      "lead_time_days": 67.02,
+      "started_at": "2026-02-09T14:59:16.380000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1167143,
+      "title": "[WEB] Redux Migration - Modules - adverts",
+      "type": "Product Backlog Item",
+      "lead_time_days": 67.02,
+      "started_at": "2026-02-09T15:00:28.393000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1167144,
+      "title": "[WEB] Redux Migration - Modules - router",
+      "type": "Product Backlog Item",
+      "lead_time_days": 67.02,
+      "started_at": "2026-02-09T15:01:54.747000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1167147,
+      "title": "[WEB] Redux Migration - Modules - Category, Facet & Analytics",
+      "type": "Product Backlog Item",
+      "lead_time_days": 67.0,
+      "started_at": "2026-02-09T15:37:48.020000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1167158,
+      "title": "[WEB] Redux Migration - Modules - Search",
+      "type": "Product Backlog Item",
+      "lead_time_days": 36.99,
+      "started_at": "2026-02-09T15:39:18.303000+00:00",
+      "completed_at": "2026-03-18T15:29:09.127000+00:00"
+    },
+    {
+      "id": 1167352,
+      "title": "[Web] - Visual categories experiment setup",
+      "type": "Product Backlog Item",
+      "lead_time_days": 59.07,
+      "started_at": "2026-02-17T13:58:08.577000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1167356,
+      "title": "[Web] Visual Categories UI",
+      "type": "Product Backlog Item",
+      "lead_time_days": 77.89,
+      "started_at": "2026-02-11T11:02:53.717000+00:00",
+      "completed_at": "2026-04-30T08:25:02.110000+00:00"
+    },
+    {
+      "id": 1167375,
+      "title": "Fredhopper feed categories attribute causes missing 100 products in products.csv",
+      "type": "Bug",
+      "lead_time_days": 68.3,
+      "started_at": "2026-02-10T09:28:54.940000+00:00",
+      "completed_at": "2026-04-19T16:37:59.367000+00:00"
+    },
+    {
+      "id": 1168565,
+      "title": "Refresh Categories - SeoNoIndex",
+      "type": "Bug",
+      "lead_time_days": 66.29,
+      "started_at": "2026-02-12T09:37:51.710000+00:00",
+      "completed_at": "2026-04-19T16:37:59.367000+00:00"
+    },
+    {
+      "id": 1171306,
+      "title": "Personalisation not working on web - INC0546349",
+      "type": "Bug",
+      "lead_time_days": 61.02,
+      "started_at": "2026-02-17T16:11:20.397000+00:00",
+      "completed_at": "2026-04-19T16:37:59.367000+00:00"
+    },
+    {
+      "id": 1174978,
+      "title": "[iOS] Send RefinementsUsed Events to Optimizely",
+      "type": "Product Backlog Item",
+      "lead_time_days": 52.25,
+      "started_at": "2026-02-24T09:29:37.253000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1175114,
+      "title": "Redux Migration - Search",
+      "type": "Product Backlog Item",
+      "lead_time_days": 13.93,
+      "started_at": "2026-02-24T11:24:26.307000+00:00",
+      "completed_at": "2026-03-10T09:48:40.490000+00:00"
+    },
+    {
+      "id": 1175843,
+      "title": "[Visual Categories][3] Update Category Cache Manager",
+      "type": "Product Backlog Item",
+      "lead_time_days": 50.89,
+      "started_at": "2026-02-25T16:54:09.230000+00:00",
+      "completed_at": "2026-04-17T14:11:31.363000+00:00"
+    },
+    {
+      "id": 1178319,
+      "title": "[iOS] Gender Search - add localization support for Gender Search Filter",
+      "type": "Product Backlog Item",
+      "lead_time_days": 44.95,
+      "started_at": "2026-03-03T16:41:07.973000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1183638,
+      "title": "[AccessPackages] Migrate AsosBrowseNonProd to AccessPackages",
+      "type": "Product Backlog Item",
+      "lead_time_days": 57.18,
+      "started_at": "2026-03-10T10:14:53.507000+00:00",
+      "completed_at": "2026-05-06T14:35:08.580000+00:00"
+    },
+    {
+      "id": 1183643,
+      "title": "[AccessPackages] Migrate AsosBrowse to AccessPackages",
+      "type": "Product Backlog Item",
+      "lead_time_days": 57.18,
+      "started_at": "2026-03-10T10:15:31.207000+00:00",
+      "completed_at": "2026-05-06T14:35:09.700000+00:00"
+    },
+    {
+      "id": 1186709,
+      "title": "[Query Engine] Investigate facet counts bug",
+      "type": "Bug",
+      "lead_time_days": 37.01,
+      "started_at": "2026-03-13T16:21:58.127000+00:00",
+      "completed_at": "2026-04-19T16:38:10.380000+00:00"
+    },
+    {
+      "id": 1186966,
+      "title": "[iOS] Brand Category Deep Linking Support",
+      "type": "Product Backlog Item",
+      "lead_time_days": 32.21,
+      "started_at": "2026-03-16T10:33:47.257000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1187762,
+      "title": "[iOS] Gender Search - Update remote config file turning feature switch ON for Default",
+      "type": "Product Backlog Item",
+      "lead_time_days": 31.15,
+      "started_at": "2026-03-17T11:57:29.787000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1189402,
+      "title": "[WEB] - Add Analytics to the Visual Category Tiles frontend",
+      "type": "Product Backlog Item",
+      "lead_time_days": 66.89,
+      "started_at": "2026-03-23T11:20:13.207000+00:00",
+      "completed_at": "2026-05-29T08:37:58.130000+00:00"
+    },
+    {
+      "id": 1189738,
+      "title": "[iOS] Update remote config file with removing Algolia related info",
+      "type": "Product Backlog Item",
+      "lead_time_days": 24.15,
+      "started_at": "2026-03-24T12:02:34.463000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1190136,
+      "title": "[iOS] refactor trigger timing for gender serach bucketing",
+      "type": "Product Backlog Item",
+      "lead_time_days": 23.19,
+      "started_at": "2026-03-25T10:58:20.820000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1192751,
+      "title": "[WEB] - Lighthouse - Add font-display: swap to @font-face declarations",
+      "type": "Product Backlog Item",
+      "lead_time_days": 16.31,
+      "started_at": "2026-04-01T08:12:43.957000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1192768,
+      "title": "[WEB] - Lighthouse - Add loading / fetchpriority attributes to product images",
+      "type": "Product Backlog Item",
+      "lead_time_days": 21.19,
+      "started_at": "2026-04-01T08:19:16.690000+00:00",
+      "completed_at": "2026-04-22T12:53:35.863000+00:00"
+    },
+    {
+      "id": 1192771,
+      "title": "[WEB] - Lighthouse - Add width / height attributes to <img> elements",
+      "type": "Product Backlog Item",
+      "lead_time_days": 21.19,
+      "started_at": "2026-04-01T08:21:33.323000+00:00",
+      "completed_at": "2026-04-22T12:53:37.553000+00:00"
+    },
+    {
+      "id": 1192852,
+      "title": "[iOS] Guided Searches - Integrate Guided Searches feature into PLP",
+      "type": "Product Backlog Item",
+      "lead_time_days": 16.06,
+      "started_at": "2026-04-01T09:41:24.940000+00:00",
+      "completed_at": "2026-04-17T11:07:02.730000+00:00"
+    },
+    {
+      "id": 1193415,
+      "title": "MixPanel migration discovery",
+      "type": "Product Backlog Item",
+      "lead_time_days": 18.02,
+      "started_at": "2026-04-02T08:20:53.990000+00:00",
+      "completed_at": "2026-04-20T08:56:41.127000+00:00"
+    },
+    {
+      "id": 1193978,
+      "title": "[iOS] Guided Searches - Add feature switch",
+      "type": "Product Backlog Item",
+      "lead_time_days": 11.85,
+      "started_at": "2026-04-05T19:11:20.600000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1193979,
+      "title": "[iOS] Guided Searches - Implement a Guided Searches Carousel View",
+      "type": "Product Backlog Item",
+      "lead_time_days": 11.84,
+      "started_at": "2026-04-05T19:29:39.373000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1193985,
+      "title": "[iOS] Guided Searches - Implement Guided Searches Feature Logic",
+      "type": "Product Backlog Item",
+      "lead_time_days": 10.81,
+      "started_at": "2026-04-05T19:40:58.040000+00:00",
+      "completed_at": "2026-04-16T15:05:57.407000+00:00"
+    },
+    {
+      "id": 1193996,
+      "title": "[iOS] Guided Searches - Define Models & Contracts",
+      "type": "Product Backlog Item",
+      "lead_time_days": 11.78,
+      "started_at": "2026-04-05T20:48:43.633000+00:00",
+      "completed_at": "2026-04-17T15:34:12.980000+00:00"
+    },
+    {
+      "id": 1196651,
+      "title": "[iOS] Guided Searches - new sort/ filter bar",
+      "type": "Product Backlog Item",
+      "lead_time_days": 6.97,
+      "started_at": "2026-04-09T15:47:26.927000+00:00",
+      "completed_at": "2026-04-16T15:05:57.407000+00:00"
+    },
+    {
+      "id": 1197722,
+      "title": "[WEB] - 1193616 - EU Pricing - Remove Discount Percentage",
+      "type": "Product Backlog Item",
+      "lead_time_days": 21.98,
+      "started_at": "2026-04-13T09:18:43.017000+00:00",
+      "completed_at": "2026-05-05T08:45:03.057000+00:00"
+    },
+    {
+      "id": 1197895,
+      "title": "[GuidedSearch] Generate Optimisely Payload - Tooling",
+      "type": "Product Backlog Item",
+      "lead_time_days": 13.9,
+      "started_at": "2026-04-13T12:20:22.770000+00:00",
+      "completed_at": "2026-04-27T09:49:33.650000+00:00"
+    },
+    {
+      "id": 1198300,
+      "title": "[MixPanel] Send Customer Signals events to Metrics Event Hub (15th May)",
+      "type": "Product Backlog Item",
+      "lead_time_days": 13.18,
+      "started_at": "2026-04-14T12:36:02.790000+00:00",
+      "completed_at": "2026-04-27T16:51:09.903000+00:00"
+    },
+    {
+      "id": 1198313,
+      "title": "[MixPanel] Stop sending Adobe events to Metrics Event Hub (15th May)",
+      "type": "Product Backlog Item",
+      "lead_time_days": 13.0,
+      "started_at": "2026-04-14T13:00:55.090000+00:00",
+      "completed_at": "2026-04-27T12:58:57.683000+00:00"
+    },
+    {
+      "id": 1198766,
+      "title": "[StoreSwitch] Store Switch IE from ROW to ROE Rehearsal (16th April)",
+      "type": "Product Backlog Item",
+      "lead_time_days": 5.01,
+      "started_at": "2026-04-15T08:38:39.297000+00:00",
+      "completed_at": "2026-04-20T08:54:27.290000+00:00"
+    },
+    {
+      "id": 1198994,
+      "title": "[MixPanel] Investigate impression metrics events (15th May)",
+      "type": "Product Backlog Item",
+      "lead_time_days": 14.03,
+      "started_at": "2026-04-15T12:04:05.910000+00:00",
+      "completed_at": "2026-04-29T12:45:33.500000+00:00"
+    },
+    {
+      "id": 1200286,
+      "title": "Delivery Pipeline: RBAC",
+      "type": "Product Backlog Item",
+      "lead_time_days": 4.54,
+      "started_at": "2026-04-17T08:45:20.793000+00:00",
+      "completed_at": "2026-04-21T21:39:47.283000+00:00"
+    },
+    {
+      "id": 1202490,
+      "title": "Visual Guided Search V2 - Discovery",
+      "type": "Product Backlog Item",
+      "lead_time_days": 8.82,
+      "started_at": "2026-04-20T12:33:08.187000+00:00",
+      "completed_at": "2026-04-29T08:08:14.907000+00:00"
+    },
+    {
+      "id": 1202584,
+      "title": "[GuidedSearch]  Prepare to launch A/B Test in Optimizely (27/04)",
+      "type": "Product Backlog Item",
+      "lead_time_days": 9.78,
+      "started_at": "2026-04-20T13:57:03.553000+00:00",
+      "completed_at": "2026-04-30T08:41:47.387000+00:00"
+    },
+    {
+      "id": 1202752,
+      "title": "[GuidedSearch] Generate showcase payload (22/04)",
+      "type": "Product Backlog Item",
+      "lead_time_days": 7.12,
+      "started_at": "2026-04-21T06:20:32.423000+00:00",
+      "completed_at": "2026-04-28T09:06:40.203000+00:00"
+    },
+    {
+      "id": 1202753,
+      "title": "[GuidedSearch] Generate Final Opti Payload (27/04)",
+      "type": "Product Backlog Item",
+      "lead_time_days": 8.1,
+      "started_at": "2026-04-21T06:20:53.350000+00:00",
+      "completed_at": "2026-04-29T08:51:01.677000+00:00"
+    },
+    {
+      "id": 1202754,
+      "title": "[GuidedSearch] Enable iOS feature toggle (27/04)",
+      "type": "Product Backlog Item",
+      "lead_time_days": 49.2,
+      "started_at": "2026-04-21T06:21:16.870000+00:00",
+      "completed_at": "2026-06-09T11:08:57.503000+00:00"
+    },
+    {
+      "id": 1203013,
+      "title": "[WEB] Fix failing test on main",
+      "type": "Bug",
+      "lead_time_days": 0.93,
+      "started_at": "2026-04-21T12:38:00.760000+00:00",
+      "completed_at": "2026-04-22T10:53:51.280000+00:00"
+    },
+    {
+      "id": 1203269,
+      "title": "Editing Api: Remove Automapper",
+      "type": "Product Backlog Item",
+      "lead_time_days": 7.46,
+      "started_at": "2026-04-21T21:35:48.400000+00:00",
+      "completed_at": "2026-04-29T08:37:06.773000+00:00"
+    },
+    {
+      "id": 1203433,
+      "title": "[WEB] - Fix breaking blob reports on build pipelines",
+      "type": "Bug",
+      "lead_time_days": 22.95,
+      "started_at": "2026-04-22T10:21:57.563000+00:00",
+      "completed_at": "2026-05-15T09:03:53.167000+00:00"
+    },
+    {
+      "id": 1203530,
+      "title": "[MixPanel] Map and send ProductPageView events (15th May)",
+      "type": "Product Backlog Item",
+      "lead_time_days": 21.82,
+      "started_at": "2026-04-22T14:42:59.123000+00:00",
+      "completed_at": "2026-05-14T10:21:29.897000+00:00"
+    },
+    {
+      "id": 1203535,
+      "title": "[MixPanel] Map and send AddToBag events (15th May)",
+      "type": "Product Backlog Item",
+      "lead_time_days": 23.04,
+      "started_at": "2026-04-22T14:44:27.240000+00:00",
+      "completed_at": "2026-05-15T15:44:51.470000+00:00"
+    },
+    {
+      "id": 1203537,
+      "title": "[MixPanel] Map and send Purchase events (15th May)",
+      "type": "Product Backlog Item",
+      "lead_time_days": 15.74,
+      "started_at": "2026-04-22T14:47:22.860000+00:00",
+      "completed_at": "2026-05-08T08:37:19.057000+00:00"
+    },
+    {
+      "id": 1203542,
+      "title": "[MixPanel] Map and send SaveForLater events (15th May)",
+      "type": "Product Backlog Item",
+      "lead_time_days": 21.16,
+      "started_at": "2026-04-22T14:48:29.157000+00:00",
+      "completed_at": "2026-05-13T18:41:49.087000+00:00"
+    },
+    {
+      "id": 1203543,
+      "title": "[MixPanel] Map and send Search events (15th May)",
+      "type": "Product Backlog Item",
+      "lead_time_days": 19.98,
+      "started_at": "2026-04-22T14:53:13.133000+00:00",
+      "completed_at": "2026-05-12T14:18:51.923000+00:00"
+    },
+    {
+      "id": 1203781,
+      "title": "Make Search API Deployment Pipeline Great Again",
+      "type": "Product Backlog Item",
+      "lead_time_days": 67.14,
+      "started_at": "2026-04-23T09:23:18.120000+00:00",
+      "completed_at": "2026-06-29T12:44:04.960000+00:00"
+    },
+    {
+      "id": 1204303,
+      "title": "[Algolia] COM Index Configuration Test",
+      "type": "Product Backlog Item",
+      "lead_time_days": 0.73,
+      "started_at": "2026-04-23T15:09:13.767000+00:00",
+      "completed_at": "2026-04-24T08:46:06.213000+00:00"
+    },
+    {
+      "id": 1204531,
+      "title": "[Algolia] COM Index Configuration Test",
+      "type": "Product Backlog Item",
+      "lead_time_days": 0.05,
+      "started_at": "2026-04-24T14:26:33.473000+00:00",
+      "completed_at": "2026-04-24T15:38:19.647000+00:00"
+    },
+    {
+      "id": 1205604,
+      "title": "[Redux migration cleanup] - Search filter performance",
+      "type": "User Story",
+      "lead_time_days": 21.93,
+      "started_at": "2026-04-27T10:43:12.830000+00:00",
+      "completed_at": "2026-05-19T09:09:33.267000+00:00"
+    },
+    {
+      "id": 1205613,
+      "title": "Search results and pagination selectors",
+      "type": "User Story",
+      "lead_time_days": 21.92,
+      "started_at": "2026-04-27T11:01:02.707000+00:00",
+      "completed_at": "2026-05-19T09:09:33.267000+00:00"
+    },
+    {
+      "id": 1206550,
+      "title": "Fix SearchByCategoryQueryReturnsResultsAndCuratedCategoryAnalyticsIsPopulated acceptance test in Search API",
+      "type": "Product Backlog Item",
+      "lead_time_days": 1.33,
+      "started_at": "2026-04-28T08:30:48.207000+00:00",
+      "completed_at": "2026-04-29T16:19:58.040000+00:00"
+    },
+    {
+      "id": 1206612,
+      "title": "Visual Categories - child categories",
+      "type": "User Story",
+      "lead_time_days": 16.32,
+      "started_at": "2026-04-28T09:12:41+00:00",
+      "completed_at": "2026-05-14T16:59:22.267000+00:00"
+    },
+    {
+      "id": 1207193,
+      "title": "[MixPanel] Map and send HomepageImpression events (15th May)",
+      "type": "Product Backlog Item",
+      "lead_time_days": 18.82,
+      "started_at": "2026-04-29T12:50:58+00:00",
+      "completed_at": "2026-05-18T08:31:31.480000+00:00"
+    },
+    {
+      "id": 1207194,
+      "title": "[MixPanel] Map and send SearchImpression events (15th May)",
+      "type": "Product Backlog Item",
+      "lead_time_days": 20.11,
+      "started_at": "2026-04-29T12:50:59.240000+00:00",
+      "completed_at": "2026-05-19T15:32:39.750000+00:00"
+    },
+    {
+      "id": 1207195,
+      "title": "[MixPanel] Map and send CategoryImpression events (15th May)",
+      "type": "Product Backlog Item",
+      "lead_time_days": 14.82,
+      "started_at": "2026-04-29T12:52:04.653000+00:00",
+      "completed_at": "2026-05-14T08:38:54.770000+00:00"
+    },
+    {
+      "id": 1207423,
+      "title": "[MixPanel] Stop sending Adobe events (by StreamEventType) to Metrics Event Hub (15th May)",
+      "type": "Product Backlog Item",
+      "lead_time_days": 0.3,
+      "started_at": "2026-04-30T08:29:59.807000+00:00",
+      "completed_at": "2026-04-30T15:44:51.670000+00:00"
+    },
+    {
+      "id": 1209063,
+      "title": "Pagination showing incorrect page",
+      "type": "Bug",
+      "lead_time_days": 8.33,
+      "started_at": "2026-05-06T08:58:41.937000+00:00",
+      "completed_at": "2026-05-14T16:59:22.267000+00:00"
+    },
+    {
+      "id": 1209402,
+      "title": "Fix broken test environment links",
+      "type": "Bug",
+      "lead_time_days": 14.27,
+      "started_at": "2026-05-07T08:30:38.513000+00:00",
+      "completed_at": "2026-05-21T14:57:52.743000+00:00"
+    },
+    {
+      "id": 1209513,
+      "title": "[WEB] Remove react-is package",
+      "type": "Product Backlog Item",
+      "lead_time_days": 92.11,
+      "started_at": "2026-05-07T10:13:53.627000+00:00",
+      "completed_at": "2026-08-07T12:49:14.437000+00:00"
+    },
+    {
+      "id": 1209578,
+      "title": "Guided Search - Gender Floor Bug",
+      "type": "Bug",
+      "lead_time_days": 7.01,
+      "started_at": "2026-05-07T12:50:42.687000+00:00",
+      "completed_at": "2026-05-14T13:07:09.090000+00:00"
+    },
+    {
+      "id": 1210301,
+      "title": "[WEB] Fix critical security vulnerabilities",
+      "type": "Product Backlog Item",
+      "lead_time_days": 13.08,
+      "started_at": "2026-05-08T12:08:25.257000+00:00",
+      "completed_at": "2026-05-21T14:05:48.227000+00:00"
+    },
+    {
+      "id": 1211136,
+      "title": "[iOS] Move new sort and filter btns (GS) below Brands hero image",
+      "type": "Bug",
+      "lead_time_days": 1.84,
+      "started_at": "2026-05-11T12:32:52.367000+00:00",
+      "completed_at": "2026-05-13T08:35:42.070000+00:00"
+    },
+    {
+      "id": 1211170,
+      "title": "Brands PLP switches to old sort filter component when scrolled",
+      "type": "Bug",
+      "lead_time_days": 1.97,
+      "started_at": "2026-05-11T13:15:32.860000+00:00",
+      "completed_at": "2026-05-13T12:35:49.710000+00:00"
+    },
+    {
+      "id": 1211835,
+      "title": "[Mixpanel] Map and Send Online Created Return events (15th May)",
+      "type": "Product Backlog Item",
+      "lead_time_days": 43.84,
+      "started_at": "2026-05-12T13:28:02.963000+00:00",
+      "completed_at": "2026-06-25T09:32:10.280000+00:00"
+    },
+    {
+      "id": 1211954,
+      "title": "[WEB] Double slashes break image results",
+      "type": "Bug",
+      "lead_time_days": 2.01,
+      "started_at": "2026-05-12T16:43:39.260000+00:00",
+      "completed_at": "2026-05-14T16:59:22.267000+00:00"
+    },
+    {
+      "id": 1212285,
+      "title": "[iOS] dynamic text on new refine/ sort bar button text",
+      "type": "Bug",
+      "lead_time_days": 6.0,
+      "started_at": "2026-05-13T09:11:10.643000+00:00",
+      "completed_at": "2026-05-19T09:10:43.907000+00:00"
+    },
+    {
+      "id": 1213033,
+      "title": "[Guided Search V3] Create Generator Jobs",
+      "type": "Product Backlog Item",
+      "lead_time_days": 6.08,
+      "started_at": "2026-05-14T13:09:49.767000+00:00",
+      "completed_at": "2026-05-20T15:05:45.987000+00:00"
+    },
+    {
+      "id": 1213037,
+      "title": "[Guided Search V3] Integrate Custom Events",
+      "type": "Product Backlog Item",
+      "lead_time_days": 14.07,
+      "started_at": "2026-05-14T13:22:38.180000+00:00",
+      "completed_at": "2026-05-28T14:57:48.300000+00:00"
+    },
+    {
+      "id": 1214999,
+      "title": "[Guided Search V3] Generator - Unit and Integration Testing",
+      "type": "Product Backlog Item",
+      "lead_time_days": 61.02,
+      "started_at": "2026-05-20T08:12:03.080000+00:00",
+      "completed_at": "2026-07-20T08:44:15.087000+00:00"
+    },
+    {
+      "id": 1215230,
+      "title": "[iOS] fix: PLP new refine/sort bar product count not updating after sort",
+      "type": "Bug",
+      "lead_time_days": 2.01,
+      "started_at": "2026-05-19T08:51:16.800000+00:00",
+      "completed_at": "2026-05-21T08:59:00.817000+00:00"
+    },
+    {
+      "id": 1215319,
+      "title": "[Mixpanel] IOS changes to support Browse Metrics and Customer Comms",
+      "type": "Product Backlog Item",
+      "lead_time_days": 36.89,
+      "started_at": "2026-05-19T10:57:26.933000+00:00",
+      "completed_at": "2026-06-25T08:22:12.557000+00:00"
+    },
+    {
+      "id": 1215441,
+      "title": "[WEB] PLP Grid Expansion on Web",
+      "type": "User Story",
+      "lead_time_days": 50.96,
+      "started_at": "2026-05-19T13:07:33.097000+00:00",
+      "completed_at": "2026-07-09T12:04:21.390000+00:00"
+    },
+    {
+      "id": 1215449,
+      "title": "[Mixpanel] WEB changes to support Browse Metrics and Customer Comms",
+      "type": "Product Backlog Item",
+      "lead_time_days": 9.8,
+      "started_at": "2026-05-19T13:32:06.173000+00:00",
+      "completed_at": "2026-05-29T08:41:06.707000+00:00"
+    },
+    {
+      "id": 1215473,
+      "title": "[Web] - Axios network console errors",
+      "type": "Bug",
+      "lead_time_days": 0.97,
+      "started_at": "2026-05-19T14:20:59.627000+00:00",
+      "completed_at": "2026-05-20T13:32:10.007000+00:00"
+    },
+    {
+      "id": 1216715,
+      "title": "[WEB] Fix high vulnerabilities packages",
+      "type": "User Story",
+      "lead_time_days": 18.09,
+      "started_at": "2026-05-21T10:22:54.967000+00:00",
+      "completed_at": "2026-06-08T12:35:47.183000+00:00"
+    },
+    {
+      "id": 1216958,
+      "title": "[WEB] Fix critical vulnerability packages",
+      "type": "User Story",
+      "lead_time_days": 17.85,
+      "started_at": "2026-05-21T16:16:55.690000+00:00",
+      "completed_at": "2026-06-08T12:35:48.627000+00:00"
+    },
+    {
+      "id": 1217842,
+      "title": "[AKS] Production Version Upgrade 1.34.7",
+      "type": "Product Backlog Item",
+      "lead_time_days": 2.01,
+      "started_at": "2026-05-26T08:27:29.870000+00:00",
+      "completed_at": "2026-05-28T08:38:25.837000+00:00"
+    },
+    {
+      "id": 1218879,
+      "title": "Update COM index semantic settings to settings from AI enrichment test",
+      "type": "Product Backlog Item",
+      "lead_time_days": 0.88,
+      "started_at": "2026-05-27T16:31:05.330000+00:00",
+      "completed_at": "2026-05-28T13:41:17.670000+00:00"
+    },
+    {
+      "id": 1220212,
+      "title": "Adjust down Query Engine scaling",
+      "type": "Product Backlog Item",
+      "lead_time_days": 25.08,
+      "started_at": "2026-05-29T14:19:24.230000+00:00",
+      "completed_at": "2026-06-23T16:10:19.487000+00:00"
+    },
+    {
+      "id": 1220617,
+      "title": "[Web] Curated Category crashes when Featured header is enabled but URL's are empty",
+      "type": "Bug",
+      "lead_time_days": 9.2,
+      "started_at": "2026-06-01T10:08:22.200000+00:00",
+      "completed_at": "2026-06-10T14:59:28.930000+00:00"
+    },
+    {
+      "id": 1220741,
+      "title": "[Mixpanel] - Ensure searchType is set to \"visual search\" for visual search",
+      "type": "Product Backlog Item",
+      "lead_time_days": 14.98,
+      "started_at": "2026-06-01T13:04:27.120000+00:00",
+      "completed_at": "2026-06-16T12:33:15.150000+00:00"
+    },
+    {
+      "id": 1221254,
+      "title": "[WEB] Update external uuid to Version: 9.0.1",
+      "type": "User Story",
+      "lead_time_days": 7.1,
+      "started_at": "2026-06-02T11:06:49.250000+00:00",
+      "completed_at": "2026-06-09T13:24:11.267000+00:00"
+    },
+    {
+      "id": 1221327,
+      "title": "[WEB] Update Medium Wiz vulnerabilities",
+      "type": "User Story",
+      "lead_time_days": 13.04,
+      "started_at": "2026-06-02T13:18:57.540000+00:00",
+      "completed_at": "2026-06-15T14:16:01.777000+00:00"
+    },
+    {
+      "id": 1221734,
+      "title": "[WEB] Create and A/B test for Grid expansion",
+      "type": "User Story",
+      "lead_time_days": 13.8,
+      "started_at": "2026-06-03T12:50:59.430000+00:00",
+      "completed_at": "2026-06-17T08:04:55.563000+00:00"
+    },
+    {
+      "id": 1221953,
+      "title": "[Web] Guided Search API integration",
+      "type": "User Story",
+      "lead_time_days": 35.91,
+      "started_at": "2026-06-03T14:31:27.720000+00:00",
+      "completed_at": "2026-07-09T12:22:32.470000+00:00"
+    },
+    {
+      "id": 1223374,
+      "title": "[WEB] Standardise workflows for Assembly Line (v8)",
+      "type": "Product Backlog Item",
+      "lead_time_days": 2.78,
+      "started_at": "2026-06-05T13:23:45.947000+00:00",
+      "completed_at": "2026-06-08T08:12:03.220000+00:00"
+    },
+    {
+      "id": 1224182,
+      "title": "[WEB] Missed Assembly Line v8 reference workflows",
+      "type": "Product Backlog Item",
+      "lead_time_days": 0.3,
+      "started_at": "2026-06-09T08:25:06.803000+00:00",
+      "completed_at": "2026-06-09T15:31:54.917000+00:00"
+    },
+    {
+      "id": 1224261,
+      "title": "[FacetedNav] Upload latest Faceted Nav targets",
+      "type": "Product Backlog Item",
+      "lead_time_days": 2.97,
+      "started_at": "2026-06-09T09:14:54.170000+00:00",
+      "completed_at": "2026-06-12T08:38:40.200000+00:00"
+    },
+    {
+      "id": 1225177,
+      "title": "PLP: Update hook rules to the AsosConfig defaults",
+      "type": "Product Backlog Item",
+      "lead_time_days": 4.27,
+      "started_at": "2026-06-11T07:53:43.180000+00:00",
+      "completed_at": "2026-06-15T14:16:13.930000+00:00"
+    },
+    {
+      "id": 1225459,
+      "title": "[WEB] Clean up stale Optimizely tests",
+      "type": "Product Backlog Item",
+      "lead_time_days": 27.88,
+      "started_at": "2026-06-11T15:03:57.710000+00:00",
+      "completed_at": "2026-07-09T12:04:21.390000+00:00"
+    },
+    {
+      "id": 1226955,
+      "title": "[SearchMonitor] Build Worker Service",
+      "type": "Product Backlog Item",
+      "lead_time_days": 37.96,
+      "started_at": "2026-06-16T09:38:19.383000+00:00",
+      "completed_at": "2026-07-24T08:37:11.540000+00:00"
+    },
+    {
+      "id": 1226957,
+      "title": "[SearchMonitor] Build Grafana Dashboard",
+      "type": "Product Backlog Item",
+      "lead_time_days": 50.96,
+      "started_at": "2026-06-16T09:38:34.727000+00:00",
+      "completed_at": "2026-08-06T08:40:47.840000+00:00"
+    },
+    {
+      "id": 1226988,
+      "title": "Faceted Nav Sitemaps not generating (except COM)",
+      "type": "Bug",
+      "lead_time_days": 16.93,
+      "started_at": "2026-06-16T10:30:06.517000+00:00",
+      "completed_at": "2026-07-03T08:47:54.597000+00:00"
+    },
+    {
+      "id": 1227203,
+      "title": "[WEB] AB#1227166 Albino's criteo-painted-rate-telemetry",
+      "type": "Product Backlog Item",
+      "lead_time_days": 0.99,
+      "started_at": "2026-06-16T16:15:44.620000+00:00",
+      "completed_at": "2026-06-17T16:02:08.067000+00:00"
+    },
+    {
+      "id": 1227392,
+      "title": "[Mixpanel] - Migrate by event (stream Copier & Metrics Servics)",
+      "type": "Product Backlog Item",
+      "lead_time_days": 14.17,
+      "started_at": "2026-06-17T09:18:20.563000+00:00",
+      "completed_at": "2026-07-01T13:25:43.057000+00:00"
+    },
+    {
+      "id": 1227406,
+      "title": "Show Promo Price on PLP",
+      "type": "Product Backlog Item",
+      "lead_time_days": 19.0,
+      "started_at": "2026-06-17T09:46:14.913000+00:00",
+      "completed_at": "2026-07-06T09:46:10.783000+00:00"
+    },
+    {
+      "id": 1227859,
+      "title": "[Algolia] Index Clean-Up",
+      "type": "Product Backlog Item",
+      "lead_time_days": 11.16,
+      "started_at": "2026-06-18T08:59:23.987000+00:00",
+      "completed_at": "2026-06-29T12:47:56.890000+00:00"
+    },
+    {
+      "id": 1227944,
+      "title": "Buy The Look V2 - Update Visual Search ETL",
+      "type": "Product Backlog Item",
+      "lead_time_days": 11.1,
+      "started_at": "2026-06-18T10:26:29.610000+00:00",
+      "completed_at": "2026-06-29T12:44:45.223000+00:00"
+    },
+    {
+      "id": 1228143,
+      "title": "[AKS] Prometheus Update",
+      "type": "Product Backlog Item",
+      "lead_time_days": 0.12,
+      "started_at": "2026-06-18T11:48:29.540000+00:00",
+      "completed_at": "2026-06-18T14:47:06.957000+00:00"
+    },
+    {
+      "id": 1228425,
+      "title": "[Web] - degraded SLE response times",
+      "type": "User Story",
+      "lead_time_days": 25.89,
+      "started_at": "2026-06-18T13:29:14.457000+00:00",
+      "completed_at": "2026-07-14T10:53:02.700000+00:00"
+    },
+    {
+      "id": 1229405,
+      "title": "Add IsNew to Search API response | Recs CX",
+      "type": "Product Backlog Item",
+      "lead_time_days": 21.03,
+      "started_at": "2026-06-22T12:24:09.530000+00:00",
+      "completed_at": "2026-07-13T13:03:31.547000+00:00"
+    },
+    {
+      "id": 1229406,
+      "title": "Add Recs Request Id to Search response",
+      "type": "Product Backlog Item",
+      "lead_time_days": 6.94,
+      "started_at": "2026-06-22T12:25:37.950000+00:00",
+      "completed_at": "2026-06-29T11:02:46.423000+00:00"
+    },
+    {
+      "id": 1229908,
+      "title": "Included HeaderBody in FacetedNav",
+      "type": "Product Backlog Item",
+      "lead_time_days": 1.27,
+      "started_at": "2026-06-23T09:58:37.117000+00:00",
+      "completed_at": "2026-06-24T16:33:28.840000+00:00"
+    },
+    {
+      "id": 1231238,
+      "title": "Fix SEO Pills Snapshot and flaky playwright tests",
+      "type": "Bug",
+      "lead_time_days": 34.86,
+      "started_at": "2026-06-25T12:04:29.400000+00:00",
+      "completed_at": "2026-07-30T08:44:27.847000+00:00"
+    },
+    {
+      "id": 1231269,
+      "title": "[Mixpanel] Deploy to prod & Prod data analysis",
+      "type": "Product Backlog Item",
+      "lead_time_days": 27.81,
+      "started_at": "2026-06-25T13:13:51.950000+00:00",
+      "completed_at": "2026-07-23T08:39:34.010000+00:00"
+    },
+    {
+      "id": 1232655,
+      "title": "[WEB] 4 panel PLP Grid Expansion on Web",
+      "type": "User Story",
+      "lead_time_days": 21.07,
+      "started_at": "2026-06-30T08:55:26.527000+00:00",
+      "completed_at": "2026-07-21T10:32:55.187000+00:00"
+    },
+    {
+      "id": 1232719,
+      "title": "Update CSA config for FR & DE",
+      "type": "Product Backlog Item",
+      "lead_time_days": 1.2,
+      "started_at": "2026-06-30T10:16:51.023000+00:00",
+      "completed_at": "2026-07-01T15:11:38.253000+00:00"
+    },
+    {
+      "id": 1232955,
+      "title": "[Web] Asos Web Extension View and override PLP A/B test variants",
+      "type": "User Story",
+      "lead_time_days": 15.74,
+      "started_at": "2026-06-30T14:57:53.650000+00:00",
+      "completed_at": "2026-07-16T08:39:12.023000+00:00"
+    },
+    {
+      "id": 1233573,
+      "title": "[WEB] Add countIntersection function and tests",
+      "type": "Product Backlog Item",
+      "lead_time_days": 13.12,
+      "started_at": "2026-07-01T13:31:10.580000+00:00",
+      "completed_at": "2026-07-14T16:27:02.573000+00:00"
+    },
+    {
+      "id": 1234977,
+      "title": "[WEB] High Wizz vulnerabilities High",
+      "type": "User Story",
+      "lead_time_days": 3.19,
+      "started_at": "2026-07-06T11:00:10+00:00",
+      "completed_at": "2026-07-09T15:31:00.993000+00:00"
+    },
+    {
+      "id": 1234980,
+      "title": "[WEB] Medium Wizz Vulnerabilities",
+      "type": "User Story",
+      "lead_time_days": 8.87,
+      "started_at": "2026-07-06T11:02:47.397000+00:00",
+      "completed_at": "2026-07-15T07:57:29.253000+00:00"
+    },
+    {
+      "id": 1235584,
+      "title": "URL Changes in The Studios Integration API (10th July)",
+      "type": "Product Backlog Item",
+      "lead_time_days": 2.07,
+      "started_at": "2026-07-07T14:37:27.767000+00:00",
+      "completed_at": "2026-07-09T16:21:23.533000+00:00"
+    },
+    {
+      "id": 1236934,
+      "title": "[WEB] Your search results for text padding",
+      "type": "Bug",
+      "lead_time_days": 5.72,
+      "started_at": "2026-07-09T14:41:56.573000+00:00",
+      "completed_at": "2026-07-15T07:57:27.570000+00:00"
+    },
+    {
+      "id": 1237619,
+      "title": "[Resiliency Testing] Search API 14/07/26",
+      "type": "Product Backlog Item",
+      "lead_time_days": 7.85,
+      "started_at": "2026-07-13T12:08:43.993000+00:00",
+      "completed_at": "2026-07-21T08:29:38.230000+00:00"
+    },
+    {
+      "id": 1237757,
+      "title": "[Provisioning] Navigation - Disable blob public access",
+      "type": "Product Backlog Item",
+      "lead_time_days": 16.08,
+      "started_at": "2026-07-13T14:00:00.137000+00:00",
+      "completed_at": "2026-07-29T15:54:32.603000+00:00"
+    },
+    {
+      "id": 1237759,
+      "title": "[Provisioning] Category - Disable blob public access",
+      "type": "Product Backlog Item",
+      "lead_time_days": 16.9,
+      "started_at": "2026-07-13T14:00:36.253000+00:00",
+      "completed_at": "2026-07-30T11:33:02.490000+00:00"
+    },
+    {
+      "id": 1237812,
+      "title": "Single Region - Service Bus Decommissioning - \"AsCMC-Pric-SB-Pns-EUW-pd\"",
+      "type": "Product Backlog Item",
+      "lead_time_days": 2.79,
+      "started_at": "2026-07-13T16:11:02.127000+00:00",
+      "completed_at": "2026-07-16T11:08:58.890000+00:00"
+    },
+    {
+      "id": 1238105,
+      "title": "[WEB] Increase 6 grid breakpoint to 1920px",
+      "type": "Bug",
+      "lead_time_days": 1.06,
+      "started_at": "2026-07-14T12:18:34.160000+00:00",
+      "completed_at": "2026-07-15T13:43:33.350000+00:00"
+    },
+    {
+      "id": 1238321,
+      "title": "[WEB] Low Wizz vulnerabilities",
+      "type": "User Story",
+      "lead_time_days": 5.26,
+      "started_at": "2026-07-15T07:59:42.200000+00:00",
+      "completed_at": "2026-07-20T14:06:58.367000+00:00"
+    },
+    {
+      "id": 1239315,
+      "title": "CastAI Perf Test 20/07/26",
+      "type": "Product Backlog Item",
+      "lead_time_days": 7.79,
+      "started_at": "2026-07-15T13:47:46.973000+00:00",
+      "completed_at": "2026-07-23T08:39:11.903000+00:00"
+    },
+    {
+      "id": 1239504,
+      "title": "Flatlay images for Recs",
+      "type": "Product Backlog Item",
+      "lead_time_days": 20.29,
+      "started_at": "2026-07-16T08:48:55.277000+00:00",
+      "completed_at": "2026-08-05T15:44:00.247000+00:00"
+    },
+    {
+      "id": 1239788,
+      "title": "[WEB] Images blured on 6 Grid Expansion",
+      "type": "Bug",
+      "lead_time_days": 13.17,
+      "started_at": "2026-07-16T10:46:46.593000+00:00",
+      "completed_at": "2026-07-29T14:53:52.600000+00:00"
+    },
+    {
+      "id": 1240181,
+      "title": "[A-Z Brands] \u00d6lend is grouped differently in web and apps",
+      "type": "Product Backlog Item",
+      "lead_time_days": 3.17,
+      "started_at": "2026-07-17T11:01:53.137000+00:00",
+      "completed_at": "2026-07-20T15:08:11.073000+00:00"
+    },
+    {
+      "id": 1240289,
+      "title": "Category Resiliency Test 28/07/26",
+      "type": "Product Backlog Item",
+      "lead_time_days": 11.79,
+      "started_at": "2026-07-17T13:53:05.983000+00:00",
+      "completed_at": "2026-07-29T08:45:10.550000+00:00"
+    },
+    {
+      "id": 1240526,
+      "title": "AI Enrichment validation and verification investigation",
+      "type": "Product Backlog Item",
+      "lead_time_days": 17.97,
+      "started_at": "2026-07-20T09:27:47.200000+00:00",
+      "completed_at": "2026-08-07T08:43:13.643000+00:00"
+    },
+    {
+      "id": 1241126,
+      "title": "[WEB] Create read me file for web Release Process",
+      "type": "User Story",
+      "lead_time_days": 2.13,
+      "started_at": "2026-07-21T09:42:42.377000+00:00",
+      "completed_at": "2026-07-23T12:54:11.783000+00:00"
+    },
+    {
+      "id": 1241238,
+      "title": "[Guided Search] Safety + Gender Improvements",
+      "type": "Product Backlog Item",
+      "lead_time_days": 10.06,
+      "started_at": "2026-07-21T12:14:46.083000+00:00",
+      "completed_at": "2026-07-31T13:45:48.317000+00:00"
+    },
+    {
+      "id": 1241322,
+      "title": "[Recs] Recs ETL changes",
+      "type": "Product Backlog Item",
+      "lead_time_days": 3.01,
+      "started_at": "2026-07-21T13:50:39.327000+00:00",
+      "completed_at": "2026-07-24T14:05:34.770000+00:00"
+    },
+    {
+      "id": 1241410,
+      "title": "[Guided Search] Dashboard + Documentation",
+      "type": "Product Backlog Item",
+      "lead_time_days": 5.98,
+      "started_at": "2026-07-21T15:40:39.807000+00:00",
+      "completed_at": "2026-07-27T15:10:42.527000+00:00"
+    },
+    {
+      "id": 1241519,
+      "title": "Remove 6 grid from our code",
+      "type": "User Story",
+      "lead_time_days": 13.29,
+      "started_at": "2026-07-22T06:26:15.490000+00:00",
+      "completed_at": "2026-08-04T13:27:34.913000+00:00"
+    },
+    {
+      "id": 1241751,
+      "title": "[WEB] Set up Guided search Optimizely metrics",
+      "type": "User Story",
+      "lead_time_days": 6.91,
+      "started_at": "2026-07-22T11:00:15.727000+00:00",
+      "completed_at": "2026-07-29T08:48:21.943000+00:00"
+    },
+    {
+      "id": 1241752,
+      "title": "[WEB] Check why Guided search isn't working on searches",
+      "type": "Bug",
+      "lead_time_days": 8.21,
+      "started_at": "2026-07-22T11:01:29.220000+00:00",
+      "completed_at": "2026-07-30T15:59:23.500000+00:00"
+    },
+    {
+      "id": 1241753,
+      "title": "[WEB] Guided search SEO Description Duplication bug and UI for extended grid",
+      "type": "User Story",
+      "lead_time_days": 6.92,
+      "started_at": "2026-07-22T11:03:07.880000+00:00",
+      "completed_at": "2026-07-29T09:03:17.130000+00:00"
+    },
+    {
+      "id": 1241965,
+      "title": "Guided Search not showing on search pages",
+      "type": "Bug",
+      "lead_time_days": 12.02,
+      "started_at": "2026-07-22T12:06:52.900000+00:00",
+      "completed_at": "2026-08-03T12:33:00.970000+00:00"
+    },
+    {
+      "id": 1243151,
+      "title": "[Search Monitor] Get Metric Labels to Display in Grafana",
+      "type": "Product Backlog Item",
+      "lead_time_days": 0.92,
+      "started_at": "2026-07-27T10:35:55.410000+00:00",
+      "completed_at": "2026-07-28T08:46:30.813000+00:00"
+    },
+    {
+      "id": 1244062,
+      "title": "Re-test 4/6-Column PLP Grid Expansion",
+      "type": "Product Backlog Item",
+      "lead_time_days": 5.15,
+      "started_at": "2026-07-29T08:53:23.500000+00:00",
+      "completed_at": "2026-08-03T12:32:58.840000+00:00"
+    },
+    {
+      "id": 1245180,
+      "title": "[Stream Copier] Filter out AddToBag and Purchase Event Items without VariantId",
+      "type": "Bug",
+      "lead_time_days": 2.95,
+      "started_at": "2026-07-31T10:52:05.343000+00:00",
+      "completed_at": "2026-08-03T09:44:55.687000+00:00"
+    },
+    {
+      "id": 1245840,
+      "title": "[WEB] Back in stock bug",
+      "type": "Bug",
+      "lead_time_days": 0.12,
+      "started_at": "2026-08-03T12:20:11.703000+00:00",
+      "completed_at": "2026-08-03T15:16:11.707000+00:00"
+    },
+    {
+      "id": 1245859,
+      "title": "[WEB] high wizz vulnerabilities",
+      "type": "User Story",
+      "lead_time_days": 4.01,
+      "started_at": "2026-08-03T12:36:44.660000+00:00",
+      "completed_at": "2026-08-07T12:49:13.013000+00:00"
+    },
+    {
+      "id": 1245927,
+      "title": "[Guided Search] Fix reconciliation not applying to some query families",
+      "type": "Bug",
+      "lead_time_days": 0.77,
+      "started_at": "2026-08-03T14:07:33.807000+00:00",
+      "completed_at": "2026-08-04T08:39:23.417000+00:00"
+    },
+    {
+      "id": 1247304,
+      "title": "[WEB] Curated categories padding issue",
+      "type": "Bug",
+      "lead_time_days": 0.18,
+      "started_at": "2026-08-07T08:35:04.587000+00:00",
+      "completed_at": "2026-08-07T12:49:15.650000+00:00"
+    }
+  ]
+}

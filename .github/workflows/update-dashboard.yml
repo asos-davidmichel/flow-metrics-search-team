@@ -1,0 +1,60 @@
+name: Update Dashboard
+on:
+  schedule:
+    - cron: '0 5 * * 1'
+  workflow_dispatch:
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      copilot-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install requests jinja2 github-copilot-sdk -q && python -m copilot download-runtime
+      - name: Clean stale data
+        run: |
+          rm -f output/data/work_items.json
+          rm -f output/data/work_item_history.json
+          rm -f output/data/work_item_rework.json
+          rm -f output/data/excluded_items.json
+          rm -f output/data/sprint_retro.json
+          rm -f output/data/data_quality_report.json
+          rm -f output/metrics/time_in_columns.json
+          rm -f output/metrics/cycle_time.json
+          rm -f output/metrics/lead_time.json
+          rm -f output/data/insights.json
+      - name: Fetch data
+        env:
+          ADO_PAT: ${{ secrets.ADO_PAT }}
+        run: python scripts/fetch_data.py "${{ vars.BOARD_URL }}"
+      - name: Check data
+        run: python scripts/check_data.py
+      - name: Calculate metrics
+        run: |
+          python scripts/calc_columns.py
+          python scripts/calc_cycle_time.py
+          python scripts/calc_lead_time.py
+      - name: Interpret metrics (AI)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          AI_API_KEY: ${{ secrets.AI_API_KEY }}
+          AI_API_ENDPOINT: ${{ vars.AI_API_ENDPOINT }}
+          AI_MODEL: ${{ vars.AI_MODEL }}
+        run: python scripts/ai_interpret_metrics.py --auto
+        continue-on-error: true
+      - name: Generate dashboard
+        run: python scripts/create_dashboard.py --force
+      - name: Update index.html
+        run: cp output/dashboard.html index.html
+      - name: Commit and push
+        run: |
+          git config user.email "github-actions@github.com"
+          git config user.name "GitHub Actions"
+          git add -A
+          git diff --quiet && git diff --staged --quiet || git commit -m "Dashboard updated $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git push

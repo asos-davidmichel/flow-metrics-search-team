@@ -2770,7 +2770,7 @@
         "Backlog",
         "Refinement"
       ],
-      "time_after_first_backward_move_hours": 24176.7,
+      "time_after_first_backward_move_hours": 24187.3,
       "time_in_revisited_columns_hours": 840.5
     }
   },
@@ -5007,7 +5007,7 @@
         "Backlog",
         "New"
       ],
-      "time_after_first_backward_move_hours": 23985.8,
+      "time_after_first_backward_move_hours": 23996.4,
       "time_in_revisited_columns_hours": 20479.6
     }
   },
@@ -5020,7 +5020,7 @@
         "Backlog",
         "New"
       ],
-      "time_after_first_backward_move_hours": 25590.5,
+      "time_after_first_backward_move_hours": 25601.1,
       "time_in_revisited_columns_hours": 20479.6
     }
   },
@@ -6318,7 +6318,7 @@
       "backward_column_moves": 2,
       "reopened_after_done": false,
       "revisited_columns": [],
-      "time_after_first_backward_move_hours": 19107.3,
+      "time_after_first_backward_move_hours": 19117.9,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -6450,7 +6450,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 14720.5,
+      "time_after_first_backward_move_hours": 14731.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -6549,7 +6549,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 14720.5,
+      "time_after_first_backward_move_hours": 14731.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -6561,7 +6561,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 14720.5,
+      "time_after_first_backward_move_hours": 14731.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -6606,7 +6606,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 16731.0,
+      "time_after_first_backward_move_hours": 16741.6,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -6675,7 +6675,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 16259.0,
+      "time_after_first_backward_move_hours": 16269.6,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -6689,7 +6689,7 @@
         "Backlog",
         "Refinement"
       ],
-      "time_after_first_backward_move_hours": 16257.9,
+      "time_after_first_backward_move_hours": 16268.5,
       "time_in_revisited_columns_hours": 9431.8
     }
   },
@@ -6917,7 +6917,7 @@
         "Backlog",
         "Ready For Dev"
       ],
-      "time_after_first_backward_move_hours": 3338.7,
+      "time_after_first_backward_move_hours": 3349.3,
       "time_in_revisited_columns_hours": 2812.0
     }
   },
@@ -6966,7 +6966,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 14720.4,
+      "time_after_first_backward_move_hours": 14731.0,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -6978,7 +6978,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 14720.4,
+      "time_after_first_backward_move_hours": 14731.0,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -7170,7 +7170,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 13565.0,
+      "time_after_first_backward_move_hours": 13575.6,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -7376,7 +7376,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 14264.3,
+      "time_after_first_backward_move_hours": 14274.9,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -7466,7 +7466,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 13569.9,
+      "time_after_first_backward_move_hours": 13580.5,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -7804,7 +7804,7 @@
         "3 Amigos",
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 12821.9,
+      "time_after_first_backward_move_hours": 12832.5,
       "time_in_revisited_columns_hours": 5757.7
     }
   },
@@ -7816,7 +7816,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 6655.1,
+      "time_after_first_backward_move_hours": 6665.7,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -7838,7 +7838,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 12991.4,
+      "time_after_first_backward_move_hours": 13002.0,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -7850,7 +7850,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 12987.1,
+      "time_after_first_backward_move_hours": 12997.7,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -7862,7 +7862,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 12987.1,
+      "time_after_first_backward_move_hours": 12997.7,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -8299,7 +8299,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 12393.4,
+      "time_after_first_backward_move_hours": 12404.0,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -8450,7 +8450,7 @@
         "Development",
         "Test"
       ],
-      "time_after_first_backward_move_hours": 11841.9,
+      "time_after_first_backward_move_hours": 11852.5,
       "time_in_revisited_columns_hours": 1870.7
     }
   },
@@ -8462,7 +8462,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 12170.4,
+      "time_after_first_backward_move_hours": 12181.0,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -8543,7 +8543,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 11864.6,
+      "time_after_first_backward_move_hours": 11875.2,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -8757,7 +8757,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 11165.8,
+      "time_after_first_backward_move_hours": 11176.4,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -9152,7 +9152,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 7853.8,
+      "time_after_first_backward_move_hours": 7864.4,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -9224,7 +9224,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 10323.1,
+      "time_after_first_backward_move_hours": 10333.7,
       "time_in_revisited_columns_hours": 0.1
     }
   },
@@ -9277,7 +9277,7 @@
         "3 Amigos",
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 10207.7,
+      "time_after_first_backward_move_hours": 10218.3,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -9814,7 +9814,7 @@
         "3 Amigos",
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 8811.5,
+      "time_after_first_backward_move_hours": 8822.1,
       "time_in_revisited_columns_hours": 197.8
     }
   },
@@ -10073,7 +10073,7 @@
         "Backlog",
         "Refinement"
       ],
-      "time_after_first_backward_move_hours": 8481.5,
+      "time_after_first_backward_move_hours": 8492.1,
       "time_in_revisited_columns_hours": 1240.8
     }
   },
@@ -10139,7 +10139,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 8287.1,
+      "time_after_first_backward_move_hours": 8297.7,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -10310,7 +10310,7 @@
         "Backlog",
         "In Review"
       ],
-      "time_after_first_backward_move_hours": 7832.8,
+      "time_after_first_backward_move_hours": 7843.4,
       "time_in_revisited_columns_hours": 196.7
     }
   },
@@ -10635,7 +10635,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 7351.1,
+      "time_after_first_backward_move_hours": 7361.7,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -10647,7 +10647,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 7351.0,
+      "time_after_first_backward_move_hours": 7361.6,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -10669,7 +10669,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 7349.5,
+      "time_after_first_backward_move_hours": 7360.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -10681,7 +10681,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 7348.5,
+      "time_after_first_backward_move_hours": 7359.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -10693,7 +10693,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 7348.1,
+      "time_after_first_backward_move_hours": 7358.7,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -10739,7 +10739,7 @@
         "Ready For Dev",
         "Ready For Testing"
       ],
-      "time_after_first_backward_move_hours": 6965.9,
+      "time_after_first_backward_move_hours": 6976.5,
       "time_in_revisited_columns_hours": 828.6
     }
   },
@@ -10795,7 +10795,7 @@
         "Backlog",
         "In Dev"
       ],
-      "time_after_first_backward_move_hours": 7043.2,
+      "time_after_first_backward_move_hours": 7053.8,
       "time_in_revisited_columns_hours": 505.1
     }
   },
@@ -10852,7 +10852,7 @@
         "3 Amigos",
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 6971.8,
+      "time_after_first_backward_move_hours": 6982.5,
       "time_in_revisited_columns_hours": 818.9
     }
   },
@@ -10865,7 +10865,7 @@
         "3 Amigos",
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 6971.8,
+      "time_after_first_backward_move_hours": 6982.4,
       "time_in_revisited_columns_hours": 725.9
     }
   },
@@ -11149,7 +11149,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 6129.4,
+      "time_after_first_backward_move_hours": 6140.0,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -11192,7 +11192,7 @@
         "Backlog",
         "Refinement"
       ],
-      "time_after_first_backward_move_hours": 5985.5,
+      "time_after_first_backward_move_hours": 5996.1,
       "time_in_revisited_columns_hours": 0.1
     }
   },
@@ -11295,7 +11295,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 5692.1,
+      "time_after_first_backward_move_hours": 5702.7,
       "time_in_revisited_columns_hours": 0.1
     }
   },
@@ -11307,7 +11307,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 5692.1,
+      "time_after_first_backward_move_hours": 5702.7,
       "time_in_revisited_columns_hours": 0.1
     }
   },
@@ -11329,7 +11329,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 5770.5,
+      "time_after_first_backward_move_hours": 5781.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -11438,7 +11438,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 5191.8,
+      "time_after_first_backward_move_hours": 5202.4,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -11690,7 +11690,7 @@
       "backward_column_moves": 1,
       "reopened_after_done": false,
       "revisited_columns": [],
-      "time_after_first_backward_move_hours": 4853.8,
+      "time_after_first_backward_move_hours": 4864.4,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -11700,7 +11700,7 @@
       "backward_column_moves": 1,
       "reopened_after_done": false,
       "revisited_columns": [],
-      "time_after_first_backward_move_hours": 4853.8,
+      "time_after_first_backward_move_hours": 4864.4,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -11754,7 +11754,7 @@
       "backward_column_moves": 1,
       "reopened_after_done": false,
       "revisited_columns": [],
-      "time_after_first_backward_move_hours": 4688.7,
+      "time_after_first_backward_move_hours": 4699.3,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -11766,7 +11766,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 4662.0,
+      "time_after_first_backward_move_hours": 4672.6,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12113,7 +12113,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3993.4,
+      "time_after_first_backward_move_hours": 4004.0,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12274,7 +12274,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3489.9,
+      "time_after_first_backward_move_hours": 3500.5,
       "time_in_revisited_columns_hours": 49.0
     }
   },
@@ -12362,7 +12362,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 105.1,
+      "time_after_first_backward_move_hours": 115.7,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12434,7 +12434,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.1
     }
   },
@@ -12446,7 +12446,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.1
     }
   },
@@ -12458,7 +12458,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.1
     }
   },
@@ -12470,7 +12470,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12482,7 +12482,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12494,7 +12494,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12506,7 +12506,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12518,7 +12518,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12530,7 +12530,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12542,7 +12542,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12554,7 +12554,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12566,7 +12566,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12578,7 +12578,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12590,7 +12590,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12602,7 +12602,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12614,7 +12614,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12626,7 +12626,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12638,7 +12638,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12650,7 +12650,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12662,7 +12662,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12674,7 +12674,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12686,7 +12686,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12698,7 +12698,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12710,7 +12710,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12722,7 +12722,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12734,7 +12734,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12746,7 +12746,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12758,7 +12758,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12770,7 +12770,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12782,7 +12782,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12794,7 +12794,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12806,7 +12806,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12818,7 +12818,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12830,7 +12830,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12842,7 +12842,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12854,7 +12854,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12866,7 +12866,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12878,7 +12878,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12890,7 +12890,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12902,7 +12902,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12914,7 +12914,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12926,7 +12926,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12938,7 +12938,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12950,7 +12950,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12962,7 +12962,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12974,7 +12974,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12986,7 +12986,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -12998,7 +12998,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -13010,7 +13010,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -13022,7 +13022,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -13034,7 +13034,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -13046,7 +13046,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -13058,7 +13058,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -13070,7 +13070,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -13082,7 +13082,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -13094,7 +13094,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -13106,7 +13106,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -13118,7 +13118,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -13130,7 +13130,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -13142,7 +13142,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -13154,7 +13154,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -13166,7 +13166,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -13178,7 +13178,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -13190,7 +13190,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -13202,7 +13202,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 3106.5,
+      "time_after_first_backward_move_hours": 3117.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -13330,7 +13330,7 @@
         "Backlog",
         "Refinement"
       ],
-      "time_after_first_backward_move_hours": 2645.1,
+      "time_after_first_backward_move_hours": 2655.7,
       "time_in_revisited_columns_hours": 1987.8
     }
   },
@@ -13343,7 +13343,7 @@
         "Backlog",
         "Refinement"
       ],
-      "time_after_first_backward_move_hours": 2814.4,
+      "time_after_first_backward_move_hours": 2825.0,
       "time_in_revisited_columns_hours": 1724.4
     }
   },
@@ -13356,7 +13356,7 @@
         "Backlog",
         "Refinement"
       ],
-      "time_after_first_backward_move_hours": 2814.4,
+      "time_after_first_backward_move_hours": 2825.0,
       "time_in_revisited_columns_hours": 2402.6
     }
   },
@@ -13759,7 +13759,7 @@
       "revisited_columns": [
         "In Progress"
       ],
-      "time_after_first_backward_move_hours": 2002.3,
+      "time_after_first_backward_move_hours": 2012.9,
       "time_in_revisited_columns_hours": 4.1
     }
   },
@@ -14165,7 +14165,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 1451.5,
+      "time_after_first_backward_move_hours": 1462.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -14442,7 +14442,7 @@
       "revisited_columns": [
         "Ready For Test"
       ],
-      "time_after_first_backward_move_hours": 82.9,
+      "time_after_first_backward_move_hours": 93.5,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -14515,7 +14515,7 @@
         "In Progress",
         "Ready For Test"
       ],
-      "time_after_first_backward_move_hours": 322.9,
+      "time_after_first_backward_move_hours": 333.5,
       "time_in_revisited_columns_hours": 191.8
     }
   },
@@ -14665,7 +14665,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 628.5,
+      "time_after_first_backward_move_hours": 639.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -14717,7 +14717,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 628.5,
+      "time_after_first_backward_move_hours": 639.1,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -14956,7 +14956,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 58.2,
+      "time_after_first_backward_move_hours": 68.8,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -15001,7 +15001,7 @@
       "revisited_columns": [
         "Refinement"
       ],
-      "time_after_first_backward_move_hours": 131.1,
+      "time_after_first_backward_move_hours": 141.7,
       "time_in_revisited_columns_hours": 0.0
     }
   },
@@ -15085,7 +15085,7 @@
       "revisited_columns": [
         "Backlog"
       ],
-      "time_after_first_backward_move_hours": 485.7,
+      "time_after_first_backward_move_hours": 496.3,
       "time_in_revisited_columns_hours": 0.0
     }
   },

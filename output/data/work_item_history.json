@@ -74681,6 +74681,11 @@
       {
         "value": "In Progress",
         "entered": "2026-08-07T09:26:51.4Z",
+        "left": "2026-08-12T11:44:41.04Z"
+      },
+      {
+        "value": "Production",
+        "entered": "2026-08-12T11:44:41.04Z",
         "left": null
       }
     ],
@@ -74698,6 +74703,11 @@
       {
         "value": "Active",
         "entered": "2026-08-07T09:26:51.4Z",
+        "left": "2026-08-12T11:44:41.04Z"
+      },
+      {
+        "value": "Done",
+        "entered": "2026-08-12T11:44:41.04Z",
         "left": null
       }
     ],
@@ -84925,11 +84935,11 @@
       {
         "value": "In Progress",
         "entered": "2026-08-11T14:17:48.243Z",
-        "left": "2026-08-11T14:38:19.973Z"
+        "left": "2026-08-13T15:06:51.737Z"
       },
       {
         "value": "Ready",
-        "entered": "2026-08-11T14:38:19.973Z",
+        "entered": "2026-08-13T15:06:51.737Z",
         "left": null
       }
     ],
@@ -84957,11 +84967,11 @@
       {
         "value": "Active",
         "entered": "2026-08-11T14:17:48.243Z",
-        "left": "2026-08-11T14:38:19.973Z"
+        "left": "2026-08-13T15:06:51.737Z"
       },
       {
         "value": "Committed",
-        "entered": "2026-08-11T14:38:19.973Z",
+        "entered": "2026-08-13T15:06:51.737Z",
         "left": null
       }
     ],
@@ -84994,7 +85004,7 @@
       {
         "from_column": "In Progress",
         "to_column": "Ready",
-        "at": "2026-08-11T14:38:19.973Z"
+        "at": "2026-08-13T15:06:51.737Z"
       }
     ]
   },
@@ -90392,11 +90402,16 @@
       {
         "value": "Refinement",
         "entered": "2026-08-04T13:39:17.323Z",
-        "left": "2026-08-10T13:59:13.74Z"
+        "left": "2026-08-13T09:34:50.463Z"
       },
       {
         "value": "Ready",
-        "entered": "2026-08-10T13:59:13.74Z",
+        "entered": "2026-08-13T09:34:50.463Z",
+        "left": "2026-08-13T09:34:51.01Z"
+      },
+      {
+        "value": "In Progress",
+        "entered": "2026-08-13T09:34:51.01Z",
         "left": null
       }
     ],
@@ -90404,6 +90419,11 @@
       {
         "value": "New",
         "entered": "2026-06-02T09:49:16.9Z",
+        "left": "2026-08-13T09:34:51.01Z"
+      },
+      {
+        "value": "Active",
+        "entered": "2026-08-13T09:34:51.01Z",
         "left": null
       }
     ],
@@ -91992,11 +92012,11 @@
       {
         "value": "Ready For Test",
         "entered": "2026-08-03T10:28:04.237Z",
-        "left": "2026-08-04T08:27:13.593Z"
+        "left": "2026-08-12T19:46:52.283Z"
       },
       {
-        "value": "Ready for Release",
-        "entered": "2026-08-04T08:27:13.593Z",
+        "value": "Production",
+        "entered": "2026-08-12T19:46:52.283Z",
         "left": null
       }
     ],
@@ -92014,6 +92034,11 @@
       {
         "value": "Active",
         "entered": "2026-06-18T08:32:07.1Z",
+        "left": "2026-08-12T19:46:52.283Z"
+      },
+      {
+        "value": "Done",
+        "entered": "2026-08-12T19:46:52.283Z",
         "left": null
       }
     ],
@@ -94683,6 +94708,11 @@
       {
         "value": "In Progress",
         "entered": "2026-08-10T09:24:06.6Z",
+        "left": "2026-08-12T11:44:54.737Z"
+      },
+      {
+        "value": "Ready for Release",
+        "entered": "2026-08-12T11:44:54.737Z",
         "left": null
       }
     ],
@@ -95319,6 +95349,16 @@
       {
         "value": "In Test",
         "entered": "2026-08-12T08:12:07.987Z",
+        "left": "2026-08-12T15:07:15.453Z"
+      },
+      {
+        "value": "Ready for Release",
+        "entered": "2026-08-12T15:07:15.453Z",
+        "left": "2026-08-13T14:05:34.343Z"
+      },
+      {
+        "value": "Production",
+        "entered": "2026-08-13T14:05:34.343Z",
         "left": null
       }
     ],
@@ -95341,6 +95381,11 @@
       {
         "value": "Active",
         "entered": "2026-07-21T08:44:57.033Z",
+        "left": "2026-08-13T14:05:34.343Z"
+      },
+      {
+        "value": "Done",
+        "entered": "2026-08-13T14:05:34.343Z",
         "left": null
       }
     ],
@@ -95615,6 +95660,11 @@
       {
         "value": "In Progress",
         "entered": "2026-07-30T13:32:04.05Z",
+        "left": "2026-08-13T08:42:16.557Z"
+      },
+      {
+        "value": "Backlog",
+        "entered": "2026-08-13T08:42:16.557Z",
         "left": null
       }
     ],
@@ -95632,6 +95682,11 @@
       {
         "value": "Active",
         "entered": "2026-07-30T13:32:04.05Z",
+        "left": "2026-08-13T08:42:16.557Z"
+      },
+      {
+        "value": "New",
+        "entered": "2026-08-13T08:42:16.557Z",
         "left": null
       }
     ],
@@ -95652,10 +95707,22 @@
         "field": "System.Tags",
         "old_value": "Refinement",
         "new_value": "Blocked",
-        "changed_at": "2026-08-04T08:35:23.807Z"
+        "changed_at": "2026-08-13T08:42:04.353Z"
+      },
+      {
+        "field": "System.Tags",
+        "old_value": "Blocked",
+        "new_value": "",
+        "changed_at": "2026-08-13T08:42:16.107Z"
       }
     ],
-    "regressions": []
+    "regressions": [
+      {
+        "from_column": "In Progress",
+        "to_column": "Backlog",
+        "at": "2026-08-13T08:42:16.557Z"
+      }
+    ]
   },
   {
     "id": 1240651,
@@ -95669,6 +95736,11 @@
       {
         "value": "Refinement",
         "entered": "2026-07-20T12:26:21.437Z",
+        "left": "2026-08-13T08:42:21.73Z"
+      },
+      {
+        "value": "Backlog",
+        "entered": "2026-08-13T08:42:21.73Z",
         "left": null
       }
     ],
@@ -95681,6 +95753,11 @@
       {
         "value": "Approved",
         "entered": "2026-07-20T12:26:21.437Z",
+        "left": "2026-08-13T08:42:21.73Z"
+      },
+      {
+        "value": "New",
+        "entered": "2026-08-13T08:42:21.73Z",
         "left": null
       }
     ],
@@ -95698,7 +95775,13 @@
         "changed_at": "2026-07-20T11:15:11.27Z"
       }
     ],
-    "regressions": []
+    "regressions": [
+      {
+        "from_column": "Refinement",
+        "to_column": "Backlog",
+        "at": "2026-08-13T08:42:21.73Z"
+      }
+    ]
   },
   {
     "id": 1240653,
@@ -95712,6 +95795,11 @@
       {
         "value": "Refinement",
         "entered": "2026-07-20T12:26:21.437Z",
+        "left": "2026-08-13T08:42:26.233Z"
+      },
+      {
+        "value": "Backlog",
+        "entered": "2026-08-13T08:42:26.233Z",
         "left": null
       }
     ],
@@ -95724,6 +95812,11 @@
       {
         "value": "Approved",
         "entered": "2026-07-20T12:26:21.437Z",
+        "left": "2026-08-13T08:42:26.233Z"
+      },
+      {
+        "value": "New",
+        "entered": "2026-08-13T08:42:26.233Z",
         "left": null
       }
     ],
@@ -95741,7 +95834,13 @@
         "changed_at": "2026-07-20T11:15:24.47Z"
       }
     ],
-    "regressions": []
+    "regressions": [
+      {
+        "from_column": "Refinement",
+        "to_column": "Backlog",
+        "at": "2026-08-13T08:42:26.233Z"
+      }
+    ]
   },
   {
     "id": 1240654,
@@ -95765,6 +95864,11 @@
       {
         "value": "In Progress",
         "entered": "2026-07-28T08:43:08.143Z",
+        "left": "2026-08-13T08:42:13.967Z"
+      },
+      {
+        "value": "Backlog",
+        "entered": "2026-08-13T08:42:13.967Z",
         "left": null
       }
     ],
@@ -95792,6 +95896,11 @@
       {
         "value": "Active",
         "entered": "2026-07-28T08:43:08.143Z",
+        "left": "2026-08-13T08:42:13.967Z"
+      },
+      {
+        "value": "New",
+        "entered": "2026-08-13T08:42:13.967Z",
         "left": null
       }
     ],
@@ -95818,10 +95927,22 @@
         "field": "System.Tags",
         "old_value": "Ready",
         "new_value": "Blocked; Ready",
-        "changed_at": "2026-08-04T08:41:58.257Z"
+        "changed_at": "2026-08-13T08:41:54.487Z"
+      },
+      {
+        "field": "System.Tags",
+        "old_value": "Blocked; Ready",
+        "new_value": "Ready",
+        "changed_at": "2026-08-13T08:42:13.15Z"
       }
     ],
-    "regressions": []
+    "regressions": [
+      {
+        "from_column": "In Progress",
+        "to_column": "Backlog",
+        "at": "2026-08-13T08:42:13.967Z"
+      }
+    ]
   },
   {
     "id": 1241126,
@@ -96761,6 +96882,11 @@
       {
         "value": "Ready for Release",
         "entered": "2026-08-11T15:28:56.05Z",
+        "left": "2026-08-13T10:04:41.007Z"
+      },
+      {
+        "value": "Production",
+        "entered": "2026-08-13T10:04:41.007Z",
         "left": null
       }
     ],
@@ -96778,6 +96904,11 @@
       {
         "value": "Active",
         "entered": "2026-08-04T13:29:22.203Z",
+        "left": "2026-08-13T10:04:41.007Z"
+      },
+      {
+        "value": "Done",
+        "entered": "2026-08-13T10:04:41.007Z",
         "left": null
       }
     ],
@@ -96924,6 +97055,11 @@
       {
         "value": "In Progress",
         "entered": "2026-07-31T08:23:19.887Z",
+        "left": "2026-08-14T08:05:09.227Z"
+      },
+      {
+        "value": "Production",
+        "entered": "2026-08-14T08:05:09.227Z",
         "left": null
       }
     ],
@@ -96936,6 +97072,11 @@
       {
         "value": "Active",
         "entered": "2026-07-31T08:23:19.887Z",
+        "left": "2026-08-14T08:05:09.227Z"
+      },
+      {
+        "value": "Done",
+        "entered": "2026-08-14T08:05:09.227Z",
         "left": null
       }
     ],
@@ -97207,6 +97348,11 @@
       {
         "value": "Ready for Release",
         "entered": "2026-08-11T14:57:19.693Z",
+        "left": "2026-08-13T10:04:13.89Z"
+      },
+      {
+        "value": "Production",
+        "entered": "2026-08-13T10:04:13.89Z",
         "left": null
       }
     ],
@@ -97219,6 +97365,11 @@
       {
         "value": "Active",
         "entered": "2026-08-06T13:24:09.247Z",
+        "left": "2026-08-13T10:04:13.89Z"
+      },
+      {
+        "value": "Closed",
+        "entered": "2026-08-13T10:04:13.89Z",
         "left": null
       }
     ],
@@ -97268,11 +97419,11 @@
       {
         "value": "Refinement",
         "entered": "2026-08-05T10:59:46.643Z",
-        "left": "2026-08-11T15:09:10.997Z"
+        "left": "2026-08-13T08:42:16.557Z"
       },
       {
         "value": "In Progress",
-        "entered": "2026-08-11T15:09:10.997Z",
+        "entered": "2026-08-13T08:42:16.557Z",
         "left": null
       }
     ],
@@ -97285,11 +97436,11 @@
       {
         "value": "Approved",
         "entered": "2026-08-05T10:59:46.643Z",
-        "left": "2026-08-11T15:09:10.997Z"
+        "left": "2026-08-13T08:42:16.557Z"
       },
       {
         "value": "Active",
-        "entered": "2026-08-11T15:09:10.997Z",
+        "entered": "2026-08-13T08:42:16.557Z",
         "left": null
       }
     ],
@@ -97363,6 +97514,11 @@
       {
         "value": "In Progress",
         "entered": "2026-08-10T15:14:27.913Z",
+        "left": "2026-08-13T09:34:41.05Z"
+      },
+      {
+        "value": "Ready For Test",
+        "entered": "2026-08-13T09:34:41.05Z",
         "left": null
       }
     ],
@@ -97421,6 +97577,11 @@
       {
         "value": "Ready for Release",
         "entered": "2026-08-06T13:54:13.347Z",
+        "left": "2026-08-12T21:17:31.96Z"
+      },
+      {
+        "value": "Production",
+        "entered": "2026-08-12T21:17:31.96Z",
         "left": null
       }
     ],
@@ -97433,6 +97594,11 @@
       {
         "value": "Active",
         "entered": "2026-08-05T08:22:42.793Z",
+        "left": "2026-08-12T21:17:31.96Z"
+      },
+      {
+        "value": "Done",
+        "entered": "2026-08-12T21:17:31.96Z",
         "left": null
       }
     ],
@@ -97458,6 +97624,11 @@
       {
         "value": "Refinement",
         "entered": "2026-08-10T13:09:24.593Z",
+        "left": "2026-08-12T10:42:08.233Z"
+      },
+      {
+        "value": "Ready",
+        "entered": "2026-08-12T10:42:08.233Z",
         "left": null
       }
     ],
@@ -97470,6 +97641,11 @@
       {
         "value": "Approved",
         "entered": "2026-08-10T13:09:24.593Z",
+        "left": "2026-08-12T10:42:08.233Z"
+      },
+      {
+        "value": "Committed",
+        "entered": "2026-08-12T10:42:08.233Z",
         "left": null
       }
     ],
@@ -97491,6 +97667,12 @@
         "old_value": "3 Amigos",
         "new_value": "Refinement",
         "changed_at": "2026-08-10T13:09:24.193Z"
+      },
+      {
+        "field": "System.Tags",
+        "old_value": "Refinement",
+        "new_value": "Ready",
+        "changed_at": "2026-08-12T10:42:07.59Z"
       }
     ],
     "regressions": []
@@ -97552,11 +97734,21 @@
       {
         "value": "In Progress",
         "entered": "2026-08-05T13:38:29.53Z",
-        "left": "2026-08-06T08:35:32.77Z"
+        "left": "2026-08-13T08:21:32.663Z"
       },
       {
         "value": "In Test",
-        "entered": "2026-08-06T08:35:32.77Z",
+        "entered": "2026-08-13T08:21:32.663Z",
+        "left": "2026-08-13T08:21:33.177Z"
+      },
+      {
+        "value": "Ready for Release",
+        "entered": "2026-08-13T08:21:33.177Z",
+        "left": "2026-08-13T10:04:44.04Z"
+      },
+      {
+        "value": "Production",
+        "entered": "2026-08-13T10:04:44.04Z",
         "left": null
       }
     ],
@@ -97569,6 +97761,11 @@
       {
         "value": "Active",
         "entered": "2026-08-05T13:38:29.53Z",
+        "left": "2026-08-13T10:04:44.04Z"
+      },
+      {
+        "value": "Closed",
+        "entered": "2026-08-13T10:04:44.04Z",
         "left": null
       }
     ],
@@ -97764,6 +97961,11 @@
       {
         "value": "Refinement",
         "entered": "2026-08-10T13:32:16.2Z",
+        "left": "2026-08-14T10:34:02.517Z"
+      },
+      {
+        "value": "Ready",
+        "entered": "2026-08-14T10:34:02.517Z",
         "left": null
       }
     ],
@@ -97776,6 +97978,11 @@
       {
         "value": "Approved",
         "entered": "2026-08-10T13:32:16.2Z",
+        "left": "2026-08-14T10:34:02.517Z"
+      },
+      {
+        "value": "Committed",
+        "entered": "2026-08-14T10:34:02.517Z",
         "left": null
       }
     ],
@@ -97785,6 +97992,12 @@
         "old_value": null,
         "new_value": "Refinement",
         "changed_at": "2026-08-10T13:32:15.83Z"
+      },
+      {
+        "field": "System.Tags",
+        "old_value": "Refinement",
+        "new_value": "Ready",
+        "changed_at": "2026-08-14T09:24:34.683Z"
       }
     ],
     "regressions": []
@@ -97796,11 +98009,11 @@
       {
         "value": "Backlog",
         "entered": "2026-08-10T14:34:39.99Z",
-        "left": "2026-08-12T10:21:46.923Z"
+        "left": "2026-08-13T08:42:16.557Z"
       },
       {
         "value": "Refinement",
-        "entered": "2026-08-12T10:21:46.923Z",
+        "entered": "2026-08-13T08:42:16.557Z",
         "left": null
       }
     ],
@@ -97902,6 +98115,139 @@
       }
     ],
     "tag_history": [],
+    "regressions": []
+  },
+  {
+    "id": 1250076,
+    "board_entry_date": "2026-08-12T15:14:05.103Z",
+    "column_history": [
+      {
+        "value": "Backlog",
+        "entered": "2026-08-12T15:14:05.103Z",
+        "left": "2026-08-12T15:32:51.247Z"
+      },
+      {
+        "value": "Ready",
+        "entered": "2026-08-12T15:32:51.247Z",
+        "left": "2026-08-12T15:56:46.557Z"
+      },
+      {
+        "value": "In Progress",
+        "entered": "2026-08-12T15:56:46.557Z",
+        "left": "2026-08-13T14:05:24.747Z"
+      },
+      {
+        "value": "Production",
+        "entered": "2026-08-13T14:05:24.747Z",
+        "left": null
+      }
+    ],
+    "state_history": [
+      {
+        "value": "New",
+        "entered": "2026-08-12T15:14:05.103Z",
+        "left": "2026-08-12T15:32:51.247Z"
+      },
+      {
+        "value": "Committed",
+        "entered": "2026-08-12T15:32:51.247Z",
+        "left": "2026-08-12T15:56:46.557Z"
+      },
+      {
+        "value": "Active",
+        "entered": "2026-08-12T15:56:46.557Z",
+        "left": "2026-08-13T14:05:24.747Z"
+      },
+      {
+        "value": "Done",
+        "entered": "2026-08-13T14:05:24.747Z",
+        "left": null
+      }
+    ],
+    "tag_history": [],
+    "regressions": []
+  },
+  {
+    "id": 1250446,
+    "board_entry_date": "2026-08-13T14:57:10.56Z",
+    "column_history": [
+      {
+        "value": "Backlog",
+        "entered": "2026-08-13T14:57:10.56Z",
+        "left": "2026-08-13T14:58:12.897Z"
+      },
+      {
+        "value": "Ready",
+        "entered": "2026-08-13T14:58:12.897Z",
+        "left": "2026-08-13T14:58:28.29Z"
+      },
+      {
+        "value": "In Progress",
+        "entered": "2026-08-13T14:58:28.29Z",
+        "left": null
+      }
+    ],
+    "state_history": [
+      {
+        "value": "New",
+        "entered": "2026-08-13T14:57:10.56Z",
+        "left": "2026-08-13T14:58:12.897Z"
+      },
+      {
+        "value": "Committed",
+        "entered": "2026-08-13T14:58:12.897Z",
+        "left": "2026-08-13T14:58:28.29Z"
+      },
+      {
+        "value": "Active",
+        "entered": "2026-08-13T14:58:28.29Z",
+        "left": null
+      }
+    ],
+    "tag_history": [],
+    "regressions": []
+  },
+  {
+    "id": 1250950,
+    "board_entry_date": "2026-08-14T12:39:04.567Z",
+    "column_history": [
+      {
+        "value": "Backlog",
+        "entered": "2026-08-14T12:39:04.567Z",
+        "left": "2026-08-14T12:39:12.49Z"
+      },
+      {
+        "value": "In Progress",
+        "entered": "2026-08-14T12:39:12.49Z",
+        "left": null
+      }
+    ],
+    "state_history": [
+      {
+        "value": "New",
+        "entered": "2026-08-14T12:39:04.567Z",
+        "left": "2026-08-14T12:39:12.49Z"
+      },
+      {
+        "value": "Active",
+        "entered": "2026-08-14T12:39:12.49Z",
+        "left": null
+      }
+    ],
+    "tag_history": [
+      {
+        "field": "System.Tags",
+        "old_value": null,
+        "new_value": "iOS",
+        "changed_at": "2026-08-14T12:39:04.567Z"
+      },
+      {
+        "field": "System.Tags",
+        "old_value": "iOS",
+        "new_value": "In Review; iOS",
+        "changed_at": "2026-08-16T23:22:08.037Z"
+      }
+    ],
     "regressions": []
   }
 ]

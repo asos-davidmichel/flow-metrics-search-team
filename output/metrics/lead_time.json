@@ -1,10 +1,10 @@
 {
   "metric": "lead_time",
-  "calculated_at": "2026-08-12T10:34:52.011639+00:00",
+  "calculated_at": "2026-08-17T07:59:30.905727+00:00",
   "window": {
     "parameter": "3m",
-    "start": "2026-05-14T10:34:52.011639+00:00",
-    "end": "2026-08-12T10:34:52.011639+00:00"
+    "start": "2026-05-19T07:59:30.905727+00:00",
+    "end": "2026-08-17T07:59:30.905727+00:00"
   },
   "config_used": {
     "clock_start": {
@@ -88,28 +88,22 @@
     1235112,
     1235124
   ],
-  "item_count": 103,
+  "item_count": 105,
   "warnings": [],
   "overall": {
-    "n": 103,
-    "mean_days": 36.7,
+    "n": 105,
+    "mean_days": 38.3,
     "median_days": 12.1,
-    "p85_days": 36.9,
+    "p85_days": 43.8,
     "min_days": 0.1,
     "max_days": 624.9
   },
   "weekly_stats": [
     {
-      "week_start": "2026-05-11",
-      "n": 6,
-      "mean_days": 13.3,
-      "median_days": 12.3
-    },
-    {
       "week_start": "2026-05-18",
-      "n": 11,
-      "mean_days": 29.9,
-      "median_days": 14.3
+      "n": 10,
+      "mean_days": 31.0,
+      "median_days": 13.7
     },
     {
       "week_start": "2026-05-25",
@@ -173,9 +167,9 @@
     },
     {
       "week_start": "2026-08-10",
-      "n": 4,
-      "mean_days": 6.3,
-      "median_days": 6.1
+      "n": 13,
+      "mean_days": 28.4,
+      "median_days": 12.1
     }
   ],
   "items": [
@@ -228,6 +222,14 @@
       "completed_at": "2026-08-07T08:42:59.943000+00:00"
     },
     {
+      "id": 1153614,
+      "title": "[PLP manager tooling] Blob Access",
+      "type": "Product Backlog Item",
+      "lead_time_days": 204.93,
+      "started_at": "2026-01-19T13:27:57.183000+00:00",
+      "completed_at": "2026-08-12T11:44:41.040000+00:00"
+    },
+    {
       "id": 1189402,
       "title": "[WEB] - Add Analytics to the Visual Category Tiles frontend",
       "type": "Product Backlog Item",
@@ -242,22 +244,6 @@
       "lead_time_days": 49.2,
       "started_at": "2026-04-21T06:21:16.870000+00:00",
       "completed_at": "2026-06-09T11:08:57.503000+00:00"
-    },
-    {
-      "id": 1203433,
-      "title": "[WEB] - Fix breaking blob reports on build pipelines",
-      "type": "Bug",
-      "lead_time_days": 22.95,
-      "started_at": "2026-04-22T10:21:57.563000+00:00",
-      "completed_at": "2026-05-15T09:03:53.167000+00:00"
-    },
-    {
-      "id": 1203535,
-      "title": "[MixPanel] Map and send AddToBag events (15th May)",
-      "type": "Product Backlog Item",
-      "lead_time_days": 23.04,
-      "started_at": "2026-04-22T14:44:27.240000+00:00",
-      "completed_at": "2026-05-15T15:44:51.470000+00:00"
     },
     {
       "id": 1203781,
@@ -284,36 +270,12 @@
       "completed_at": "2026-05-19T09:09:33.267000+00:00"
     },
     {
-      "id": 1206612,
-      "title": "Visual Categories - child categories",
-      "type": "User Story",
-      "lead_time_days": 16.32,
-      "started_at": "2026-04-28T09:12:41+00:00",
-      "completed_at": "2026-05-14T16:59:22.267000+00:00"
-    },
-    {
-      "id": 1207193,
-      "title": "[MixPanel] Map and send HomepageImpression events (15th May)",
-      "type": "Product Backlog Item",
-      "lead_time_days": 18.82,
-      "started_at": "2026-04-29T12:50:58+00:00",
-      "completed_at": "2026-05-18T08:31:31.480000+00:00"
-    },
-    {
       "id": 1207194,
       "title": "[MixPanel] Map and send SearchImpression events (15th May)",
       "type": "Product Backlog Item",
       "lead_time_days": 20.11,
       "started_at": "2026-04-29T12:50:59.240000+00:00",
       "completed_at": "2026-05-19T15:32:39.750000+00:00"
-    },
-    {
-      "id": 1209063,
-      "title": "Pagination showing incorrect page",
-      "type": "Bug",
-      "lead_time_days": 8.33,
-      "started_at": "2026-05-06T08:58:41.937000+00:00",
-      "completed_at": "2026-05-14T16:59:22.267000+00:00"
     },
     {
       "id": 1209402,
@@ -332,14 +294,6 @@
       "completed_at": "2026-08-07T12:49:14.437000+00:00"
     },
     {
-      "id": 1209578,
-      "title": "Guided Search - Gender Floor Bug",
-      "type": "Bug",
-      "lead_time_days": 7.01,
-      "started_at": "2026-05-07T12:50:42.687000+00:00",
-      "completed_at": "2026-05-14T13:07:09.090000+00:00"
-    },
-    {
       "id": 1210301,
       "title": "[WEB] Fix critical security vulnerabilities",
       "type": "Product Backlog Item",
@@ -354,14 +308,6 @@
       "lead_time_days": 43.84,
       "started_at": "2026-05-12T13:28:02.963000+00:00",
       "completed_at": "2026-06-25T09:32:10.280000+00:00"
-    },
-    {
-      "id": 1211954,
-      "title": "[WEB] Double slashes break image results",
-      "type": "Bug",
-      "lead_time_days": 2.01,
-      "started_at": "2026-05-12T16:43:39.260000+00:00",
-      "completed_at": "2026-05-14T16:59:22.267000+00:00"
     },
     {
       "id": 1212285,
@@ -612,6 +558,14 @@
       "completed_at": "2026-07-06T09:46:10.783000+00:00"
     },
     {
+      "id": 1227410,
+      "title": "iOS Delivery Banner on PLP",
+      "type": "Product Backlog Item",
+      "lead_time_days": 56.42,
+      "started_at": "2026-06-17T09:48:12.037000+00:00",
+      "completed_at": "2026-08-12T19:46:52.283000+00:00"
+    },
+    {
       "id": 1227859,
       "title": "[Algolia] Index Clean-Up",
       "type": "Product Backlog Item",
@@ -820,6 +774,14 @@
       "completed_at": "2026-07-29T14:53:52.600000+00:00"
     },
     {
+      "id": 1240012,
+      "title": "Criteo - Relevant Ads",
+      "type": "Product Backlog Item",
+      "lead_time_days": 27.24,
+      "started_at": "2026-07-17T08:13:44.463000+00:00",
+      "completed_at": "2026-08-13T14:05:34.343000+00:00"
+    },
+    {
       "id": 1240181,
       "title": "[A-Z Brands] \u00d6lend is grouped differently in web and apps",
       "type": "Product Backlog Item",
@@ -940,12 +902,28 @@
       "completed_at": "2026-08-03T12:32:58.840000+00:00"
     },
     {
+      "id": 1244064,
+      "title": "[WEB] Re-test 4-Column PLP Image Expansion",
+      "type": "Product Backlog Item",
+      "lead_time_days": 15.04,
+      "started_at": "2026-07-29T09:07:10.037000+00:00",
+      "completed_at": "2026-08-13T10:04:41.007000+00:00"
+    },
+    {
       "id": 1244145,
       "title": "[MixPanel] StreamCopier Alerting",
       "type": "Product Backlog Item",
       "lead_time_days": 12.95,
       "started_at": "2026-07-29T09:53:59.030000+00:00",
       "completed_at": "2026-08-11T08:37:40.187000+00:00"
+    },
+    {
+      "id": 1245039,
+      "title": "Investigate New In/ Sale journey in category navigation",
+      "type": "Product Backlog Item",
+      "lead_time_days": 13.99,
+      "started_at": "2026-07-31T08:23:04.617000+00:00",
+      "completed_at": "2026-08-14T08:05:09.227000+00:00"
     },
     {
       "id": 1245180,
@@ -972,12 +950,36 @@
       "completed_at": "2026-08-07T12:49:13.013000+00:00"
     },
     {
+      "id": 1245863,
+      "title": "[WEB] Medium Wizz vulnerabilities",
+      "type": "User Story",
+      "lead_time_days": 9.89,
+      "started_at": "2026-08-03T12:43:54.290000+00:00",
+      "completed_at": "2026-08-13T10:04:13.890000+00:00"
+    },
+    {
       "id": 1245927,
       "title": "[Guided Search] Fix reconciliation not applying to some query families",
       "type": "Bug",
       "lead_time_days": 0.77,
       "started_at": "2026-08-03T14:07:33.807000+00:00",
       "completed_at": "2026-08-04T08:39:23.417000+00:00"
+    },
+    {
+      "id": 1246429,
+      "title": "[iOS] Animation bug found on PL when GS + Quick FIlter are enabled",
+      "type": "Bug",
+      "lead_time_days": 7.54,
+      "started_at": "2026-08-05T08:22:33.243000+00:00",
+      "completed_at": "2026-08-12T21:17:31.960000+00:00"
+    },
+    {
+      "id": 1246665,
+      "title": "[WEB] InnerSource - failed PLP events",
+      "type": "User Story",
+      "lead_time_days": 7.85,
+      "started_at": "2026-08-05T13:38:16.760000+00:00",
+      "completed_at": "2026-08-13T10:04:44.040000+00:00"
     },
     {
       "id": 1247304,
@@ -1002,6 +1004,14 @@
       "lead_time_days": 0.22,
       "started_at": "2026-08-11T09:51:47.153000+00:00",
       "completed_at": "2026-08-11T15:03:06.963000+00:00"
+    },
+    {
+      "id": 1250076,
+      "title": "[Search API] Acceptance test failure on edge cache TTL",
+      "type": "Bug",
+      "lead_time_days": 0.95,
+      "started_at": "2026-08-12T15:14:05.103000+00:00",
+      "completed_at": "2026-08-13T14:05:24.747000+00:00"
     }
   ]
 }

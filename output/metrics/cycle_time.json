@@ -1,10 +1,10 @@
 {
   "metric": "cycle_time",
-  "calculated_at": "2026-08-12T10:34:51.868174+00:00",
+  "calculated_at": "2026-08-17T07:59:30.781890+00:00",
   "window": {
     "parameter": "3m",
-    "start": "2026-05-14T10:34:51.868174+00:00",
-    "end": "2026-08-12T10:34:51.868174+00:00"
+    "start": "2026-05-19T07:59:30.781890+00:00",
+    "end": "2026-08-17T07:59:30.781890+00:00"
   },
   "config_used": {
     "clock_start": {
@@ -88,13 +88,11 @@
     1235112,
     1235124
   ],
-  "item_count": 87,
+  "item_count": 91,
   "warnings": [
     "Item 993599: Reached 'Production' but no 'In Progress' visit found \u2014 clock start may predate available history; excluded",
     "Item 1085455: Reached 'Production' but no 'In Progress' visit found \u2014 clock start may predate available history; excluded",
-    "Item 1203433: Reached 'Production' but no 'In Progress' visit found \u2014 clock start may predate available history; excluded",
     "Item 1209402: Reached 'Production' but no 'In Progress' visit found \u2014 clock start may predate available history; excluded",
-    "Item 1209578: Reached 'Production' but no 'In Progress' visit found \u2014 clock start may predate available history; excluded",
     "Item 1215230: Reached 'Production' but no 'In Progress' visit found \u2014 clock start may predate available history; excluded",
     "Item 1215319: Reached 'Production' but no 'In Progress' visit found \u2014 clock start may predate available history; excluded",
     "Item 1218879: Reached 'Production' but no 'In Progress' visit found \u2014 clock start may predate available history; excluded",
@@ -108,25 +106,19 @@
     "Item 1245840: Reached 'Production' but no 'In Progress' visit found \u2014 clock start may predate available history; excluded"
   ],
   "overall": {
-    "n": 87,
-    "mean_days": 12.6,
-    "median_days": 7.0,
-    "p85_days": 21.0,
+    "n": 91,
+    "mean_days": 12.9,
+    "median_days": 7.5,
+    "p85_days": 22.9,
     "min_days": 0.0,
     "max_days": 164.2
   },
   "weekly_stats": [
     {
-      "week_start": "2026-05-11",
-      "n": 4,
-      "mean_days": 10.9,
-      "median_days": 12.2
-    },
-    {
       "week_start": "2026-05-18",
-      "n": 9,
-      "mean_days": 7.3,
-      "median_days": 6.1
+      "n": 8,
+      "mean_days": 7.6,
+      "median_days": 8.1
     },
     {
       "week_start": "2026-05-25",
@@ -190,9 +182,9 @@
     },
     {
       "week_start": "2026-08-10",
-      "n": 4,
-      "mean_days": 5.6,
-      "median_days": 5.1
+      "n": 13,
+      "mean_days": 11.7,
+      "median_days": 7.8
     }
   ],
   "items": [
@@ -229,6 +221,14 @@
       "completed_at": "2026-08-07T08:42:59.943000+00:00"
     },
     {
+      "id": 1153614,
+      "title": "[PLP manager tooling] Blob Access",
+      "type": "Product Backlog Item",
+      "cycle_time_days": 5.1,
+      "started_at": "2026-08-07T09:26:51.400000+00:00",
+      "completed_at": "2026-08-12T11:44:41.040000+00:00"
+    },
+    {
       "id": 1189402,
       "title": "[WEB] - Add Analytics to the Visual Category Tiles frontend",
       "type": "Product Backlog Item",
@@ -243,14 +243,6 @@
       "cycle_time_days": 41.99,
       "started_at": "2026-04-28T11:27:36.813000+00:00",
       "completed_at": "2026-06-09T11:08:57.503000+00:00"
-    },
-    {
-      "id": 1203535,
-      "title": "[MixPanel] Map and send AddToBag events (15th May)",
-      "type": "Product Backlog Item",
-      "cycle_time_days": 18.0,
-      "started_at": "2026-04-27T15:40:26.527000+00:00",
-      "completed_at": "2026-05-15T15:44:51.470000+00:00"
     },
     {
       "id": 1203781,
@@ -277,36 +269,12 @@
       "completed_at": "2026-05-19T09:09:33.267000+00:00"
     },
     {
-      "id": 1206612,
-      "title": "Visual Categories - child categories",
-      "type": "User Story",
-      "cycle_time_days": 16.32,
-      "started_at": "2026-04-28T09:14:37.350000+00:00",
-      "completed_at": "2026-05-14T16:59:22.267000+00:00"
-    },
-    {
-      "id": 1207193,
-      "title": "[MixPanel] Map and send HomepageImpression events (15th May)",
-      "type": "Product Backlog Item",
-      "cycle_time_days": 4.7,
-      "started_at": "2026-05-13T15:41:28.280000+00:00",
-      "completed_at": "2026-05-18T08:31:31.480000+00:00"
-    },
-    {
       "id": 1207194,
       "title": "[MixPanel] Map and send SearchImpression events (15th May)",
       "type": "Product Backlog Item",
       "cycle_time_days": 1.29,
       "started_at": "2026-05-18T08:31:56.953000+00:00",
       "completed_at": "2026-05-19T15:32:39.750000+00:00"
-    },
-    {
-      "id": 1209063,
-      "title": "Pagination showing incorrect page",
-      "type": "Bug",
-      "cycle_time_days": 8.16,
-      "started_at": "2026-05-06T13:10:16.213000+00:00",
-      "completed_at": "2026-05-14T16:59:22.267000+00:00"
     },
     {
       "id": 1209513,
@@ -331,14 +299,6 @@
       "cycle_time_days": 29.74,
       "started_at": "2026-05-26T15:46:05.037000+00:00",
       "completed_at": "2026-06-25T09:32:10.280000+00:00"
-    },
-    {
-      "id": 1211954,
-      "title": "[WEB] Double slashes break image results",
-      "type": "Bug",
-      "cycle_time_days": 1.32,
-      "started_at": "2026-05-13T09:24:31.633000+00:00",
-      "completed_at": "2026-05-14T16:59:22.267000+00:00"
     },
     {
       "id": 1212285,
@@ -557,6 +517,14 @@
       "completed_at": "2026-07-06T09:46:10.783000+00:00"
     },
     {
+      "id": 1227410,
+      "title": "iOS Delivery Banner on PLP",
+      "type": "Product Backlog Item",
+      "cycle_time_days": 55.47,
+      "started_at": "2026-06-18T08:32:07.100000+00:00",
+      "completed_at": "2026-08-12T19:46:52.283000+00:00"
+    },
+    {
       "id": 1227859,
       "title": "[Algolia] Index Clean-Up",
       "type": "Product Backlog Item",
@@ -741,6 +709,14 @@
       "completed_at": "2026-07-29T14:53:52.600000+00:00"
     },
     {
+      "id": 1240012,
+      "title": "Criteo - Relevant Ads",
+      "type": "Product Backlog Item",
+      "cycle_time_days": 23.22,
+      "started_at": "2026-07-21T08:44:57.033000+00:00",
+      "completed_at": "2026-08-13T14:05:34.343000+00:00"
+    },
+    {
       "id": 1240289,
       "title": "Category Resiliency Test 28/07/26",
       "type": "Product Backlog Item",
@@ -837,12 +813,28 @@
       "completed_at": "2026-08-03T12:32:58.840000+00:00"
     },
     {
+      "id": 1244064,
+      "title": "[WEB] Re-test 4-Column PLP Image Expansion",
+      "type": "Product Backlog Item",
+      "cycle_time_days": 8.86,
+      "started_at": "2026-08-04T13:29:22.203000+00:00",
+      "completed_at": "2026-08-13T10:04:41.007000+00:00"
+    },
+    {
       "id": 1244145,
       "title": "[MixPanel] StreamCopier Alerting",
       "type": "Product Backlog Item",
       "cycle_time_days": 12.0,
       "started_at": "2026-07-30T08:43:43.570000+00:00",
       "completed_at": "2026-08-11T08:37:40.187000+00:00"
+    },
+    {
+      "id": 1245039,
+      "title": "Investigate New In/ Sale journey in category navigation",
+      "type": "Product Backlog Item",
+      "cycle_time_days": 13.99,
+      "started_at": "2026-07-31T08:23:19.887000+00:00",
+      "completed_at": "2026-08-14T08:05:09.227000+00:00"
     },
     {
       "id": 1245180,
@@ -861,12 +853,36 @@
       "completed_at": "2026-08-07T12:49:13.013000+00:00"
     },
     {
+      "id": 1245863,
+      "title": "[WEB] Medium Wizz vulnerabilities",
+      "type": "User Story",
+      "cycle_time_days": 6.86,
+      "started_at": "2026-08-06T13:24:09.247000+00:00",
+      "completed_at": "2026-08-13T10:04:13.890000+00:00"
+    },
+    {
       "id": 1245927,
       "title": "[Guided Search] Fix reconciliation not applying to some query families",
       "type": "Bug",
       "cycle_time_days": 0.77,
       "started_at": "2026-08-03T14:10:37.667000+00:00",
       "completed_at": "2026-08-04T08:39:23.417000+00:00"
+    },
+    {
+      "id": 1246429,
+      "title": "[iOS] Animation bug found on PL when GS + Quick FIlter are enabled",
+      "type": "Bug",
+      "cycle_time_days": 7.54,
+      "started_at": "2026-08-05T08:22:42.793000+00:00",
+      "completed_at": "2026-08-12T21:17:31.960000+00:00"
+    },
+    {
+      "id": 1246665,
+      "title": "[WEB] InnerSource - failed PLP events",
+      "type": "User Story",
+      "cycle_time_days": 7.85,
+      "started_at": "2026-08-05T13:38:29.530000+00:00",
+      "completed_at": "2026-08-13T10:04:44.040000+00:00"
     },
     {
       "id": 1247304,
@@ -891,6 +907,14 @@
       "cycle_time_days": 0.21,
       "started_at": "2026-08-11T09:54:01.330000+00:00",
       "completed_at": "2026-08-11T15:03:06.963000+00:00"
+    },
+    {
+      "id": 1250076,
+      "title": "[Search API] Acceptance test failure on edge cache TTL",
+      "type": "Bug",
+      "cycle_time_days": 0.92,
+      "started_at": "2026-08-12T15:56:46.557000+00:00",
+      "completed_at": "2026-08-13T14:05:24.747000+00:00"
     }
   ],
   "throughput_items": [
@@ -925,6 +949,11 @@
       "completed_at": "2026-08-07T08:42:59.943000+00:00"
     },
     {
+      "id": 1153614,
+      "type": "Product Backlog Item",
+      "completed_at": "2026-08-12T11:44:41.040000+00:00"
+    },
+    {
       "id": 1189402,
       "type": "Product Backlog Item",
       "completed_at": "2026-05-29T08:37:58.130000+00:00"
@@ -933,16 +962,6 @@
       "id": 1202754,
       "type": "Product Backlog Item",
       "completed_at": "2026-06-09T11:08:57.503000+00:00"
-    },
-    {
-      "id": 1203433,
-      "type": "Bug",
-      "completed_at": "2026-05-15T09:03:53.167000+00:00"
-    },
-    {
-      "id": 1203535,
-      "type": "Product Backlog Item",
-      "completed_at": "2026-05-15T15:44:51.470000+00:00"
     },
     {
       "id": 1203781,
@@ -960,24 +979,9 @@
       "completed_at": "2026-05-19T09:09:33.267000+00:00"
     },
     {
-      "id": 1206612,
-      "type": "User Story",
-      "completed_at": "2026-05-14T16:59:22.267000+00:00"
-    },
-    {
-      "id": 1207193,
-      "type": "Product Backlog Item",
-      "completed_at": "2026-05-18T08:31:31.480000+00:00"
-    },
-    {
       "id": 1207194,
       "type": "Product Backlog Item",
       "completed_at": "2026-05-19T15:32:39.750000+00:00"
-    },
-    {
-      "id": 1209063,
-      "type": "Bug",
-      "completed_at": "2026-05-14T16:59:22.267000+00:00"
     },
     {
       "id": 1209402,
@@ -990,11 +994,6 @@
       "completed_at": "2026-08-07T12:49:14.437000+00:00"
     },
     {
-      "id": 1209578,
-      "type": "Bug",
-      "completed_at": "2026-05-14T13:07:09.090000+00:00"
-    },
-    {
       "id": 1210301,
       "type": "Product Backlog Item",
       "completed_at": "2026-05-21T14:05:48.227000+00:00"
@@ -1003,11 +1002,6 @@
       "id": 1211835,
       "type": "Product Backlog Item",
       "completed_at": "2026-06-25T09:32:10.280000+00:00"
-    },
-    {
-      "id": 1211954,
-      "type": "Bug",
-      "completed_at": "2026-05-14T16:59:22.267000+00:00"
     },
     {
       "id": 1212285,
@@ -1165,6 +1159,11 @@
       "completed_at": "2026-07-06T09:46:10.783000+00:00"
     },
     {
+      "id": 1227410,
+      "type": "Product Backlog Item",
+      "completed_at": "2026-08-12T19:46:52.283000+00:00"
+    },
+    {
       "id": 1227859,
       "type": "Product Backlog Item",
       "completed_at": "2026-06-29T12:47:56.890000+00:00"
@@ -1295,6 +1294,11 @@
       "completed_at": "2026-07-29T14:53:52.600000+00:00"
     },
     {
+      "id": 1240012,
+      "type": "Product Backlog Item",
+      "completed_at": "2026-08-13T14:05:34.343000+00:00"
+    },
+    {
       "id": 1240181,
       "type": "Product Backlog Item",
       "completed_at": "2026-07-20T15:08:11.073000+00:00"
@@ -1370,9 +1374,19 @@
       "completed_at": "2026-08-03T12:32:58.840000+00:00"
     },
     {
+      "id": 1244064,
+      "type": "Product Backlog Item",
+      "completed_at": "2026-08-13T10:04:41.007000+00:00"
+    },
+    {
       "id": 1244145,
       "type": "Product Backlog Item",
       "completed_at": "2026-08-11T08:37:40.187000+00:00"
+    },
+    {
+      "id": 1245039,
+      "type": "Product Backlog Item",
+      "completed_at": "2026-08-14T08:05:09.227000+00:00"
     },
     {
       "id": 1245180,
@@ -1390,9 +1404,24 @@
       "completed_at": "2026-08-07T12:49:13.013000+00:00"
     },
     {
+      "id": 1245863,
+      "type": "User Story",
+      "completed_at": "2026-08-13T10:04:13.890000+00:00"
+    },
+    {
       "id": 1245927,
       "type": "Bug",
       "completed_at": "2026-08-04T08:39:23.417000+00:00"
+    },
+    {
+      "id": 1246429,
+      "type": "Bug",
+      "completed_at": "2026-08-12T21:17:31.960000+00:00"
+    },
+    {
+      "id": 1246665,
+      "type": "User Story",
+      "completed_at": "2026-08-13T10:04:44.040000+00:00"
     },
     {
       "id": 1247304,
@@ -1408,6 +1437,11 @@
       "id": 1248664,
       "type": "Bug",
       "completed_at": "2026-08-11T15:03:06.963000+00:00"
+    },
+    {
+      "id": 1250076,
+      "type": "Bug",
+      "completed_at": "2026-08-13T14:05:24.747000+00:00"
     }
   ]
 }

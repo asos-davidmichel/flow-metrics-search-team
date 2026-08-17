@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-12T10:34:51.468441+00:00",
-  "total_items": 1319,
+  "generated_at": "2026-08-17T07:59:30.403893+00:00",
+  "total_items": 1322,
   "excluded_item_ids": [
     {
       "id": 1192916,
@@ -8345,7 +8345,7 @@
     },
     "short_dwell_spans": {
       "threshold_minutes": 60,
-      "count": 1023,
+      "count": 1027,
       "items": [
         {
           "id": 25410,
@@ -24334,12 +24334,6 @@
               "entered": "2026-04-14T13:09:20.337Z",
               "left": "2026-04-14T13:09:20.85Z",
               "dwell_minutes": 0.0
-            },
-            {
-              "column": "In Progress",
-              "entered": "2026-08-11T14:17:48.243Z",
-              "left": "2026-08-11T14:38:19.973Z",
-              "dwell_minutes": 20.5
             }
           ]
         },
@@ -25034,6 +25028,17 @@
               "entered": "2026-06-16T12:32:09.387Z",
               "left": "2026-06-16T12:33:15.15Z",
               "dwell_minutes": 1.1
+            }
+          ]
+        },
+        {
+          "id": 1221135,
+          "short_spans": [
+            {
+              "column": "Ready",
+              "entered": "2026-08-13T09:34:50.463Z",
+              "left": "2026-08-13T09:34:51.01Z",
+              "dwell_minutes": 0.0
             }
           ]
         },
@@ -26316,6 +26321,12 @@
               "entered": "2026-08-05T13:38:24.367Z",
               "left": "2026-08-05T13:38:29.53Z",
               "dwell_minutes": 0.1
+            },
+            {
+              "column": "In Test",
+              "entered": "2026-08-13T08:21:32.663Z",
+              "left": "2026-08-13T08:21:33.177Z",
+              "dwell_minutes": 0.0
             }
           ]
         },
@@ -26403,6 +26414,51 @@
               "dwell_minutes": 0.1
             }
           ]
+        },
+        {
+          "id": 1250076,
+          "short_spans": [
+            {
+              "column": "Backlog",
+              "entered": "2026-08-12T15:14:05.103Z",
+              "left": "2026-08-12T15:32:51.247Z",
+              "dwell_minutes": 18.8
+            },
+            {
+              "column": "Ready",
+              "entered": "2026-08-12T15:32:51.247Z",
+              "left": "2026-08-12T15:56:46.557Z",
+              "dwell_minutes": 23.9
+            }
+          ]
+        },
+        {
+          "id": 1250446,
+          "short_spans": [
+            {
+              "column": "Backlog",
+              "entered": "2026-08-13T14:57:10.56Z",
+              "left": "2026-08-13T14:58:12.897Z",
+              "dwell_minutes": 1.0
+            },
+            {
+              "column": "Ready",
+              "entered": "2026-08-13T14:58:12.897Z",
+              "left": "2026-08-13T14:58:28.29Z",
+              "dwell_minutes": 0.3
+            }
+          ]
+        },
+        {
+          "id": 1250950,
+          "short_spans": [
+            {
+              "column": "Backlog",
+              "entered": "2026-08-14T12:39:04.567Z",
+              "left": "2026-08-14T12:39:12.49Z",
+              "dwell_minutes": 0.1
+            }
+          ]
         }
       ],
       "note": "Short dwell spans are likely accidental moves. Consider ignoring these when evaluating regressions."
@@ -26413,7 +26469,7 @@
       "note": "Items with future 'entered' timestamps produce negative days_in_current_column. Fix the source timestamp in ADO or exclude the affected column span."
     },
     "unassigned_in_progress": {
-      "count": 19,
+      "count": 16,
       "items": [
         {
           "id": 1137817,
@@ -26429,10 +26485,6 @@
         },
         {
           "id": 1198321,
-          "column": "Ready"
-        },
-        {
-          "id": 1221135,
           "column": "Ready"
         },
         {
@@ -26464,37 +26516,29 @@
           "column": "Refinement"
         },
         {
-          "id": 1240651,
-          "column": "Refinement"
-        },
-        {
-          "id": 1240653,
-          "column": "Refinement"
-        },
-        {
           "id": 1245871,
           "column": "In Progress"
         },
         {
           "id": 1246458,
-          "column": "Refinement"
+          "column": "Ready"
         },
         {
           "id": 1248054,
           "column": "Refinement"
         },
         {
-          "id": 1248249,
+          "id": 1248401,
           "column": "Refinement"
         },
         {
-          "id": 1248401,
-          "column": "Refinement"
+          "id": 1250446,
+          "column": "In Progress"
         }
       ]
     },
     "broken_parent_references": {
-      "count": 680,
+      "count": 681,
       "items": [
         {
           "id": 26804,
@@ -29215,11 +29259,15 @@
         {
           "id": 1248249,
           "parent_id": 1248162
+        },
+        {
+          "id": 1250446,
+          "parent_id": 1245879
         }
       ]
     },
     "broken_child_references": {
-      "count": 673,
+      "count": 674,
       "items": [
         {
           "id": 25410,
@@ -31844,6 +31892,10 @@
         {
           "id": 1240012,
           "child_id": 1244881
+        },
+        {
+          "id": 1240012,
+          "child_id": 1250074
         },
         {
           "id": 1240505,

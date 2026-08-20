@@ -1,553 +1,499 @@
 {
   "chart_insights": {
     "cycle_time": {
-      "insight": "Cycle time is fairly predictable for the median item, but the long tail is still substantial: half of items finish in about a week, while the slower tail stretches into multiple weeks. The flat trend suggests the team has not materially improved or worsened delivery speed over the window, and the bug mean being higher than stories indicates more variability in defect work than feature work.",
+      "insight": "The gap between median (7.3d) and P85 (23.2d) shows a long right tail: most items finish in about a week, but a meaningful minority take 3x longer, hurting predictability. The improving trend (-0.41 d/wk) is genuine but modest. Bugs show the widest spread (median 5.7d vs mean 17.8d), suggesting a few very slow bugs dominate.",
       "evidence": [
-        "median 7.5 days vs p85 22.9 days",
-        "trend_direction stable; slope -0.04 days/week",
-        "Bug mean 16.1 days vs User Story median 8.0 days"
+        "median 7.3d vs P85 23.2d, max 164.2d",
+        "13 of 86 items above P85",
+        "Bug mean 17.8d vs median 5.7d"
       ],
-      "watch_out": "Watch whether the long-tail items are concentrated in specific stages or item types, because they will dominate stakeholder lead-time expectations."
+      "watch_out": "Whether the improving trend holds once the recent high-completion weeks normalise."
     },
     "lead_time": {
-      "insight": "Stakeholders cannot reliably plan around the average lead time because the distribution is highly skewed: the median is relatively short, but a small number of very old items pull the mean far upward. The worsening trend suggests items are spending more time waiting before completion, not just more time in active work.",
+      "insight": "Median lead time (12.0d) is close to median cycle time (7.3d), but the mean (38.6d) and max (624.9d) reveal that many items wait a very long time before or between commitments. The worsening trend (+1.41 d/wk) contrasts with improving cycle time — delay is accumulating upstream, not in delivery.",
       "evidence": [
-        "mean 38.3 days vs median 12.1 days",
-        "trend_direction worsening; slope 2.27 days/week",
-        "max 624.9 days"
+        "mean 38.6d vs median 12.0d; max 624.9d",
+        "trend +1.41 d/wk worsening",
+        "PBI mean 49.3d vs median 14.2d"
       ],
-      "watch_out": "Check whether the long lead times are driven by backlog age, queueing before start, or items stuck near release."
+      "watch_out": "Old backlog items being pulled in will keep inflating lead time even if delivery stays fast."
     },
     "throughput": {
-      "insight": "Delivery output is improving overall, but it is not yet perfectly smooth: there was one zero-completion week and several weeks with large swings. That pattern suggests the team can deliver in bursts, but forecasting should still account for batchiness rather than assuming a steady weekly rate.",
+      "insight": "Average throughput of 6.6/wk with an improving trend (+0.43/wk) is a healthy base for probabilistic forecasting, but the zero-completion week (1 June) followed by 8 completions suggests batchy finishing rather than steady flow.",
       "evidence": [
-        "avg 7.0 items/week over 13 weeks",
-        "1 week with zero completions",
-        "weekly trend slope 0.57; trend_direction improving"
+        "avg 6.6/wk, trend +0.43/wk",
+        "0 completions week of 2026-06-01, then 8",
+        "recent weeks 11-14 completions"
       ],
-      "watch_out": "Watch whether higher completion weeks are followed by lower-start weeks or rising WIP, which would indicate batching rather than sustained flow."
+      "watch_out": "Whether the strong July/August run reflects genuine improvement or a push to clear aged items."
     },
     "time_in_columns": {
-      "insight": "The main accumulation point is Refinement, where work waits much longer than in any other column. That points to an upstream triage or preparation constraint rather than a downstream execution bottleneck, and improving it should reduce overall cycle time by shortening time before work becomes ready to flow.",
+      "insight": "Refinement is the dominant bottleneck at 2.39x the average dwell (mean 319h ≈ 13 days), more than double In Progress. This is likely an upstream capacity/prioritisation problem rather than a delivery problem — items sit being 'refined' far longer than they take to build.",
       "evidence": [
-        "Refinement mean 317.6 hours vs overall average ratio 2.43",
-        "In Progress mean 162.1 hours, much lower than Refinement",
-        "Ready For Test, In Test, and Ready for Release all have lower mean times than Refinement"
+        "Refinement mean 319h, ratio 2.39x",
+        "In Progress mean 164.5h (1.23x)",
+        "test/release columns all below average"
       ],
-      "watch_out": "Investigate whether Refinement is overloaded by intake, unclear acceptance criteria, or too few people doing analysis/preparation."
+      "watch_out": "Whether Refinement time is active discussion or passive queuing — the median (100h) vs mean (319h) gap suggests a long tail of parked items."
     },
     "flow_efficiency": {
-      "insight": "Most items spend far more time waiting than actively moving, which means the system is flow-inefficient and queue-heavy. The median at 0% suggests many items experience almost no active time relative to total time, so the main improvement lever is reducing waiting, not speeding up touch time alone.",
+      "insight": "Mean flow efficiency of 23% with a median of 0% means most items spend the majority of their life waiting, and half spend essentially no measured active time at all. 245 of 355 items sit below 20%, indicating waiting is the norm, not the exception.",
       "evidence": [
-        "mean flow efficiency 22.6%",
-        "median flow efficiency 0.0%",
-        "253 of 362 items below 20%"
+        "mean 23%, median 0%",
+        "245/355 items below 20% efficiency"
       ],
-      "watch_out": "Confirm whether waiting is concentrated before development, between handoffs, or in release/review states."
+      "watch_out": "Median 0% may partly be a measurement artefact (items skipping active columns) — verify column mapping before acting."
     },
     "work_start_efficiency": {
-      "insight": "Work usually starts quickly once committed, but the average is pulled down by a smaller set of items that waited a long time before development began. That suggests prioritisation is mostly effective for most items, yet queue management or commitment discipline is letting some work sit too long before being started.",
+      "insight": "The median wait before development is only 0.3 days — most items start promptly once committed. But the mean of 17.4 days shows a subset of items languish long after commitment, likely the same aged items inflating lead time.",
       "evidence": [
-        "median wait before dev 0.3 days",
-        "mean wait before dev 18.6 days",
-        "18 items below 50% efficiency"
+        "median wait 0.3d vs mean 17.4d",
+        "17 items below 50% start efficiency"
       ],
-      "watch_out": "Review the long-wait items to see whether they were intentionally deferred, blocked by dependencies, or simply lost in the queue."
+      "watch_out": "Items committed early to 'reserve' them but not actually started."
     },
     "wip": {
-      "insight": "Current WIP is high enough to create multitasking pressure, especially with most items sitting in Refinement and In Progress. With more items active than a small team can comfortably finish in parallel, Little's Law suggests cycle time will stay elevated unless WIP is reduced.",
+      "insight": "Current WIP of 24 with 10 items in Refinement confirms inventory is concentrated upstream. Delivery-stage WIP (In Progress 6, In Test 0-1) is modest, so the multitasking risk sits in refinement and ready queues rather than in development.",
       "evidence": [
-        "current WIP 24",
-        "Refinement holds 9 items; In Progress holds 6",
-        "mean WIP 31.1 with trend increasing"
+        "Refinement 10 of 24 WIP items",
+        "In Progress 6, Ready For Test 1"
       ],
-      "watch_out": "Watch whether limiting active work in Refinement and In Progress lowers cycle time without reducing throughput."
+      "watch_out": "The 5 items in Ready — a queue between two queues, adding pure wait time."
     },
     "wip_over_time": {
-      "insight": "WIP has been drifting upward over time rather than being actively contained. That points to passive accumulation, not a stable operating level, and it increases the risk of longer cycle times and ageing items.",
+      "insight": "WIP drifted upward from ~24 to peaks of 38-39 mid-window (+0.55/wk trend) before falling back to 25 recently. The trend suggests WIP is accumulating passively rather than being actively capped, though the recent drawdown is encouraging.",
       "evidence": [
-        "trend_slope_per_week 1.04",
-        "WIP rose from 22 to 33 across the snapshots shown",
-        "max WIP 40"
+        "mean 31.1, range 23-39",
+        "trend +0.55/wk",
+        "latest snapshot 25"
       ],
-      "watch_out": "Check whether the recent reduction from the peak is sustained or just a temporary dip after a burst of completions."
+      "watch_out": "Whether the recent drop is deliberate WIP management or just a completion burst."
     },
     "wip_age_distribution": {
-      "insight": "Ageing work is a clear problem: most active items are older than 30 days, and the median active item is already many weeks old. A dominant older-age band means the team is carrying too much work for too long, reducing the chance of finishing items quickly and predictably.",
+      "insight": "14 of 24 in-progress items are over 30 days old, with a mean age of 62.7 days and P85 of 127.8 days. The dominant over-30-day band indicates the team routinely starts work it does not finish promptly, undermining any cycle-time forecast for new starts.",
       "evidence": [
-        "15 of 24 active items are over 30 days old",
-        "median active age 47.9 days; average 64.8 days",
-        "p85 active age 124.8 days"
+        "14/24 items >30 days old",
+        "mean age 62.7d, P85 127.8d"
       ],
-      "watch_out": "Verify whether these old items are genuinely in progress or effectively dormant backlog-in-disguise."
+      "watch_out": "Aged items eventually completing will spike reported cycle times despite the improving trend."
     },
     "wip_age_by_column": {
-      "insight": "The oldest active work is concentrated in Refinement and Ready for Release, with some very old items also in In Progress. The wide spread between median and p85 in Refinement suggests a systemic queueing issue there, while the very old Ready for Release items suggest a release-path delay rather than just development age.",
+      "insight": "Ageing is concentrated upstream: Ready holds items at a median of 127.8 days and Refinement has items up to 259.9 days old, while In Progress median is a healthy 9.7 days. This is systemic parking in pre-development stages, not a delivery-stage ageing problem — except two Ready-for-Release items at 205.9 days that appear forgotten near the finish line.",
       "evidence": [
-        "Refinement p85 143.0 days; max 256.9 days",
-        "Ready for Release median age 202.9 days",
-        "In Progress median age 75.9 days"
+        "Ready median age 127.8d (n=5)",
+        "Refinement max 259.9d",
+        "In Progress median 9.7d",
+        "Ready for Release median 205.9d (n=2)"
       ],
-      "watch_out": "Check whether release approval, external coordination, or policy gates are creating an end-of-flow pile-up."
+      "watch_out": "The three ~128-day Ready items (1198320-22) appear to be a batch parked together — likely a stalled initiative."
     },
     "blockers": {
-      "insight": "Blocking has a material cost, but it is concentrated rather than universal. The fact that one item accounts for 90 days blocked time suggests a severe outlier is distorting the total cost, while the ongoing weekly blocked counts indicate blocking is still a live operational issue.",
+      "insight": "Blocking is rare but devastating when it happens: ever-blocked items show a 637.7% median cycle-time uplift (50.9d vs 6.9d) and spend 36.2% of their cycle under a blocker. This suggests the team lacks an effective escalation path once something is blocked, so blocked items are set aside rather than actively unblocked.",
       "evidence": [
-        "currently_blocked_count 1",
-        "total_days_lost_to_blocking 90.0; longest_single_block_days 90.0",
-        "weeks_with_any_blocked 13"
+        "median CT uplift 637.7% (50.9d vs 6.9d)",
+        "6 ever-blocked items, 36.2% of cycle blocked",
+        "longest single block 90d"
       ],
-      "watch_out": "See whether the long-blocked item is an exceptional dependency case or a symptom of a recurring external dependency pattern."
+      "watch_out": "Item 497159 blocked 945.9 days in Backlog — likely a zombie item skewing blocked-days totals."
     },
     "blocked_by_signal": {
-      "insight": "Blocking is dominated by a generic 'Blocked' signal, with a smaller amount of explicit external dependency blocking. That usually means the team is capturing impediments, but not yet separating categories finely enough to show whether the root cause is internal waiting, external dependency, or policy delay.",
+      "insight": "Blocking is dominated by generic 'Blocked' (6 items) with only 1 'Waiting on Microsoft', so the signal taxonomy tells us little about impediment causes. Coarse labelling makes it hard to distinguish internal dependencies from external vendor waits.",
       "evidence": [
-        "Blocked: 6 items",
-        "Waiting on Microsoft: 1 item",
-        "peak_any_in_one_week 4"
+        "Blocked: 6, Waiting on Microsoft: 1"
       ],
-      "watch_out": "Refine blocker reasons so the team can distinguish dependency waiting from true stop-the-line issues."
+      "watch_out": "Consider richer blocker categories (dependency, decision, environment) to make this data actionable."
     },
     "blockers_by_column": {
-      "insight": "The only currently blocked item is in Backlog, which suggests the blocker problem is mostly upstream rather than in execution or testing. That pattern points more to demand-side intake, dependency discovery, or backlog grooming issues than to downstream delivery failure.",
+      "insight": "The single currently blocked item sits in Backlog, meaning active delivery is currently unimpeded. Blocking here is a demand-side/backlog hygiene issue right now, not a delivery-side one.",
       "evidence": [
-        "blocked_by_column Backlog: 1",
-        "no currently blocked items reported in In Progress, Ready For Test, or Ready for Release",
-        "blocked items are not concentrated in downstream columns"
+        "blocked_by_column: Backlog 1",
+        "0 blocked items in delivery columns"
       ],
-      "watch_out": "Check whether blocked backlog items are being left unattended instead of actively triaged or removed."
+      "watch_out": "Historical blocked items completed slowly, so watch new blocks in delivery columns closely."
     },
     "blocker_timeline": {
-      "insight": "Blocking is stable over time rather than improving, and there is a recent spike in 'Blocked' signals. That suggests the issue is structural, not random, and may be getting worse at the end of the window.",
+      "insight": "Blocked counts have been stable at 1-2 per week for the whole window with a brief spike to 4 in early August. Blocking is a persistent low-level condition rather than an escalating trend.",
       "evidence": [
-        "total_blocked_trend_direction stable",
-        "Blocked counts were 2 per week for many weeks, rising to 4 in 2026-08-11",
-        "weeks_with_any_blocked 13"
+        "13/13 weeks with ≥1 blocked item",
+        "peak 4 in week of 2026-08-07",
+        "trend stable"
       ],
-      "watch_out": "Investigate what changed in the last few weeks that increased blocked signals, especially if it coincides with higher WIP or more starting work."
+      "watch_out": "The August spike to 4 — check whether those items were resolved or absorbed silently."
     },
     "days_lost_to_blockers": {
-      "insight": "A single blocked item has lost 90 days, which indicates blocking can become a structural condition rather than a brief interruption. Because the data only reports one current blocked item, the team may be tolerating long blocked periods instead of escalating them quickly.",
+      "insight": "90 total days lost is entirely attributable to one long-running block, and the sole current blocked item has been blocked for 945.9 days — far exceeding any plausible active time. Blocking here is structural abandonment, not incidental delay.",
       "evidence": [
-        "current blocked item 497159 has 90.0 days blocked",
-        "current blocked item age 942.9 days",
-        "blocked_status is Blocked and current_column is Backlog"
+        "total 90.0d lost = longest single block 90.0d",
+        "item 497159 blocked 945.9d"
       ],
-      "watch_out": "Find out whether the item is truly blocked on an external dependency or simply dormant and never cleared."
+      "watch_out": "Decide-or-delete policy needed for items blocked longer than a quarter."
     },
     "stale_work": {
-      "insight": "Backlog hygiene is weak: there is a very large amount of untouched work, and much of it has not been updated for over a month. That reduces planning accuracy because the team cannot rely on the backlog to reflect current priority, readiness, or feasibility.",
+      "insight": "220 items untouched for 30+ days — the vast majority backlog items in 'New' state with a suspicious cluster at exactly 35.8 days (likely a bulk update event). This volume of dormant work makes the backlog unreliable as a planning instrument and hides genuinely valuable items.",
       "evidence": [
-        "stale_work count 219",
-        "many stale items are in Backlog with 32.8 days since update",
-        "items exist with 90+ and even 119.7 days since update"
+        "220 stale items",
+        "~200 in Backlog/New state",
+        "cluster at exactly 35.8 days since update"
       ],
-      "watch_out": "Check whether stale items are intentionally parked or whether the backlog is drifting without active triage."
+      "watch_out": "The 35.8-day uniformity suggests a bulk edit reset timestamps — actual staleness may be far worse."
     },
     "net_flow": {
-      "insight": "The current flow pattern is only sustainable if the recent improvement in completions continues, because arrivals and departures are close but not consistently balanced. The overall trend is slightly favorable, yet several weeks with negative net flow show the system can still accumulate work quickly when intake rises.",
+      "insight": "Departures (7.5/wk) now exceed arrivals (6.5/wk) into the delivery workflow, and the last four weeks are all positive net flow — the team is draining its in-progress inventory. This is sustainable and healthy at the workflow level, though it contrasts with system-wide accumulation seen in the CFD.",
       "evidence": [
-        "arrival_rate_per_week 6.8 vs departure_rate_per_week 8.1",
-        "weeks with negative net flow include 2026-06-22 (-5) and 2026-07-20 (-4)",
-        "weekly trend mixed but recent weeks are strongly positive"
+        "arrival 6.5/wk vs departure 7.5/wk",
+        "net flow +7, +6, +6, +2 over last 4 weeks"
       ],
-      "watch_out": "Watch whether the recent surplus in completions is repeatable or just a short-term catch-up after earlier accumulation."
+      "watch_out": "Positive net flow driven by a slowdown in starts (3-5/wk recently) — throughput will fall if intake stays low."
     },
     "arrival_departure": {
-      "insight": "No single column is clearly accumulating or draining in a sustained way, which suggests the workflow is broadly in balance at a column level. That can coexist with local delay problems, especially if WIP and ageing are being absorbed within columns rather than showing up as obvious imbalance.",
+      "insight": "All workflow columns show balanced arrival/departure ratios (0.94-1.06), meaning no column is structurally accumulating within the board. The bottleneck expresses itself as dwell time in Refinement, not as unbounded queue growth.",
       "evidence": [
-        "all columns status balanced",
-        "no accumulating_columns or draining_columns identified",
-        "ratios range narrowly from 0.97 to 1.06"
+        "all ratios 0.94-1.06",
+        "no accumulating or draining columns"
       ],
-      "watch_out": "Use ageing and time-in-column data to find hidden bottlenecks, because balanced arrivals and departures do not mean fast flow."
+      "watch_out": "Balance can mask slow flow — items move through at matched but slow rates."
     },
     "bugs": {
-      "insight": "Bug handling looks active but not yet fully controlled: the open bug count is modest relative to total bug history, and completions are occurring, but the inflow is still enough to keep bugs present in WIP. The fact that bugs are being completed in several separate weeks suggests work is being cleared in bursts rather than continuously.",
+      "insight": "36 open bugs with 28 sitting untriaged in Backlog, while bug completions are batchy (0 most weeks, 6 in one week). Bugs are ~21% of WIP, a moderate quality tax, and resolution appears to happen in cleanup pushes rather than continuously.",
       "evidence": [
-        "open_bug_count 34 vs total_bug_count 631",
-        "bug_share_of_wip_pct 12.5",
-        "bug completions occur in multiple weeks, including 2026-08-03 with 6"
+        "36 open bugs, 28 in Backlog",
+        "6 bug completions week of 2026-08-03 vs 0 most weeks",
+        "bug share of WIP 20.8%"
       ],
-      "watch_out": "Monitor whether open bug count starts rising faster than completions, especially if bugs continue to occupy core delivery columns."
+      "watch_out": "Untriaged Backlog bugs — unknown severity risk lurking in 28 items."
     },
     "bug_intake": {
-      "insight": "Bug intake is uneven but not obviously accelerating; it spikes in some weeks, which may correspond to release or usage events. The recent weeks with higher bug creation suggest the team may be seeing incoming quality pressure even while resolving bugs.",
+      "insight": "Bug creation runs at roughly 2-3/wk with a recent uptick (5 in early August), while completions total 16 vs ~30 created in-window — the team is accumulating quality debt at a slow but steady rate.",
       "evidence": [
-        "bug_creations_by_week rises to 5 on 2026-08-03 and 3 on 2026-08-10",
-        "earlier weeks are lower, often 1-4 creations",
-        "total bug count 631 provides a large base of historical defect work"
+        "~30 bugs created vs 16 completed in window",
+        "creation spike of 5 (2026-08-03) and 3+2 in following weeks"
       ],
-      "watch_out": "Compare bug creation spikes to deployments, incidents, or feature launches to see whether certain releases are generating defects."
+      "watch_out": "The August creation spike coincides with the high-throughput delivery weeks — possible quality trade-off."
     },
     "bug_pct": {
-      "insight": "Bugs are a meaningful share of active work, but not so dominant that feature delivery is completely displaced. Still, a 12.5% bug share in WIP is large enough to compete for capacity and can slow feature throughput if bug demand remains persistent.",
+      "insight": "Bugs make up 20.8% of WIP but only 17% of completions (15/86), so bugs are being carried slightly disproportionately to their resolution rate. Not alarming, but a fifth of active capacity going to defects reduces feature delivery.",
       "evidence": [
-        "bug_share_of_wip_pct 12.5",
-        "34 open bugs",
-        "18 bugs are completed across the window in cycle/lead-time summaries"
+        "bug WIP share 20.8%",
+        "15/86 completions were bugs"
       ],
-      "watch_out": "Track whether bug share of WIP rises as release pressure increases, which would suggest quality debt is crowding out feature work."
+      "watch_out": "If bug WIP share climbs above ~25%, feature velocity will visibly suffer."
     },
     "bug_net_flow": {
-      "insight": "The bug flow appears positive overall, but the weekly pattern is bursty enough that it is hard to tell whether the team is staying ahead continuously. If bug creation keeps clustering around delivery events, the apparent improvement may be temporary catch-up rather than a stable reduction in quality debt.",
+      "insight": "Cumulatively the team created more bugs than it closed this window, with resolution concentrated in late July/early August. Persistent slightly-negative bug net flow means quality debt is growing gradually and will require a deliberate paydown.",
       "evidence": [
-        "bug completions by week include 6 on 2026-08-03 and 3 on 2026-08-10",
-        "bug creations by week include 5 on 2026-08-03 and 3 on 2026-08-10",
-        "open_bug_count remains 34"
+        "creations ~30 vs completions 16",
+        "9 of 14 creation weeks had zero completions"
       ],
-      "watch_out": "Look at bug creation minus completion week by week to see whether debt is shrinking or just fluctuating."
+      "watch_out": "Weeks where creation and delivery both spike (2026-08-03: 5 created, 14 items delivered)."
     },
     "bug_distribution": {
-      "insight": "Most open bugs are still sitting in Backlog, so the immediate bug-management issue is triage, not downstream verification. The small number of bugs in active columns suggests execution is not being overwhelmed by bugs yet, but it also means unresolved bugs may be waiting too long before anyone acts on them.",
+      "insight": "28 of 36 open bugs sit in Backlog untriaged, with only 2 in active delivery columns. The risk is not delivery-stage congestion but invisible severity — untriaged bugs can't be prioritised against features.",
       "evidence": [
-        "Backlog has 28 open bugs",
-        "only 1 open bug in each of In Progress, Ready For Test, and Refinement",
-        "3 open bugs have null column"
+        "Backlog: 28 of 36 open bugs",
+        "3 bugs with null column (data gap)"
       ],
-      "watch_out": "Check whether backlog bugs are being prioritised, duplicated, or left untriaged for too long."
+      "watch_out": "The 3 null-column bugs need column assignment or closure."
     },
     "cfd": {
-      "insight": "The cumulative flow shape suggests the system is growing overall rather than flattening out, which is consistent with increasing WIP and a growing backlog mass. The CFD does not show a widening band between the active columns, so the bottleneck looks more like persistent queueing at the front end than a single unstable downstream stage.",
+      "insight": "System-wide arrivals (11.2/wk) exceed departures (9.7/wk) with a 'growing' accumulation signal, driven almost entirely by Backlog (avg 134.9 items) and Refinement (88.6). The CFD confirms the time-in-columns bottleneck: work piles up before development, while delivery bands stay thin (2-11 items).",
       "evidence": [
-        "accumulation_signal growing",
-        "avg items per column is highest in Backlog 134.9 and Refinement 89.6",
-        "widening_bands []"
+        "arrival 11.2/wk vs departure 9.7/wk, signal growing",
+        "avg Backlog 134.9 and Refinement 88.6 vs In Progress 10.6"
       ],
-      "watch_out": "Confirm whether the backlog and refinement queues are absorbing most of the growth rather than the downstream delivery stages."
+      "watch_out": "Refinement averaging 88.6 items vs 10 on the board snapshot suggests a large hidden refinement queue — verify board vs data scoping."
     },
     "wip_level_distribution": {
-      "insight": "In Progress and Ready for Release spend a concerning amount of time at or above their WIP limits, while In Test is often empty and therefore unlikely to be the constraint. The modes show that some columns run below their limits most of the time, which suggests the limits are not uniformly calibrated to actual flow needs.",
+      "insight": "Refinement has no WIP limit and is never empty (modal 10, reaching 22), confirming it as the uncontrolled constraint. In Progress exceeds its limit of 10 on 19.8% of days and Ready for Release exceeds its limit 23.1% of days, while In Test is empty 19.8% of the time — limits exist but are not enforced, and test capacity is intermittently starved.",
       "evidence": [
-        "In Progress at or above limit 36.3% of days; over limit 19.8%",
-        "Ready for Release at or above limit 24.2% of days; over limit 24.2%",
-        "In Test is empty 18.7% of days and at or above limit only 5.5%"
+        "Refinement: limit 0, never empty, up to 22 items",
+        "In Progress over limit 19.8% of days",
+        "Ready for Release over limit 23.1% of days; In Test empty 19.8%"
       ],
-      "watch_out": "Check whether the limits match the real bottleneck or whether they are causing queue buildup in the wrong places."
+      "watch_out": "Ready for Release regularly holding 6-10 items suggests batched or infrequent releases."
     }
   },
   "diagnostic_findings": [
     {
-      "finding": "The primary constraint appears to be upstream queueing in Refinement rather than hands-on development or QA.",
+      "finding": "The primary constraint is upstream: work waits in Refinement/Ready far longer than it takes to build.",
       "evidence": [
-        "Refinement mean 317.6 hours, the highest of any column",
-        "15 of 24 active items are over 30 days old",
-        "all columns are balanced on arrival/departure ratios, yet WIP and ageing are high"
+        "Refinement dwell 2.39x average (mean 319h)",
+        "Ready column median WIP age 127.8 days",
+        "In Progress median item age 9.7d and median cycle time 7.3d",
+        "CFD: Backlog+Refinement average ~224 items vs ~19 in delivery columns"
       ],
-      "interpretation": "Work is not piling up because one downstream team is failing to complete it; instead, items are waiting too long before they become ready to flow. That suggests the system is spending more time deciding, shaping, or parking work than executing it.",
+      "interpretation": "Delivery capacity is adequate; the system starves on decision-making and readiness of work, inflating lead time while cycle time stays healthy.",
       "plausible_explanations": [
-        "Too much intake is entering Refinement without enough refinement capacity",
-        "Backlog items lack clear acceptance criteria or design context",
-        "Work is being pulled into refinement without enough prioritisation discipline",
-        "A small number of large/complex items are monopolising refinement attention"
+        "Insufficient product/PO capacity for refinement",
+        "Items entering refinement before they are genuinely wanted",
+        "No entry criteria or WIP limit on Refinement",
+        "Stakeholder decisions pending on parked items"
       ],
       "confidence": "high",
-      "what_would_confirm_this": "Review queue age and arrival patterns into Refinement, plus who is doing refinement work and how often items are deferred, reworked, or sent back."
+      "what_would_confirm_this": "Review the 10 items currently in Refinement with the PO: how many have an active decision pending vs are simply parked?"
     },
     {
-      "finding": "Delay is concentrated before work starts, but there is also a secondary delay after work starts in some columns.",
+      "finding": "Cycle time improving while lead time worsens indicates delay is shifting upstream, not being eliminated.",
       "evidence": [
-        "median wait before dev 0.3 days vs mean 18.6 days",
-        "median cycle time 7.5 days vs mean lead time 38.3 days",
-        "In Progress median age 75.9 days and Ready for Release median age 202.9 days"
+        "cycle time trend -0.41 d/wk (improving)",
+        "lead time trend +1.41 d/wk (worsening)",
+        "median wait before dev 0.3d but mean 17.4d"
       ],
-      "interpretation": "Most items start quickly once committed, but a minority wait a long time before starting, and some items then sit for a long time later in the flow. This means the system has both front-end queueing and downstream ageing, though the front-end issue is more prominent.",
+      "interpretation": "Once work truly starts it flows well; the growing lead time is old committed items ageing in queues before development.",
       "plausible_explanations": [
-        "Commitment is being made before capacity is actually available",
-        "Items are blocked by dependencies or approvals before coding starts",
-        "Downstream review/release steps are holding finished work",
-        "Older items are effectively deprioritised rather than actively processed"
+        "Old backlog commitments being pulled in late",
+        "Commitment made too early relative to capacity",
+        "Batch planning creating long ready queues"
       ],
       "confidence": "high",
-      "what_would_confirm_this": "Split lead time into waiting-before-start and active flow after start for the oldest items, and inspect the ageing items in Ready for Release."
+      "what_would_confirm_this": "Decompose lead time into pre-start vs post-start components for the last 20 completions."
     },
     {
-      "finding": "Delivery is improving but still batchy, which makes short-term forecasting less reliable than the average throughput suggests.",
+      "finding": "Recent healthy net flow is partly driven by reduced starts, not just increased finishing.",
       "evidence": [
-        "throughput trend slope 0.57 and trend_direction improving",
-        "one zero-completion week on 2026-06-01",
-        "recent weeks completed 14 and 13 items, after earlier weeks as low as 0-5"
+        "starts fell from 14 (wk 2026-07-20) to 3-5/wk in the last three weeks",
+        "completions 14→11→5 declining over same period",
+        "WIP dropped 39→25"
       ],
-      "interpretation": "The team can deliver at a healthy rate, but output arrives in bursts rather than as a smooth stream. That usually means planning based on the average alone will overstate near-term certainty.",
+      "interpretation": "The team is draining inventory, which is good, but throughput will drop if intake stays low — the July completion peak reflects clearing accumulated WIP.",
       "plausible_explanations": [
-        "Work is released in batches from upstream queues",
-        "Completion is tied to ceremonies or release trains",
-        "The team is opportunistically finishing old items when capacity appears",
-        "Testing or release gating creates periodic flushes"
+        "Deliberate finish-first policy",
+        "Refinement bottleneck starving intake",
+        "Holiday/staffing effects in August"
       ],
       "confidence": "medium",
-      "what_would_confirm_this": "Compare completion dates to release events, sprint boundaries, and work-start dates to see whether finishes cluster around batch triggers."
+      "what_would_confirm_this": "Ask the team whether reduced starts were deliberate; watch throughput over the next 3 weeks."
     },
     {
-      "finding": "WIP appears too high for the throughput rate, and that is likely inflating cycle time and ageing.",
+      "finding": "By Little's Law, current WIP is consistent with observed cycle time, but total system WIP is not.",
       "evidence": [
-        "current WIP 24 with mean WIP 31.1 and an increasing trend",
-        "avg throughput 7.0 items/week",
-        "median cycle time 7.5 days but p85 22.9 days and 13 items above p85"
+        "workflow WIP ~31 avg / throughput 6.6/wk ≈ 4.7 weeks, matching P85 CT of 23.2d",
+        "system-wide Refinement avg 88.6 items ≈ 13+ weeks of supply",
+        "14/24 current items >30d old"
       ],
-      "interpretation": "The system is carrying more work than can flow smoothly at the current delivery rate. That level of WIP makes multitasking and queue growth more likely, which usually worsens both cycle time and predictability.",
+      "interpretation": "The delivery board is roughly right-sized, but the refinement pipeline holds a quarter-plus of inventory, guaranteeing long lead times for anything entering now.",
       "plausible_explanations": [
-        "Too many items are started in parallel",
-        "WIP limits are loose or not enforced",
-        "Refinement and release queues are acting as hidden WIP reservoirs",
-        "Capacity is spread too thin across too many item types"
+        "Backlog used as a wishlist rather than a commitment queue",
+        "No refinement WIP limit",
+        "Reluctance to say no/delete items"
       ],
       "confidence": "high",
-      "what_would_confirm_this": "Test whether reducing active items in Refinement and In Progress lowers cycle time and ageing without reducing weekly completions."
+      "what_would_confirm_this": "Count refinement-stage items with a realistic delivery slot in the next two quarters."
     },
     {
-      "finding": "Blocking looks systemic rather than isolated, but it is concentrated in backlog-stage work rather than execution stages.",
+      "finding": "Blocking is rare but catastrophic — a systemic escalation gap rather than frequent impediments.",
       "evidence": [
-        "weeks with any blocked items: 13",
-        "blocked signal present in 6 items; Waiting on Microsoft in 1 item",
-        "the only currently blocked item is in Backlog and has 90.0 days blocked"
+        "only 6 ever-blocked completed items",
+        "637.7% median CT uplift for blocked items",
+        "longest block 90d; current item 497159 blocked 945.9d",
+        "blocked count stable 1-2/wk for 13 weeks"
       ],
-      "interpretation": "Blocking is not a one-off anomaly. The concentration upstream suggests dependency or intake management problems more than a testing or build problem.",
+      "interpretation": "Blocked items are shelved rather than escalated, so a single block predictably turns a 7-day item into a 50-day item.",
       "plausible_explanations": [
-        "External dependencies are discovered too late",
-        "Backlog items are being parked instead of removed or decomposed",
-        "Blocking reasons are not being escalated quickly enough",
-        "Some items are stale rather than truly blocked, but marked as blocked"
+        "No blocker SLA or escalation path",
+        "Blockers on external parties with no leverage",
+        "Blocked items deprioritised and forgotten"
       ],
       "confidence": "medium",
-      "what_would_confirm_this": "Inspect the oldest blocked or stale backlog items and ask whether they are waiting on external parties, decisions, or internal triage."
+      "what_would_confirm_this": "Walk the history of the 6 ever-blocked items: who owned unblocking, and how long between block and first escalation?"
     },
     {
-      "finding": "Backlog hygiene is poor and is likely distorting planning accuracy.",
+      "finding": "Ageing work is tolerated, especially in 'ready' queues, and quality debt is slowly compounding alongside it.",
       "evidence": [
-        "stale_work count 219",
-        "many stale items remain in Backlog for 32.8 days or more",
-        "open bugs are mostly in Backlog: 28 of 34"
+        "3 identical-age Ready items at 127.8d (1198320-22)",
+        "2 Ready-for-Release items at 205.9d",
+        "bugs created (~30) exceed bugs closed (16) in window",
+        "220 stale items"
       ],
-      "interpretation": "A large amount of untouched work means the board is carrying inventory that may no longer reflect actual priority or readiness. That makes forecasting and prioritisation less trustworthy.",
+      "interpretation": "The system lacks age-triggered review; items pass refinement then stall, and defect debt grows quietly beneath the improving delivery numbers.",
       "plausible_explanations": [
-        "The backlog is being used as storage rather than an actively managed queue",
-        "There is no regular pruning or revalidation of old items",
-        "Bug triage is under-resourced",
-        "Items are created faster than they are reviewed and refined"
+        "No ageing-WIP review in standups",
+        "Stalled initiative parked mid-flow",
+        "Release process batching finished work"
       ],
       "confidence": "high",
-      "what_would_confirm_this": "Ask when backlog items are last reviewed, who owns triage, and whether stale work is periodically archived or re-scored."
-    },
-    {
-      "finding": "Quality demand is real but not yet dominant; however, it competes with feature work enough to matter.",
-      "evidence": [
-        "bug_share_of_wip_pct 12.5",
-        "bug creations occur every week, peaking at 5 on 2026-08-03",
-        "open bugs are 34, but bug completions are also occurring in bursts"
-      ],
-      "interpretation": "Bug work is a steady drain on capacity rather than an occasional anomaly. It likely does not fully explain the flow problems, but it can amplify them by consuming attention in an already queue-heavy system.",
-      "plausible_explanations": [
-        "Recent releases are generating defects",
-        "Bugs are being created continuously but resolved in batches",
-        "Bug triage is slow, leaving defects in backlog",
-        "Some bug classes are being counted late in their lifecycle"
-      ],
-      "confidence": "medium",
-      "what_would_confirm_this": "Compare bug creation to releases and incidents, and check whether bug age is rising faster than feature item age."
+      "what_would_confirm_this": "Standup review of every item >30 days old with an explicit finish/park/kill decision."
     }
   ],
   "outlier_patterns": [
     {
-      "pattern": "One backlog item is an extreme blocked outlier, with very long system age but much shorter time in its current column.",
+      "pattern": "A trio of PBIs parked in Ready at identical ages — a likely stalled batch/initiative.",
       "items_or_periods_involved": [
-        "497159"
+        1198320,
+        1198321,
+        1198322
       ],
       "evidence": [
-        "age_days 942.9",
-        "days_blocked 942.9",
-        "current_column Backlog; blocked_status Blocked"
+        "all three aged exactly 127.8 days",
+        "recent column moves (0.7-6.7 days in current column) despite old age"
       ],
-      "possible_meaning": "This may be a dormant, never-cleared dependency or a badly aged item that has been left in the system too long.",
-      "recommended_follow_up": "Ask whether this item is still relevant, what it is waiting on, and why it has remained blocked for so long."
+      "possible_meaning": "A feature set was refined together ~4 months ago and never scheduled; recent shuffling suggests indecision rather than progress.",
+      "recommended_follow_up": "Ask the PO whether this initiative is still wanted; if not, remove from Ready."
     },
     {
-      "pattern": "Several active items in Refinement are very old, with one extreme item far older than the rest.",
+      "pattern": "Extremely old items still 'in flight' upstream and at the release gate.",
       "items_or_periods_involved": [
-        "1137817",
-        "1190866",
-        "1221955",
-        "1239955",
-        "1240505"
+        1137817,
+        1156052,
+        1190866,
+        1221955
       ],
       "evidence": [
-        "1137817 age 256.9 days and 112.0 days in current column",
-        "1190866 age 143.0 days",
-        "Refinement p85 age 143.0 days"
+        "1137817: 259.9d old, 114.9d in Refinement, untouched 35.8d",
+        "1156052: 205.9d old, sitting in Ready for Release",
+        "1221955 (Bug): 75.9d in Refinement"
       ],
-      "possible_meaning": "Refinement is acting as a holding pen for old work, not just a short preparation stage.",
-      "recommended_follow_up": "Inspect whether these items are genuinely being refined or repeatedly deferred, and why they have not moved onward."
+      "possible_meaning": "Zombie items that inflate WIP age and will distort cycle-time stats if ever completed; 1156052 is finished work delivering no value.",
+      "recommended_follow_up": "Release or close 1156052 immediately; make explicit keep/kill decisions on the Refinement zombies."
     },
     {
-      "pattern": "Ready for Release contains extremely old items even though their time in column is short, implying late-flow stalling.",
+      "pattern": "One item blocked for over 2.5 years.",
       "items_or_periods_involved": [
-        "1156052",
-        "1237761"
+        497159
       ],
       "evidence": [
-        "1156052 age 202.9 days in Ready for Release",
-        "1237761 age 34.7 days in Ready for Release",
-        "Ready for Release median age 202.9 days"
+        "blocked 945.9 days in Backlog",
+        "accounts for the dominant share of blocked-time history"
       ],
-      "possible_meaning": "Work may be reaching the release gate but then waiting for approval, scheduling, or a release event.",
-      "recommended_follow_up": "Check release policy, approver availability, and whether these items are truly ready or awaiting a release train."
+      "possible_meaning": "Blocker signals are not maintained; this item is effectively dead but pollutes blocker metrics.",
+      "recommended_follow_up": "Close or archive it; establish a max-block-age policy."
     },
     {
-      "pattern": "WIP ageing is broad-based, not limited to one stage, but the worst concentration is in Refinement and In Progress.",
-      "items_or_periods_involved": [
-        "1198320",
-        "1198322",
-        "1226965",
-        "1239232",
-        "1239955",
-        "1240505"
-      ],
-      "evidence": [
-        "In Progress median age 75.9 days",
-        "Refinement median age 32.8 days with max 256.9 days",
-        "15 of 24 active items are over 30 days old"
-      ],
-      "possible_meaning": "Old work is being tolerated across the flow rather than being aggressively cleared.",
-      "recommended_follow_up": "Review the entire oldest-WIP list and ask whether each item is still worth finishing now."
-    },
-    {
-      "pattern": "Throughput spikes late in the window, following earlier weak weeks.",
+      "pattern": "Batchy throughput: a zero-completion week followed by a catch-up week.",
       "items_or_periods_involved": [
         "2026-06-01",
-        "2026-07-27",
-        "2026-08-03",
-        "2026-08-10"
+        "2026-06-08",
+        "2026-08-03"
       ],
       "evidence": [
-        "0 completions on 2026-06-01",
-        "11 completions on 2026-07-27",
-        "14 on 2026-08-03 and 13 on 2026-08-10"
+        "0 completions then 8 in consecutive weeks",
+        "peak of 14 completions in 2026-08-03"
       ],
-      "possible_meaning": "The team may be batching completions or clearing accumulated work in waves.",
-      "recommended_follow_up": "Check whether these surges line up with release cycles, holidays, or work that was held back in earlier weeks."
+      "possible_meaning": "Completions cluster around release or sprint boundaries rather than flowing continuously; the August peak likely reflects a WIP-clearing push.",
+      "recommended_follow_up": "Check whether release cadence or sprint-end rituals gate completions."
     },
     {
-      "pattern": "Bug work is spread across the system but mostly parked before active development.",
+      "pattern": "Bulk-updated stale backlog masking true item ages.",
       "items_or_periods_involved": [
-        "open bug distribution in Backlog 28, Refinement 1, Ready For Test 1, In Progress 1"
+        "~180 items at exactly 35.8 days since update"
       ],
       "evidence": [
-        "Backlog holds 28 of 34 open bugs",
-        "only one open bug each in In Progress, Ready For Test, and Refinement"
+        "identical days_since_last_update values across most stale items",
+        "220 stale items total"
       ],
-      "possible_meaning": "Bugs are not overwhelming execution, but triage is slow and may be delaying response.",
-      "recommended_follow_up": "Ask how quickly bugs are reviewed, prioritised, and assigned after creation."
+      "possible_meaning": "A bulk edit reset update timestamps ~5 weeks ago; genuine staleness is likely much greater and the backlog is largely dormant.",
+      "recommended_follow_up": "Sample 20 of these items with the PO to estimate what fraction are still wanted; consider a backlog purge policy."
     }
   ],
   "executive_summary": {
-    "headline": "The Search team is carrying too much old work in queues, especially in Refinement, which is making flow slower and less predictable than output alone suggests.",
-    "narrative": "Work is coming through the system, and the team has recently been completing more items. But a lot of that work is spending time waiting rather than moving, and many items are ageing before they are finished. The biggest hold-up appears to be early in the flow, where items sit in preparation far longer than they should. A smaller but important amount of work is also lingering near release and in backlog, which makes planning less reliable. Overall, the system looks more like one that accumulates and batches work than one that flows steadily.",
-    "primary_diagnosis": "The system\u2019s main problem is excessive queueing before and around refinement, compounded by high WIP and stale backlog inventory.",
+    "headline": "The team delivers quickly once work truly starts, but a large, ageing queue of undecided work upstream is making overall delivery promises slower and less reliable.",
+    "narrative": "When this team picks something up, it usually finishes within about a week, and their finishing rate has been rising. The problem sits before that point: a large pile of requests waits months for decisions about whether and when to do them, and that waiting period is getting longer. Several pieces of work have been sitting part-finished or parked for four to eight months, including one finished item waiting at the release gate for no clear reason. A handful of items that hit obstacles took seven times longer than normal, because obstacles tend to be set aside rather than actively cleared. Meanwhile, slightly more defects are being reported than fixed, so quality debt is slowly building. The fix is not working harder — it is deciding faster, trimming the waiting pile, and putting a spotlight on anything that has stalled.",
+    "primary_diagnosis": "An unmanaged upstream queue (refinement and ready stages) with no limits or age policies is the system's main constraint, inflating lead time despite healthy delivery-stage flow.",
     "confidence": "high",
-    "main_caveat": "The data shows where work is waiting, but it does not prove exactly why items are waiting or whether every old item is still intended to be delivered."
+    "main_caveat": "Timestamp anomalies (a bulk update ~5 weeks ago and a 0% median flow efficiency) mean some waiting-time measurements may be under- or mis-stated; the direction of the diagnosis is solid but exact magnitudes are not."
   },
   "investigate_next": [
     {
-      "question": "What is causing work to spend so long in Refinement?",
-      "why_it_matters": "This is the clearest bottleneck and likely the biggest lever on cycle time.",
-      "data_or_conversation_needed": "Talk to the people doing refinement; review item histories for the oldest Refinement items; check refinement entry/exit criteria.",
-      "decision_it_would_inform": "Whether to add refinement capacity, tighten intake, or change readiness rules."
+      "question": "How many of the 10 items in Refinement (and 88 average in the wider refinement pipeline) are genuinely wanted in the next quarter?",
+      "why_it_matters": "Refinement is the measured bottleneck; most of its contents may be inventory that should be deleted, not refined.",
+      "data_or_conversation_needed": "Item-by-item review with the Product Owner.",
+      "decision_it_would_inform": "Whether to introduce a Refinement WIP limit and purge policy."
     },
     {
-      "question": "Which items in Ready for Release are waiting on approval, scheduling, or an external dependency?",
-      "why_it_matters": "Very old work near the end of the flow can hide a release-policy bottleneck.",
-      "data_or_conversation_needed": "Inspect the oldest Ready for Release items and ask release owners about gating steps.",
-      "decision_it_would_inform": "Whether release process changes are needed or whether items should be reclassified."
+      "question": "Why are items 1198320-22 parked in Ready at ~128 days, and is their initiative still live?",
+      "why_it_matters": "They represent committed-but-stalled work distorting WIP age and lead time.",
+      "data_or_conversation_needed": "Conversation with PO and the sponsoring stakeholder.",
+      "decision_it_would_inform": "Schedule, re-scope, or remove the initiative."
     },
     {
-      "question": "Are long waits before development caused by prioritisation, dependency discovery, or lack of capacity?",
-      "why_it_matters": "Most items start quickly, but a minority wait a long time and distort lead time.",
-      "data_or_conversation_needed": "Compare commit dates, start dates, and blocker notes for items with long pre-dev waits.",
-      "decision_it_would_inform": "Whether to improve queue discipline, dependency management, or capacity planning."
+      "question": "What is holding item 1156052 (finished, 206 days old) at Ready for Release?",
+      "why_it_matters": "Finished-but-unreleased work is pure waste and delayed value; Ready for Release exceeds its limit 23% of days.",
+      "data_or_conversation_needed": "Release manager / deployment pipeline logs.",
+      "decision_it_would_inform": "Whether release cadence or approval steps need changing."
     },
     {
-      "question": "Are throughput spikes tied to release events or batch completion of older items?",
-      "why_it_matters": "Batchy delivery weakens forecast confidence even when average throughput looks healthy.",
-      "data_or_conversation_needed": "Overlay completion weeks with release dates, sprint boundaries, and item ages at completion.",
-      "decision_it_would_inform": "Whether to smooth release cadence or accept batch delivery as an operating pattern."
+      "question": "What happened on the 6 ever-blocked items between the block being raised and being resolved?",
+      "why_it_matters": "A 638% cycle-time uplift suggests no working escalation path.",
+      "data_or_conversation_needed": "Item histories plus a conversation with the team about blocker ownership.",
+      "decision_it_would_inform": "Whether to introduce a blocker SLA and daily escalation ritual."
     },
     {
-      "question": "Why does backlog contain so much stale and open bug work?",
-      "why_it_matters": "Large stale inventory reduces planning accuracy and can hide real priority.",
-      "data_or_conversation_needed": "Review backlog ownership, triage cadence, and backlog aging policy with product and engineering leads.",
-      "decision_it_would_inform": "Whether to prune, re-rank, or enforce ageing policies on the backlog."
+      "question": "Was the drop in work starts over the last three weeks (14→3/wk) deliberate?",
+      "why_it_matters": "It explains the positive net flow; if accidental, throughput will slump shortly.",
+      "data_or_conversation_needed": "Conversation with the team lead; staffing/holiday calendar.",
+      "decision_it_would_inform": "Whether the finish-first pattern should be formalised as policy."
     },
     {
-      "question": "Are blocked items truly blocked, or are some simply dormant?",
-      "why_it_matters": "The system has a very long-blocked outlier and persistent blocked signals.",
-      "data_or_conversation_needed": "Inspect blocked reasons and update histories for the oldest blocked items.",
-      "decision_it_would_inform": "Whether to escalate dependencies or clean up status hygiene."
+      "question": "Which of the 28 untriaged Backlog bugs are severe?",
+      "why_it_matters": "Untriaged defects are unquantified risk, and bug creation currently outpaces resolution.",
+      "data_or_conversation_needed": "Triage session with QA/PO.",
+      "decision_it_would_inform": "Whether to allocate a bug paydown capacity slice."
     },
     {
-      "question": "Is WIP limit calibration helping or hurting flow?",
-      "why_it_matters": "Some columns are often over or at limit while others are often empty.",
-      "data_or_conversation_needed": "Review limit settings, actual staffing, and the reasons columns remain empty or overloaded.",
-      "decision_it_would_inform": "Whether to lower active work limits or rebalance capacity across stages."
+      "question": "Is the 0% median flow efficiency real or a column-mapping artefact?",
+      "why_it_matters": "It determines whether waiting time is as extreme as measured or whether the active/waiting classification is broken.",
+      "data_or_conversation_needed": "Trace 10 sample items through their column histories.",
+      "decision_it_would_inform": "Whether flow efficiency can be trusted as an improvement KPI."
     }
   ],
   "recommendations": [
     {
-      "action": "Reduce active work in Refinement and In Progress to a tighter operating limit.",
-      "why": "These columns hold the most age and most of the queue pressure, so lowering parallelism should reduce waiting and ageing.",
-      "first_step": "Agree a temporary cap on the number of items allowed in Refinement and In Progress at one time.",
-      "metric_to_watch": "Refinement mean hours, In Progress age, cycle time median and p85",
-      "expected_effect": "Shorter queue times and less long-tail cycle time."
+      "action": "Introduce a WIP limit and maximum-age policy on Refinement.",
+      "why": "Refinement is the measured bottleneck (2.39x average dwell, no limit, never empty, items up to 260 days old).",
+      "first_step": "Set a limit of 6 and review every Refinement item older than 30 days for keep/kill this week.",
+      "metric_to_watch": "time_in_columns (Refinement mean hours) and lead time trend",
+      "expected_effect": "Lead time trend reverses within 6-8 weeks as parked items are decided or removed."
     },
     {
-      "action": "Introduce a weekly backlog and bug triage purge for stale items.",
-      "why": "The backlog contains a large amount of untouched work, especially bugs, which is distorting planning.",
-      "first_step": "Review items older than 30 days and either revalidate, re-score, or archive them.",
-      "metric_to_watch": "stale_work count, open_bug_count, backlog age distribution",
-      "expected_effect": "Cleaner queue, better prioritisation, fewer forgotten items."
+      "action": "Run an ageing-WIP review in every standup for items older than 14 days.",
+      "why": "14 of 24 in-flight items exceed 30 days; ageing is currently invisible to daily conversation.",
+      "first_step": "Sort the board by item age tomorrow and make an explicit decision on the top five oldest.",
+      "metric_to_watch": "ageing_wip median and over-30-day count",
+      "expected_effect": "Over-30-day WIP halves within a month."
     },
     {
-      "action": "Split refinement into explicit readiness checks with ownership and exit criteria.",
-      "why": "Refinement appears to be the main bottleneck, and ambiguous readiness often creates hidden waiting.",
-      "first_step": "Define who owns refinement, what 'ready' means, and how long items may stay there before escalation.",
-      "metric_to_watch": "time_in_columns for Refinement, work_start_efficiency, lead_time",
-      "expected_effect": "Lower wait before start and more predictable lead time."
+      "action": "Establish a blocker escalation SLA (e.g. escalate any block older than 3 days).",
+      "why": "Blocked items suffer a 638% cycle-time uplift, indicating blocks are shelved not solved.",
+      "first_step": "Assign a named unblocking owner to every raised blocker; close the 946-day zombie block on item 497159.",
+      "metric_to_watch": "blockers ct_impact uplift and longest block duration",
+      "expected_effect": "Blocked-item cycle times converge toward 2x rather than 7x normal."
     },
     {
-      "action": "Tighten release gating and make Ready for Release a visible exception queue.",
-      "why": "Very old items near release suggest a late-stage hold-up that should not be invisible.",
-      "first_step": "Review the two oldest Ready for Release items and map every approval step they still need.",
-      "metric_to_watch": "Ready for Release age, cycle time p85, WIP in Ready for Release",
-      "expected_effect": "Fewer items aging at the end of the flow and faster completion once work is done."
+      "action": "Release item 1156052 and investigate the Ready-for-Release queue cadence.",
+      "why": "Ready for Release exceeds its WIP limit 23% of days and holds a 206-day-old finished item — value is being delayed after the hard work is done.",
+      "first_step": "Ship or close 1156052 this week and map the release approval steps.",
+      "metric_to_watch": "wip_level_distribution for Ready for Release; time in that column",
+      "expected_effect": "Faster value delivery and reduced release-column dwell."
     },
     {
-      "action": "Create an explicit blocker escalation policy with ageing thresholds.",
-      "why": "Blocking is persistent and one item has been blocked for an extreme length of time.",
-      "first_step": "Set escalation at 2, 5, and 10 days blocked; review the current blocked item immediately.",
-      "metric_to_watch": "currently_blocked_count, total_days_lost_to_blocking, blocker_timeline",
-      "expected_effect": "Less time lost to blocking and faster removal of dependency delays."
+      "action": "Triage all 28 Backlog bugs and reserve a small continuous bug-fix capacity.",
+      "why": "Bug creation (~30) exceeded resolution (16) this window and fixes currently happen in batches.",
+      "first_step": "One-hour triage session; tag severity on all open bugs.",
+      "metric_to_watch": "bug net flow (weekly creations vs completions)",
+      "expected_effect": "Bug net flow reaches balance within 4-6 weeks."
     },
     {
-      "action": "Limit new starts when WIP is already above target.",
-      "why": "WIP is high relative to throughput and is likely inflating cycle time via Little's Law.",
-      "first_step": "Add a policy that new work only starts when an active item leaves the system or when WIP is below threshold.",
-      "metric_to_watch": "current_wip, wip_over_time, throughput",
-      "expected_effect": "Lower WIP, better flow efficiency, and shorter cycle time."
+      "action": "Purge or archive the dormant backlog (220+ stale items).",
+      "why": "A backlog dominated by untouched items obscures priorities and inflates lead-time statistics when old items are pulled.",
+      "first_step": "Auto-flag anything untouched 90+ days for PO confirmation; archive non-responses after two weeks.",
+      "metric_to_watch": "stale_work count and lead time mean/median gap",
+      "expected_effect": "Backlog shrinks to a plannable size; lead time mean converges toward the median."
     },
     {
-      "action": "Separate bug triage from feature refinement.",
-      "why": "Bug work is a meaningful share of WIP and is mostly sitting in backlog, so it can quietly compete with feature delivery.",
-      "first_step": "Assign one weekly triage slot and one explicit bug owner to clear, rank, or reject defects.",
-      "metric_to_watch": "bug_share_of_wip_pct, bug_creations_by_week, open_bug_count",
-      "expected_effect": "Faster bug response and less hidden capacity drain on feature work."
+      "action": "Formalise the recent 'finish before start' behaviour as an explicit pull policy.",
+      "why": "The last four weeks of positive net flow and falling WIP coincided with the best cycle times — make it deliberate, not accidental.",
+      "first_step": "Agree a total workflow WIP cap (e.g. 25) at the next retro.",
+      "metric_to_watch": "wip_over_time trend and cycle time P85",
+      "expected_effect": "P85 cycle time falls below ~18 days and stays there."
     }
   ],
   "data_quality_caveats": [
-    "The analysis window is only 3 months, so long-term seasonality or structural shifts may be missed.",
-    "Several metrics are skewed by extreme outliers, especially lead time and ageing items.",
-    "The current blocked-items detail is very sparse, so blocker conclusions rely heavily on aggregate counts.",
-    "Some categories contain null or inconsistent states (for example, current_column null in open bug distribution and stale items with varied states).",
-    "The data does not show exact team capacity, staffing changes, or release calendar events, which limits root-cause certainty.",
-    "WIP age analysis reflects current items only; it does not prove whether old items are still actively worked or merely parked.",
-    "Throughput and bug flow are aggregated weekly, which can hide within-week batching and short spikes."
-  ]
+    "A large cluster of items shows exactly 35.8 days since last update, indicating a bulk edit that reset timestamps — true staleness is likely understated.",
+    "Median flow efficiency of 0% suggests many items may skip or not register time in 'active' columns; the active/waiting column classification should be validated.",
+    "One item blocked 945.9 days dominates blocker totals and inflates days-lost figures.",
+    "3 open bugs have a null current column, indicating incomplete board mapping.",
+    "The 3-month window includes only 6 ever-blocked completed items, so blocker impact statistics rest on a very small sample.",
+    "CFD arrival rate (11.2/wk, includes Backlog intake) differs from workflow arrival rate (6.5/wk) by design; they measure different workflow stages.",
+    "Ready column shows some items with old total age but very recent column entry (0.7 days), suggesting recent board restructuring or re-mapping that may affect column-dwell accuracy."
+  ],
+  "generated_at": "2026-08-20T07:22:14.776Z"
 }

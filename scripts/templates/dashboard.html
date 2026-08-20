@@ -1181,16 +1181,25 @@
       </div>
       <div class="card">
         <div class="card-header"><h2>Impeded Items by Column</h2></div>
-        <p id="bc-subtitle" style="font-size:13px;color:#718096;margin-bottom:12px;">Distribution of currently impeded items across in-progress columns.</p>
+        <p id="bc-subtitle" style="font-size:13px;color:#718096;margin-bottom:12px;">Distribution of currently impeded items across all columns.</p>
         <div class="chart-wrap" style="height:220px;"><canvas id="blockedByColumnChart"></canvas></div>
       </div>
     </div>
 
-    <!-- Row 2: Currently Impeded Items (full width) -->
+    <!-- Row 2: Cycle time impact of blockers — single card, shared insight -->
     <div class="card">
-      <div class="card-header"><h2>Currently Impeded Items</h2></div>
-      <p id="cb-subtitle" style="font-size:13px;color:#718096;margin-bottom:12px;">Active items with a blocked signal, sorted by how long it has been active.</p>
-      <div class="chart-wrap" style="height:360px;"><canvas id="currentBlockedChart"></canvas></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;">
+        <div>
+          <div class="card-header"><h2>Cycle Time: Blocked vs Unblocked</h2></div>
+          <p style="font-size:13px;color:#718096;margin-bottom:12px;">Median and 85th-percentile cycle time for completed items — never blocked vs ever blocked during their cycle.</p>
+          <div class="chart-wrap" style="height:220px;"><canvas id="ctImpactCompareChart"></canvas></div>
+        </div>
+        <div>
+          <div class="card-header"><h2>Blocked Time in Completed Items</h2></div>
+          <p style="font-size:13px;color:#718096;margin-bottom:12px;">Completed items that carried a blocker signal — blocked portion vs total cycle time, sorted by longest cycle.</p>
+          <div class="chart-wrap" style="height:360px;"><canvas id="ctImpactBreakdownChart"></canvas></div>
+        </div>
+      </div>
     </div>
 
   </div><!-- /tab-blockers -->
@@ -3208,7 +3217,7 @@ function updateChart() {
     const sortedMs = [], maxIdxAt = [];
     let runMax = -1;
     events.forEach(e => { runMax = Math.max(runMax, e.idx); sortedMs.push(e.ms); maxIdxAt.push(runMax); });
-    itemProgressions.push({ sortedMs, maxIdxAt });
+    itemProgressions.push({ id: entry.id, sortedMs, maxIdxAt });
   });
 
   function maxIdxAtSnap(prog, snapMs) {
@@ -3282,6 +3291,25 @@ function updateChart() {
   // Δstarted  = items newly entering the first inProgress column
   const closedCum  = cumAtOrBeyond[lastCol];
   const startedCum = cumAtOrBeyond[firstInProgressCol];
+
+  // Build per-week item lists for the net flow tooltip
+  const nfWiMap          = Object.fromEntries((dashboard.work_items || []).map(i => [i.id, i]));
+  const nfLastColIdx      = allCols.length - 1;
+  const nfFirstProgColIdx = allCols.indexOf(firstInProgressCol);
+  const nfAdoBase         = ct.ado_url_base || '';
+  const nfFinishedByWeek  = cfdWeeks.map((_, i) => {
+    if (i === 0) return [];
+    return itemProgressions
+      .filter(p => maxIdxAtSnap(p, cfdWeekEndMs[i]) >= nfLastColIdx && maxIdxAtSnap(p, cfdWeekEndMs[i - 1]) < nfLastColIdx)
+      .map(p => nfWiMap[p.id]).filter(Boolean);
+  });
+  const nfStartedByWeek   = cfdWeeks.map((_, i) => {
+    if (i === 0) return [];
+    return itemProgressions
+      .filter(p => maxIdxAtSnap(p, cfdWeekEndMs[i]) >= nfFirstProgColIdx && maxIdxAtSnap(p, cfdWeekEndMs[i - 1]) < nfFirstProgColIdx)
+      .map(p => nfWiMap[p.id]).filter(Boolean);
+  });
+
   const netFlowVals = cfdWeeks.map((_, i) => {
     if (i === 0) return 0;
     const finished = (closedCum[i]  || 0) - (closedCum[i-1]  || 0);
@@ -3318,11 +3346,15 @@ function updateChart() {
           const v = netFlowVals[idx];
           const finished = idx > 0 ? (closedCum[idx]||0)-(closedCum[idx-1]||0) : 0;
           const started  = idx > 0 ? (startedCum[idx]||0)-(startedCum[idx-1]||0) : 0;
+          const nfFinishedItems = nfFinishedByWeek[idx] || [];
+          const nfStartedItems  = nfStartedByWeek[idx]  || [];
           sharedTooltip.show(
             `<div class="tt-total" style="font-weight:600;">${escapeHtml(cfdLabels[idx]??'')}</div>` +
-            `<div class="tt-total">Finished: ${finished}</div>` +
-            `<div class="tt-total">Started: ${started}</div>` +
             `<div class="tt-total" style="font-weight:600;color:${v>=0?'#2d3748':'#ed8936'};">Net: ${v>=0?'+':''}${v}</div>` +
+            `<div class="tt-total">Finished: ${finished}</div>` +
+            (nfFinishedItems.length ? '<div class="tt-items">' + nfFinishedItems.map(i => ttItemRow(typeStyles[i.type]||{}, nfAdoBase+'/'+i.id, i.id, i.title||'', null)).join('') + '</div>' : '') +
+            `<div class="tt-total">Started: ${started}</div>` +
+            (nfStartedItems.length  ? '<div class="tt-items">' + nfStartedItems.map(i => ttItemRow(typeStyles[i.type]||{}, nfAdoBase+'/'+i.id, i.id, i.title||'', null)).join('') + '</div>' : '') +
             TT_HINT, c
           );
         }},
@@ -4576,7 +4608,7 @@ function updateChart() {
     `padding:1px 7px;font-size:11px;font-weight:600;margin-right:4px;line-height:1.6;">${escapeHtml(s.label)}</span>`
   ).join('');
   document.getElementById('bt-subtitle').innerHTML = `When a blocked signal was active per item, by week. ${_sigPills}`;
-  document.getElementById('bc-subtitle').innerHTML = `Distribution of currently impeded items across in-progress columns. ${_sigPills}`;
+  document.getElementById('bc-subtitle').innerHTML = `Distribution of currently impeded items across all columns. ${_sigPills}`;
 
   // Return highest-priority matching signal for this item's tags, or null
   function getItemSignal(tags) {
@@ -4657,6 +4689,24 @@ function updateChart() {
     for (const [a1, a2] of ivsA)
       for (const [b1, b2] of ivsB) { const s = Math.max(a1, b1), e = Math.min(a2, b2); if (e > s) result.push([s, e]); }
     return result;
+  }
+
+  // Blocked days for a completed item clipped to its own cycle window, not the analysis window.
+  function getBlockedDaysDuringCycle(itemId, startMs, endMs) {
+    const history = [...(tagHistMap[itemId] || [])].sort((a, b) => new Date(a.changed_at) - new Date(b.changed_at));
+    const starts = new Array(SIGNALS.length).fill(null);
+    const rawIvs = SIGNALS.map(() => []);
+    for (const ev of history) {
+      const ms = new Date(ev.changed_at).getTime();
+      SIGNALS.forEach((sig, k) => {
+        const hadSig = strHasSig(ev.old_value, sig), hasSig = strHasSig(ev.new_value, sig);
+        if (!hadSig && hasSig)  starts[k] = ms;
+        if (hadSig && !hasSig && starts[k] !== null) { rawIvs[k].push([starts[k], ms]); starts[k] = null; }
+      });
+    }
+    SIGNALS.forEach((sig, k) => { if (starts[k] !== null) rawIvs[k].push([starts[k], endMs]); });
+    const clip = ([a, b]) => { const s2 = Math.max(a, startMs), e2 = Math.min(b, endMs); return e2 > s2 ? [s2, e2] : null; };
+    return sumIntervalDays(mergeIntervals(rawIvs.flat().map(clip).filter(Boolean)));
   }
 
   const allBlockedItems    = wi.filter(i => isAnySignal(i.tags));
@@ -4801,7 +4851,7 @@ function updateChart() {
 
   // ── Chart 1b: Blocked by column ───────────────────────────────────
   (() => {
-    const colOrder = (ctx.columns || []).filter(c => c.column_type === 'inProgress').map(c => c.name);
+    const colOrder = (ctx.columns || []).map(c => c.name);
     const sigColCounts = SIGNALS.map(() => { const m = {}; colOrder.forEach(c => m[c] = 0); return m; });
     activeBlockedItems.forEach(item => {
       const col = item.column;
@@ -4855,55 +4905,6 @@ function updateChart() {
       },
     });
   })();
-
-  // ── Chart 2: Current Blocked Items ────────────────────────────────
-  const sortedBlocked = [...activeBlockedItems]
-    .map(i => {
-      const primarySig   = getItemSignal(i.tags);
-      const sigIntervals = getTagIntervalsAll(i.id, i.tags);
-      const sigIdx       = primarySig ? SIGNALS.indexOf(primarySig) : -1;
-      const days         = sigIdx >= 0 ? Math.round(sumIntervalDays(sigIntervals[sigIdx])) : 0;
-      return { ...i, style: typeStyles[i.type] || {}, days, primarySig, sigIntervals };
-    })
-    .sort((a, b) => b.days - a.days)
-    .slice(0, 10);
-
-  const cbItemsFn = () => sortedBlocked;
-  new Chart(document.getElementById('currentBlockedChart'), {
-    type: 'bar',
-    data: {
-      labels: sortedBlocked.map(i => `#${i.id}`),
-      datasets: SIGNALS.map(sig => ({
-        label: sig.label,
-        data: sortedBlocked.map(i => i.primarySig === sig ? i.days : null),
-        backgroundColor: sig.color,
-        borderRadius: 3,
-      })),
-    },
-    options: {
-      indexAxis: 'y', responsive: true, maintainAspectRatio: false, animation: false,
-      layout: { padding: { left: 28 } },
-      plugins: {
-        legend: { position: 'top', align: 'start', labels: { usePointStyle: true, pointStyle: 'rect', boxWidth: 12, padding: 16 } },
-        tooltip: { enabled: false, external: c => {
-          if (c.tooltip.opacity === 0) { sharedTooltip.hide(); return; }
-          const idx = c.tooltip.dataPoints?.[0]?.dataIndex;
-          const item = sortedBlocked[idx]; if (!item) return;
-          const url = adoBase ? `${adoBase}/${item.id}` : '';
-          sharedTooltip.show(
-            ttItemRow(item.style, url, item.id, item.title||'', item.days) +
-            (item.primarySig ? `<div class="tt-total" style="color:${item.primarySig.color}">${escapeHtml(item.primarySig.label)}: ${item.days}d</div>` : '') +
-            TT_HINT, c
-          );
-        }},
-      },
-      scales: {
-        x: { beginAtZero: true, title: { display: true, text: 'Days blocked', color: '#718096', font: { size: 11 } }, grid: { color: '#e2e8f0' } },
-        y: { grid: { display: false }, ticks: { font: { size: 12 } } },
-      },
-    },
-    plugins: [makeIconPlugin(cbItemsFn)],
-  });
 
   // ── Chart 3: Stale Work ────────────────────────────────────────────
   const sortedStale = [...wi.filter(i => !outCols.has(i.column))]
@@ -5009,6 +5010,127 @@ function updateChart() {
     },
     plugins: [makeIconPlugin(lostItemsFn)],
   });
+
+  // ── Charts 5+6: Cycle time impact of blockers ─────────────────────
+  (() => {
+    const ctItems = ct.items || [];
+    if (!ctItems.length) return;
+
+    // Classify each completed item and compute blocked days during its own cycle window.
+    const completed = ctItems.map(i => {
+      const cycleEndMs   = new Date(i.completed_at).getTime();
+      const cycleStartMs = cycleEndMs - i.cycle_time_days * MS_DAY;
+      const daysBlocked  = getBlockedDaysDuringCycle(i.id, cycleStartMs, cycleEndMs);
+      return { ...i, style: typeStyles[i.type] || {}, daysBlocked, everBlocked: daysBlocked > 0 };
+    });
+
+    // ── Chart 5: Median/P85 comparison ────────────────────────────────
+    const neverVals = completed.filter(i => !i.everBlocked).map(i => i.cycle_time_days).sort((a, b) => a - b);
+    const everVals  = completed.filter(i =>  i.everBlocked).map(i => i.cycle_time_days).sort((a, b) => a - b);
+    const pct = (arr, p) => arr.length ? Math.round(arr[Math.max(0, Math.ceil(arr.length * p / 100) - 1)] * 10) / 10 : null;
+    const neverMed = pct(neverVals, 50), neverP85 = pct(neverVals, 85);
+    const everMed  = pct(everVals,  50), everP85  = pct(everVals,  85);
+
+    if (neverMed !== null || everMed !== null) {
+      new Chart(document.getElementById('ctImpactCompareChart'), {
+        type: 'bar',
+        data: {
+          labels: ['Median CT', 'P85 CT'],
+          datasets: [
+            { label: `Never blocked (${neverVals.length})`, data: [neverMed, neverP85], backgroundColor: '#68d391', borderRadius: 4 },
+            { label: `Ever blocked (${everVals.length})`,   data: [everMed,  everP85],  backgroundColor: '#fc8181', borderRadius: 4 },
+          ],
+        },
+        options: {
+          responsive: true, maintainAspectRatio: false, animation: false,
+          plugins: {
+            legend: { position: 'top', align: 'start', labels: { usePointStyle: true, pointStyle: 'rect', boxWidth: 12, padding: 16 } },
+            tooltip: { callbacks: { label: c => `${c.dataset.label}: ${c.raw}d` } },
+          },
+          scales: {
+            x: { grid: { display: false } },
+            y: { beginAtZero: true, title: { display: true, text: 'Days', color: '#718096', font: { size: 11 } }, grid: { color: '#e2e8f0' } },
+          },
+        },
+      });
+    }
+
+    // ── Chart 6: Per-item stacked breakdown for completed blocked items ─
+    const blockedCompleted = completed
+      .filter(i => i.everBlocked)
+      .map(i => {
+        const cycleEndMs   = new Date(i.completed_at).getTime();
+        const cycleStartMs = cycleEndMs - i.cycle_time_days * MS_DAY;
+        // Replay tag history to get per-signal intervals clipped to this item's cycle.
+        const history = [...(tagHistMap[i.id] || [])].sort((a, b) => new Date(a.changed_at) - new Date(b.changed_at));
+        const starts  = new Array(SIGNALS.length).fill(null);
+        const rawIvs  = SIGNALS.map(() => []);
+        for (const ev of history) {
+          const ms = new Date(ev.changed_at).getTime();
+          SIGNALS.forEach((sig, k) => {
+            const hadSig = strHasSig(ev.old_value, sig), hasSig = strHasSig(ev.new_value, sig);
+            if (!hadSig && hasSig)  starts[k] = ms;
+            if (hadSig && !hasSig && starts[k] !== null) { rawIvs[k].push([starts[k], ms]); starts[k] = null; }
+          });
+        }
+        SIGNALS.forEach((sig, k) => { if (starts[k] !== null) rawIvs[k].push([starts[k], cycleEndMs]); });
+        const clip = ([a, b]) => { const s2 = Math.max(a, cycleStartMs), e2 = Math.min(b, cycleEndMs); return e2 > s2 ? [s2, e2] : null; };
+        const sigDays = rawIvs.map(ivs => Math.round(sumIntervalDays(mergeIntervals(ivs.map(clip).filter(Boolean))) * 10) / 10);
+        return { ...i, sigDays };
+      })
+      .sort((a, b) => b.cycle_time_days - a.cycle_time_days)
+      .slice(0, 12);
+
+    if (!blockedCompleted.length) return;
+
+    const bcFn = () => blockedCompleted;
+    const bcSigDatasets = SIGNALS
+      .map((sig, k) => ({
+        label: sig.label,
+        data: blockedCompleted.map(i => i.sigDays[k] || 0),
+        backgroundColor: sig.color,
+        borderRadius: 3,
+        stack: 'ct',
+      }))
+      .filter((_, k) => blockedCompleted.some(i => (i.sigDays[k] || 0) > 0));
+
+    new Chart(document.getElementById('ctImpactBreakdownChart'), {
+      type: 'bar',
+      data: {
+        labels: blockedCompleted.map(i => `#${i.id}`),
+        datasets: [
+          ...bcSigDatasets,
+          { label: 'Not blocked', data: blockedCompleted.map(i => Math.max(0, Math.round((i.cycle_time_days - i.daysBlocked) * 10) / 10)), backgroundColor: '#cbd5e0', borderRadius: 3, stack: 'ct' },
+        ],
+      },
+      options: {
+        indexAxis: 'y', responsive: true, maintainAspectRatio: false, animation: false,
+        layout: { padding: { left: 28 } },
+        plugins: {
+          legend: { position: 'top', align: 'start', labels: { usePointStyle: true, pointStyle: 'rect', boxWidth: 12, padding: 16 } },
+          tooltip: { enabled: false, external: c => {
+            if (c.tooltip.opacity === 0) { sharedTooltip.hide(); return; }
+            const idx = c.tooltip.dataPoints?.[0]?.dataIndex;
+            const item = blockedCompleted[idx]; if (!item) return;
+            const url = adoBase ? `${adoBase}/${item.id}` : '';
+            const blockedPct = item.cycle_time_days > 0 ? Math.round(item.daysBlocked / item.cycle_time_days * 100) : 0;
+            sharedTooltip.show(
+              ttItemRow(item.style, url, item.id, item.title||'', item.cycle_time_days) +
+              SIGNALS.reduce((html, sig, k) => html + (item.sigDays[k] > 0 ? `<div class="tt-total" style="color:${sig.color}">${escapeHtml(sig.label)}: ${item.sigDays[k]}d</div>` : ''), '') +
+              `<div class="tt-total" style="color:#718096">Not blocked: ${Math.max(0, Math.round((item.cycle_time_days - item.daysBlocked) * 10) / 10)}d</div>` +
+              `<div class="tt-total">Blocked ${blockedPct}% of cycle</div>` +
+              TT_HINT, c
+            );
+          }},
+        },
+        scales: {
+          x: { stacked: true, beginAtZero: true, title: { display: true, text: 'Cycle time (days)', color: '#718096', font: { size: 11 } }, grid: { color: '#e2e8f0' } },
+          y: { stacked: true, grid: { display: false }, ticks: { font: { size: 12 } } },
+        },
+      },
+      plugins: [makeIconPlugin(bcFn)],
+    });
+  })();
 
   // ── Blocker KPI cards on Overview ─────────────────────────────────
   // Card: blocked items count + trend (slope of weekly blocked count over window)
@@ -6216,7 +6338,7 @@ if (_savedTab) {
     { key: 'wip_age_distribution',   primary: 'wipAgeStackedChart',   secondary: [],               primaryLabel: 'Daily WIP × Work Item Age' },
     { key: 'wip_age_by_column',     primary: 'wipAgeScatterChart',   secondary: [],               primaryLabel: 'WIP age by column' },
     { key: 'blocked_by_signal',     primary: 'blockedBySignalChart', secondary: [],                                                                              primaryLabel: 'Blocked items by signal' },
-    { key: 'blockers',              primary: 'currentBlockedChart',  secondary: [],                                                                              primaryLabel: 'Current Blocked Items' },
+    { key: 'blockers',              primary: 'ctImpactCompareChart', secondary: ['ctImpactBreakdownChart'],                                                        primaryLabel: 'Cycle Time Impact of Blockers' },
     { key: 'blocker_timeline',      primary: 'blockerTimelineChart', secondary: [],                                                                              primaryLabel: 'Blocker timeline' },
     { key: 'blockers_by_column',    primary: 'blockedByColumnChart', secondary: [],                                                                              primaryLabel: 'Blocked items by column' },
     { key: 'days_lost_to_blockers', primary: 'daysLostBlockedChart', secondary: [],                                              primaryLabel: 'Days Lost to Being Blocked' },

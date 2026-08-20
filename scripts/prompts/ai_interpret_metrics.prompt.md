@@ -73,7 +73,7 @@ wip_age_distribution — What does the age breakdown of in-progress items reveal
 
 wip_age_by_column — Which columns hold the oldest active items? Is age concentrated downstream (review, QA, release) or spread across all stages? What does the spread between median and P85 per column reveal about where ageing is a systemic problem vs. an outlier problem?
 
-blockers — What is the systemic cost of blocking? Are blockers concentrated in specific columns? What does the pattern suggest about how the team manages dependencies?
+blockers — How much does blocking extend cycle time for completed items? Quantify the median CT uplift for ever-blocked vs never-blocked items using blockers.ct_impact.median_ct_uplift_pct. What share of their cycle time do blocked items spend under a blocker signal (blockers.ct_impact.ever_blocked.mean_blocked_pct_of_cycle)? Is blocking an incidental delay or a structural condition? What does the pattern suggest about how the team manages dependencies?
 
 blocked_by_signal — Which signal type accounts for the most blocked items? Is blocking dominated by a single signal category (e.g. hard-blocked vs. waiting for something) or spread across multiple? What does the relative distribution reveal about the nature of the impediments? If any signal has 0 items, note that. Use blockers.blocked_by_signal.
 

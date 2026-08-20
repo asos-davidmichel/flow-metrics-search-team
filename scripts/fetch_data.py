@@ -2,6 +2,7 @@ import json
 import os
 import re
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 from util_ado import (
@@ -300,6 +301,7 @@ def main():
 
     output_path = Path("output/data/context.json")
     output_path.parent.mkdir(parents=True, exist_ok=True)
+    output["generated_at"] = datetime.now(timezone.utc).isoformat()
     output_path.write_text(json.dumps(output, indent=2))
     print(f"\nContext saved to: {output_path}")
 

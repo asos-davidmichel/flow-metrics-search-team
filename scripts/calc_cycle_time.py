@@ -299,6 +299,7 @@ def main():
     }
 
     METRICS_DIR.mkdir(parents=True, exist_ok=True)
+    output["generated_at"] = datetime.now(timezone.utc).isoformat()
     OUTPUT_PATH.write_text(json.dumps(output, indent=2, default=str), encoding="utf-8")
     print(f"Written: {OUTPUT_PATH}")
     print(f"Completed items in window: {len(items_output)}")

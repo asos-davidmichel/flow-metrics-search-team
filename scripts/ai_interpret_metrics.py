@@ -482,6 +482,73 @@ def summarise_blockers(wi, wih, ctx, ct, cfg=None):
 
     by_signal = {sig["label"]: sum(1 for i in wi if item_has_sig(i, sig)) for sig in signals}
 
+    # CT impact: completed items split by whether they carried a blocker during their cycle.
+    ct_items = ct.get("items", []) if ct else []
+    never_ct, ever_ct, ever_blocked_pct = [], [], []
+    for item in ct_items:
+        completed_ms = _parse_dt(item.get("completed_at"))
+        if not completed_ms:
+            continue
+        completed_ms = completed_ms.timestamp() * 1000
+        cycle_days = item.get("cycle_time_days", 0) or 0
+        cycle_start_ms = completed_ms - cycle_days * 86400000
+
+        history = sorted(tag_hist_map.get(item["id"], []), key=lambda e: e.get("changed_at", ""))
+        blk_start = None
+        blocked_ivs = []
+        for ev in history:
+            ms = _parse_dt(ev.get("changed_at"))
+            if not ms:
+                continue
+            ms = ms.timestamp() * 1000
+            had, now_ = has_sig(ev.get("old_value")), has_sig(ev.get("new_value"))
+            if not had and now_:
+                blk_start = ms
+            if had and not now_ and blk_start:
+                blocked_ivs.append((blk_start, ms))
+                blk_start = None
+        if blk_start:
+            blocked_ivs.append((blk_start, completed_ms))
+
+        clipped = [(max(a, cycle_start_ms), min(b, completed_ms)) for a, b in blocked_ivs]
+        clipped = [(s, e) for s, e in clipped if e > s]
+        days_blocked = sum_days(merge(clipped))
+
+        if days_blocked > 0:
+            ever_ct.append(cycle_days)
+            ever_blocked_pct.append(days_blocked / cycle_days * 100 if cycle_days else 0)
+        else:
+            never_ct.append(cycle_days)
+
+    def _med(lst):
+        if not lst:
+            return None
+        s = sorted(lst)
+        return _round(s[len(s) // 2])
+
+    def _p85(lst):
+        if not lst:
+            return None
+        s = sorted(lst)
+        return _round(s[max(0, math.ceil(len(s) * 0.85) - 1)])
+
+    never_med = _med(never_ct)
+    ever_med  = _med(ever_ct)
+    ct_impact = {
+        "never_blocked": {
+            "count": len(never_ct),
+            "median_days": never_med,
+            "p85_days": _p85(never_ct),
+        },
+        "ever_blocked": {
+            "count": len(ever_ct),
+            "median_days": ever_med,
+            "p85_days": _p85(ever_ct),
+            "mean_blocked_pct_of_cycle": _round(sum(ever_blocked_pct) / len(ever_blocked_pct)) if ever_blocked_pct else None,
+        },
+        "median_ct_uplift_pct": _round((ever_med - never_med) / never_med * 100) if never_med and ever_med and never_med > 0 else None,
+    }
+
     return {
         "chart": "blockers",
         "currently_blocked_count": len(active_blocked),
@@ -489,6 +556,7 @@ def summarise_blockers(wi, wih, ctx, ct, cfg=None):
         "longest_single_block_days": _round(max_days),
         "blocked_by_column": dict(by_col),
         "blocked_by_signal": by_signal,
+        "ct_impact": ct_impact,
     }
 
 
@@ -1453,8 +1521,11 @@ Do NOT repeat the metrics back. Focus entirely on what to do and why.
 
 
 def build_prompt_text(summary):
+    import re
     template = PROMPT_TEMPLATE_PATH.read_text(encoding="utf-8")
-    return template.replace("{{SUMMARY_JSON}}", json.dumps(summary, indent=2))
+    text = template.replace("{{SUMMARY_JSON}}", json.dumps(summary, indent=2))
+    # Remove control characters that are illegal in JSON strings (keep \t \n \r)
+    return re.sub(r'[\x00-\x08\x0b\x0c\x0e-\x1f]', '', text)
 
 
 # ---------------------------------------------------------------------------
@@ -1494,6 +1565,9 @@ in 3-5 bullet points.
 
 def _parse_insights(content: str) -> dict:
     """Parse JSON from an AI response, stripping accidental markdown fences."""
+    import re
+    # Strip control characters illegal in JSON strings (same set as build_prompt_text)
+    content = re.sub(r'[\x00-\x08\x0b\x0c\x0e-\x1f]', '', content)
     stripped = content.strip()
     if stripped.startswith("```"):
         stripped = "\n".join(stripped.splitlines()[1:])
@@ -1504,6 +1578,7 @@ def _parse_insights(content: str) -> dict:
 
 def _write_insights(content: str):
     insights = _parse_insights(content)
+    insights["generated_at"] = datetime.now(timezone.utc).isoformat()
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     INSIGHTS_PATH.write_text(json.dumps(insights, indent=2), encoding="utf-8")
     print(f"Written: {INSIGHTS_PATH}")
